@@ -5,7 +5,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Dandelion`,
+    title: `Wise Networking`,
     description: `Your Partner For An IOT Future`,
     author: `@taylorbryant`,
   },
