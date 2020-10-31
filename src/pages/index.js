@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from '../components/App/Layout'
 import SEO from "../components/App/seo"
-import Banner from "../components/Index/Banner"
-import Services from "../components/Index/Services"
+import Banner from "../components/HomeTwo/Banner"
+import Products from "../components/Index/Products"
 import WelcomeServices from "../components/Index/WelcomeServices"
-import Works from "../components/Index/Works"
+import Partners from "../components/Index/Partners"
 import About from "../components/Index/About"
 import Team from "../components/Index/Team"
-import Blog from "../components/Index/Blog"
+import News from "../components/Index/Blog"
 import VideoArea from "../components/Index/VideoArea"
 import Pricing from "../components/Index/Pricing"
 import FunFacts from "../components/Index/FunFacts"
@@ -20,11 +20,10 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" />
         <Banner />
-        <div className="mt-130">
-            <Services />
-        </div>
+        <News />
+        <Products />
+        <Partners />
         <WelcomeServices />
-        <Works />
         <About />
         <Team />
         <VideoArea />
@@ -33,7 +32,6 @@ const IndexPage = () => (
         <Testimonials />
         <FAQ />
         <Partner />
-        <Blog />
         <Contact />
     </Layout>
 )

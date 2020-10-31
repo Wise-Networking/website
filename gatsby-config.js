@@ -7,6 +7,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-datocms`,
+            options: {
+              apiToken: "eb67bceab631dc1ec53d6df0a32af9",
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -28,11 +42,23 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        lang: 'zxx'
-      }
-    }
+        lang: "zxx",
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `eb67bceab631dc1ec53d6df0a32af9`,
+        previewMode: false,
+        disableLiveReload: false,
+        localeFallbacks: {
+          it: ["en"],
+        },
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

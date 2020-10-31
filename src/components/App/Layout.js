@@ -15,19 +15,11 @@ import Navigationbar from './Navigationbar'
 import BlogNavigationbar from './BlogNavigationbar'
 import Footer from './Footer'
 import GoTop from './GoTop'
-import Preloader from './Preloader'
 
 const Layout = ({children, location}) => {
-    const [loader, setLoader] = React.useState(true);
-
-    React.useEffect(() => {
-        setTimeout(() => setLoader(false), 1000);
-    }, [])
-
     return (
         <React.Fragment>
             <Helmet title="Gloxy - Gatsby/React multipurpose responsive landing page template" defer={false} />
-            {loader ? <Preloader /> : null}
             {location === 'blog' ? <BlogNavigationbar /> : <Navigationbar />}
             {children}
             <GoTop scrollStepInPx="100" delayInMs="10.50" />

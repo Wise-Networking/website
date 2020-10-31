@@ -74,7 +74,7 @@ const Works = () => {
     ];
     return (
         <React.Fragment>
-            <section id="works" className="our-works ptb-100">
+            <section id="partners" className="our-works ptb-100">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2 text-center">

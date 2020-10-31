@@ -3,9 +3,9 @@ import React from "react"
 import Layout from '../components/App/Layout'
 import SEO from "../components/App/seo"
 import Banner from "../components/HomeThree/Banner"
-import Services from "../components/Index/Services"
+import Services from "../components/Index/Products"
 import WelcomeServices from "../components/Index/WelcomeServices"
-import Works from "../components/Index/Works"
+import Works from "../components/Index/Partners"
 import About from "../components/Index/About"
 import Team from "../components/Index/Team"
 import Blog from "../components/Index/Blog"
@@ -20,7 +20,7 @@ import Contact from "../components/Index/Contact"
 const IndexPage = () => (
     <Layout>
         <SEO title="Home" />
-        <Banner />
+        {/* <Banner />
         <Services />
         <WelcomeServices />
         <Works />
@@ -33,7 +33,7 @@ const IndexPage = () => (
         <FAQ />
         <Partner />
         <Blog />
-        <Contact />
+        <Contact /> */}
     </Layout>
 )
 
