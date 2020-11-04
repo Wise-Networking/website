@@ -23,8 +23,6 @@ const Services = props => {
     }
   `)
 
-  console.log({ data })
-
   const products = data.products.edges.map(node => node.node)
   const {
     productsTitle,
@@ -33,7 +31,13 @@ const Services = props => {
   } = data.titles
   const servicedata = products.map((product, index) => (
     <div className="col-md-6 col-lg-6 text-center" key={index}>
-      <Link className="read-more" to={`products/${product.link}`}>
+      <Link
+        className="read-more"
+        to={`products/${product.link}`}
+        style={{
+          color: "unset",
+        }}
+      >
         <div className="service-item">
           <div className="glyph">
             <i className={product.icon}></i>
