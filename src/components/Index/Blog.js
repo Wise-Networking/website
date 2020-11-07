@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import Image from 'gatsby-image'
 
 const getTeamImages = graphql`
   {
@@ -36,6 +37,25 @@ const getTeamImages = graphql`
       newsDescription
       newsBackgroundTitle
     }
+    blogPosts: allDatoCmsBlogPost(limit: 3) {
+      edges {
+        node {
+          title
+          slug
+          featuredImage {
+            fluid {
+              ...GatsbyDatoCmsFluid
+            }
+          }
+          publishedDate(formatString:"MMMM DD, YYYY")
+          contentNode {
+            childMarkdownRemark {
+              excerpt
+            }
+          }
+        }
+      }
+    }
   }
 `
 
@@ -43,6 +63,10 @@ const Blog = () => {
   const data = useStaticQuery(getTeamImages)
 
   const { newsTitle, newsDescription, newsBackgroundTitle } = data.dato
+
+  const blogPosts = data.blogPosts.edges.map(node => node.node)
+
+  console.log({ blogPosts })
   return (
     <section id="news" className="our-blog ptb-100">
       <div className="container">
@@ -50,16 +74,47 @@ const Blog = () => {
           <div className="col-lg-8 offset-lg-2 text-center">
             <div className="section-title">
               <h2>{newsTitle}</h2>
-              <p>
-                {newsDescription}
-              </p>
+              <p>{newsDescription}</p>
               <span className="section-title-bg">{newsBackgroundTitle}</span>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-md-6 col-lg-4">
+          {blogPosts.map(post => (
+            <div className="col-md-6 col-lg-4">
+              <div className="blog-card">
+                <Link to={`/blog/${post.slug}`}>
+                  <Image
+                    fluid={post.featuredImage.fluid}
+                    alt="blog-one"
+                  />
+                </Link>
+
+                <div className="blog-caption">
+                  <ul className="meta-tag">
+                    <li>
+                      <i className="fa fa-calendar"></i>{post.publishedDate}
+                    </li>
+                  </ul>
+
+                  <h3>
+                  <Link to={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p>
+                    {post.contentNode.childMarkdownRemark.excerpt}
+                  </p>
+
+                  <Link className="read-more" to="/blog-details">
+                    Read More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* <div className="col-md-6 col-lg-4">
             <div className="blog-card">
               <Link to="/blog-details">
                 <img
@@ -166,6 +221,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
+     */}
         </div>
       </div>
     </section>
