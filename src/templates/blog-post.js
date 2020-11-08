@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link,graphql } from "gatsby"
 import Sidebar from "../components/BlogDetails/Sidebar"
 import Comment from "../components/BlogDetails/Comment"
 import Layout from "../components/App/Layout"

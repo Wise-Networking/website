@@ -3,16 +3,17 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import TopHeader from "./TopHeader"
 import SearchModal from "./SearchModal"
+
 const getLogo = graphql`
   {
-    logo: file(relativePath: { eq: "logo.png" }) {
+    logo: file(relativePath: { eq: "logo_wise.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
-    logo2: file(relativePath: { eq: "logo2.png" }) {
+    logo2: file(relativePath: { eq: "logo_wise.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed_tracedSVG
@@ -48,7 +49,6 @@ const Navigationbar = () => {
       }
     })
     window.scrollTo(0, 0)
-
     menuActiveClass()
   }, [])
 
@@ -59,7 +59,7 @@ const Navigationbar = () => {
       mainNavLinks.forEach(link => {
         if (link.hash) {
           let section = document.querySelector(link.hash)
-          if(!section) return;
+          if (!section) return
           if (
             section.offsetTop <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
@@ -86,12 +86,18 @@ const Navigationbar = () => {
 
       <nav id="navbar" className="navbar navbar-expand-md navbar-light">
         <div className="container">
-          <Link className="navbar-brand logo" to="/">
+          <Link
+            className="navbar-brand logo logo-one"
+            to="/"
+          >
             <img src={data.logo.childImageSharp.fixed.src} alt="Logo" />
           </Link>
           <Link className="navbar-brand logo-2" to="/">
             <img
               className="img-fluid"
+              style={{
+                maxWidth: "50%",
+              }}
               src={data.logo2.childImageSharp.fixed.src}
               alt="Logo"
             />

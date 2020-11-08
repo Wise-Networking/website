@@ -36,7 +36,6 @@ const Works = () => {
 
   const partners = data.partners.edges.map(node => node.node)
 
-  console.log({ partners })
   return (
     <React.Fragment>
       <section id="partners" className="our-works ptb-100">

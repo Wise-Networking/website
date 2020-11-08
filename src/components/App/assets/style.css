@@ -396,6 +396,10 @@ padding: 0;
 .navbar-brand img {
 cursor: pointer;
 }
+.logo-one{
+    background: #eeeeee!important;
+    border-radius: 10px;
+}
 .menu-shrink {
 box-shadow: 0 0 10px #ebebeb;
 }

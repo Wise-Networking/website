@@ -23,15 +23,15 @@ const IndexPage = () => (
         <News />
         <Products />
         <Partners />
-        <WelcomeServices />
-        <About />
+        {/* <WelcomeServices /> */}
+        {/* <About /> */}
         <Team />
-        <VideoArea />
+        {/* <VideoArea />
         <Pricing />
         <FunFacts />
         <Testimonials />
         <FAQ />
-        <Partner />
+        <Partner /> */}
         <Contact />
     </Layout>
 )
