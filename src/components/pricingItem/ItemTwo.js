@@ -4,46 +4,46 @@ import { Link } from 'gatsby'
 
 const ItemTwo = (props) => {
     const itemtwodata = props.itemtwosData.map((itemtwo, index) => (
-            
-        <div className={itemtwo.className} key={index}>
-            <div className={itemtwo.FeaturedClass}>
-                <span className="featured">{itemtwo.Featured}</span>
-            </div>
-            <div className="plan-price">
-                <h3>{itemtwo.planName}</h3>
-                <span className="value">{itemtwo.price}</span>
-                <span className="period">{itemtwo.description}</span>
-            </div>
 
-            <div className="plan-features">
-                <ul>
-                    <li>{itemtwo.content1}</li>
-                    <li>{itemtwo.content2}</li>
-                    <li>{itemtwo.content3}</li>
-                    <li>{itemtwo.content4}</li>
-                    <li>{itemtwo.content5}</li>
-                    <li>{itemtwo.content6}</li>
-                    <li>{itemtwo.content7}</li>
-                </ul>
-                <div className="center-wrap">
-                    <Link to={itemtwo.btnlink} className="btn-a">
-                        <div className="button">
-                            {itemtwo.BtnName}
-                            <i className="fa fa-long-arrow-right"></i>
-                        <div className="mask" /></div>
-                    </Link>
-                </div>
+        <div className={itemtwo.className} key={index}>
+          <div className={itemtwo.FeaturedClass}>
+            <span className="featured">{itemtwo.Featured}</span>
+          </div>
+          <div className="plan-price">
+            <h3>{itemtwo.planName}</h3>
+            <span className="value">{itemtwo.price}</span>
+            <span className="period">{itemtwo.description}</span>
+          </div>
+
+          <div className="plan-features">
+            <ul>
+              <li>{itemtwo.content1}</li>
+              <li>{itemtwo.content2}</li>
+              <li>{itemtwo.content3}</li>
+              <li>{itemtwo.content4}</li>
+              <li>{itemtwo.content5}</li>
+              <li>{itemtwo.content6}</li>
+              <li>{itemtwo.content7}</li>
+            </ul>
+            <div className="center-wrap">
+              <Link to={itemtwo.btnlink} className="btn-a">
+                <div className="button">
+                  {itemtwo.BtnName}
+                  <i className="fa fa-long-arrow-right"></i>
+                  <div className="mask" /></div>
+              </Link>
             </div>
+          </div>
         </div>
     ))
 
     return (
     <React.Fragment>
-        <div className="tab-pane fade show active">
-            <div className="pricing-container margin-top-60">
-                {itemtwodata}           
-            </div>
+      <div className="tab-pane fade show active">
+        <div className="pricing-container margin-top-60">
+          {itemtwodata}
         </div>
+      </div>
     </React.Fragment>
     )
 }

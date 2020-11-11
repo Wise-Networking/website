@@ -99,7 +99,7 @@ const Blog = () => {
                   </ul>
 
                   <h3>
-                  <Link to={`/blog/${post.slug}`}>
+                    <Link to={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
                   </h3>
@@ -117,111 +117,111 @@ const Blog = () => {
           {/* <div className="col-md-6 col-lg-4">
             <div className="blog-card">
               <Link to="/blog-details">
-                <img
-                  src={data.image1.childImageSharp.fluid.src}
-                  alt="blog-one"
-                />
+            <img
+            src={data.image1.childImageSharp.fluid.src}
+            alt="blog-one"
+            />
               </Link>
 
               <div className="blog-caption">
-                <ul className="meta-tag">
-                  <li>
-                    <i className="fa fa-user"></i> Admin
-                  </li>
-                  <li>
-                    <i className="fa fa-calendar"></i>August 12, 2020
-                  </li>
-                </ul>
+            <ul className="meta-tag">
+            <li>
+            <i className="fa fa-user"></i> Admin
+            </li>
+            <li>
+            <i className="fa fa-calendar"></i>August 12, 2020
+            </li>
+            </ul>
 
-                <h3>
-                  <Link to="/blog-details">
-                    14 ridiculously cool websites you never know.
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore.
-                </p>
+            <h3>
+            <Link to="/blog-details">
+            14 ridiculously cool websites you never know.
+            </Link>
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore.
+            </p>
 
-                <Link className="read-more" to="/blog-details">
-                  Read More
-                </Link>
+            <Link className="read-more" to="/blog-details">
+            Read More
+            </Link>
               </div>
             </div>
-          </div>
+            </div>
 
-          <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4">
             <div className="blog-card">
               <Link to="/blog-details">
-                <img
-                  src={data.image2.childImageSharp.fluid.src}
-                  alt="blog-one"
-                />
+            <img
+            src={data.image2.childImageSharp.fluid.src}
+            alt="blog-one"
+            />
               </Link>
 
               <div className="blog-caption">
-                <ul className="meta-tag">
-                  <li>
-                    <i className="fa fa-user"></i> Admin
-                  </li>
-                  <li>
-                    <i className="fa fa-calendar"></i>August 13, 2020
-                  </li>
-                </ul>
+            <ul className="meta-tag">
+            <li>
+            <i className="fa fa-user"></i> Admin
+            </li>
+            <li>
+            <i className="fa fa-calendar"></i>August 13, 2020
+            </li>
+            </ul>
 
-                <h3>
-                  <Link to="/blog-details">
-                    Top 10 hot marketing trends you need.
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore.
-                </p>
+            <h3>
+            <Link to="/blog-details">
+            Top 10 hot marketing trends you need.
+            </Link>
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore.
+            </p>
 
-                <Link className="read-more" to="/blog-details">
-                  Read More
-                </Link>
+            <Link className="read-more" to="/blog-details">
+            Read More
+            </Link>
               </div>
             </div>
-          </div>
+            </div>
 
-          <div className="col-md-6 col-lg-4 offset-md-3 offset-lg-0">
+            <div className="col-md-6 col-lg-4 offset-md-3 offset-lg-0">
             <div className="blog-card">
               <Link to="/blog-details">
-                <img
-                  src={data.image3.childImageSharp.fluid.src}
-                  alt="blog-one"
-                />
+            <img
+            src={data.image3.childImageSharp.fluid.src}
+            alt="blog-one"
+            />
               </Link>
 
               <div className="blog-caption">
-                <ul className="meta-tag">
-                  <li>
-                    <i className="fa fa-user"></i> Admin
-                  </li>
-                  <li>
-                    <i className="fa fa-calendar"></i>August 14, 2020
-                  </li>
-                </ul>
+            <ul className="meta-tag">
+            <li>
+            <i className="fa fa-user"></i> Admin
+            </li>
+            <li>
+            <i className="fa fa-calendar"></i>August 14, 2020
+            </li>
+            </ul>
 
-                <h3>
-                  <Link to="/blog-details">
-                    10 reasons you need a digital marketing strategy
-                  </Link>
-                </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore.
-                </p>
+            <h3>
+            <Link to="/blog-details">
+            10 reasons you need a digital marketing strategy
+            </Link>
+            </h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore.
+            </p>
 
-                <Link className="read-more" to="/blog-details">
-                  Read More
-                </Link>
+            <Link className="read-more" to="/blog-details">
+            Read More
+            </Link>
               </div>
             </div>
-          </div>
-     */}
+            </div>
+          */}
         </div>
       </div>
     </section>

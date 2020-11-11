@@ -29,7 +29,7 @@ const getTeamImages = graphql`
   }
 `
 
-const Team = () => {
+const OurPeople = () => {
   const data = useStaticQuery(getTeamImages)
   const [display, setDisplay] = useState(false)
 
@@ -46,7 +46,7 @@ const Team = () => {
   }, [])
 
   return (
-    <section id="ourpeople" className="our-team ptb-100">
+    <section id="our-people" className="our-team ptb-100">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2 text-center">
@@ -129,4 +129,4 @@ const Team = () => {
   )
 }
 
-export default Team
+export default OurPeople

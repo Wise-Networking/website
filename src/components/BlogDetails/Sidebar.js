@@ -5,62 +5,62 @@ import { Link } from 'gatsby'
 const Sidebar = (props) => {
     const sidebardata = props.sideData.map((sidebar, index) => (
         <div className="single-post" key={index}>
-            <Link to={sidebar.postsLink}><img src={sidebar.Image} alt="post" /></Link>
+          <Link to={sidebar.postsLink}><img src={sidebar.Image} alt="post" /></Link>
 
-            <div className="post-meta">
-                <ul>
-                    <li><i className="fa fa-calendar"></i> Date: {sidebar.postDate}</li>
-                </ul>
-            </div>
+          <div className="post-meta">
+            <ul>
+              <li><i className="fa fa-calendar"></i> Date: {sidebar.postDate}</li>
+            </ul>
+          </div>
 
-            <h4><Link to={sidebar.postsLink}>{sidebar.PostTitle}</Link></h4> 
+          <h4><Link to={sidebar.postsLink}>{sidebar.PostTitle}</Link></h4>
         </div>
     ))
 
     const categoriedata = props.categoriesData.map((categories, index) => (
         <li className="list-group-item" key={index}>
-            <Link to={categories.categorieLink}>{categories.categorieName}</Link>
+          <Link to={categories.categorieLink}>{categories.categorieName}</Link>
         </li>
     ))
 
     const tagdata = props.tagsData.map((tag, index) => (
-        <li key={index}> 
-            <Link to={tag.tagLink}>{tag.tagName}</Link>
+        <li key={index}>
+          <Link to={tag.tagLink}>{tag.tagName}</Link>
         </li>
     ))
     return (
         <div className="col-lg-4">
-            <div className="side-widget">
-                <div className="search-form">
-                    <form>
-                        <input type="text" className="form-control" placeholder="Search" />
-                        <button type="submit" className="btn btn-default">
-                            <i className="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
+          <div className="side-widget">
+            <div className="search-form">
+              <form>
+                <input type="text" className="form-control" placeholder="Search" />
+                <button type="submit" className="btn btn-default">
+                  <i className="fa fa-search"></i>
+                </button>
+              </form>
             </div>
-            
-            <div className="side-widget">
-                <h3>{props.widgetTitle2}</h3>
+          </div>
 
-                {sidebardata}
-            </div>
-            
-            <div className="side-widget">
-                <h3>{props.widgetTitle3}</h3>
-                <ul className="list-group">
-                    {categoriedata}
-                </ul>
-            </div>
-            
-            <div className="side-widget">
-                <h3>{props.widgetTitle4}</h3>
-                <ul className="list-tags">
-                    {tagdata}
-                </ul>
-            </div>
-        </div> 
+          <div className="side-widget">
+            <h3>{props.widgetTitle2}</h3>
+
+            {sidebardata}
+          </div>
+
+          <div className="side-widget">
+            <h3>{props.widgetTitle3}</h3>
+            <ul className="list-group">
+              {categoriedata}
+            </ul>
+          </div>
+
+          <div className="side-widget">
+            <h3>{props.widgetTitle4}</h3>
+            <ul className="list-tags">
+              {tagdata}
+            </ul>
+          </div>
+        </div>
     )
 }
 

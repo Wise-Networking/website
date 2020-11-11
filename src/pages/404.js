@@ -4,7 +4,7 @@ import Layout from '../components/App/Layout'
 const CustomError = () => {
     return (
         <Layout>
-            <h1>Not Found!</h1>
+          <h1>Not Found!</h1>
         </Layout>
     )
 }

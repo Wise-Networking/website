@@ -15,108 +15,108 @@ const FunFacts = (props) => {
 
     return (
         <section className="fun-facts ptb-100">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-8 offset-lg-2 text-center">
-                        <div className="section-title">
-                            <h2>{props.sectionTitle}</h2>
-                            <p>{props.sectionDescription}</p>
-                            <span className="section-title-bg">{props.SectionbgTitle}</span>
-                        </div>
-                    </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 offset-lg-2 text-center">
+                <div className="section-title">
+                  <h2>{props.sectionTitle}</h2>
+                  <p>{props.sectionDescription}</p>
+                  <span className="section-title-bg">{props.SectionbgTitle}</span>
                 </div>
-
-                <div className="row">
-                    <div className="col-lg-4 col-md-4 col-sm-6">
-                        <div className="count-box text-center">
-                            <div className="glyph">
-                                <i className="glyph-icon flaticon-035-coin-1"></i>
-                            </div>
-                            <h2 className="counter">
-                                <VisibilitySensor
-                                    onChange={onVisibilityChange}
-                                    offset={{
-                                        top: 10
-                                    }}
-                                    delayedCall
-                                >
-                                    <CountUp
-                                        start={0}
-                                        end={
-                                            didViewCountUp
-                                                ? 14
-                                                : 0
-                                        }
-                                        duration={3}
-                                    />
-                                </VisibilitySensor>0
-                            </h2>
-
-                            <p>Clients Worked With</p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-4 col-sm-6">
-                        <div className="count-box text-center">
-                            <div className="glyph">
-                                <i className="glyph-icon flaticon-020-handshake"></i>
-                            </div>
-                            
-                            <h2 className="counter">
-                                <VisibilitySensor
-                                    onChange={onVisibilityChange}
-                                    offset={{
-                                        top: 10
-                                    }}
-                                    delayedCall
-                                >
-                                    <CountUp
-                                        start={0}
-                                        end={
-                                            didViewCountUp
-                                                ? 20
-                                                : 0
-                                        }
-                                        duration={3}
-                                    />
-                                </VisibilitySensor>5
-                            </h2>
-
-                            <p>Completed Projects</p>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-4 col-sm-12">
-                        <div className="count-box text-center">
-                            <div className="glyph">
-                                <i className="glyph-icon flaticon-005-trophy"></i>
-                            </div>
-                            
-                            <h2 className="counter">
-                                <VisibilitySensor
-                                    onChange={onVisibilityChange}
-                                    offset={{
-                                        top: 10
-                                    }}
-                                    delayedCall
-                                >
-                                    <CountUp
-                                        start={0}
-                                        end={
-                                            didViewCountUp
-                                                ? 5
-                                                : 0
-                                        }
-                                        duration={3}
-                                    />
-                                </VisibilitySensor>0
-                            </h2>
-
-                            <p>Winning Awards</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+
+            <div className="row">
+              <div className="col-lg-4 col-md-4 col-sm-6">
+                <div className="count-box text-center">
+                  <div className="glyph">
+                    <i className="glyph-icon flaticon-035-coin-1"></i>
+                  </div>
+                  <h2 className="counter">
+                    <VisibilitySensor
+                      onChange={onVisibilityChange}
+                      offset={{
+                        top: 10
+                      }}
+                      delayedCall
+                    >
+                      <CountUp
+                        start={0}
+                        end={
+                          didViewCountUp
+                            ? 14
+                            : 0
+                        }
+                        duration={3}
+                      />
+                    </VisibilitySensor>0
+                  </h2>
+
+                  <p>Clients Worked With</p>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-4 col-sm-6">
+                <div className="count-box text-center">
+                  <div className="glyph">
+                    <i className="glyph-icon flaticon-020-handshake"></i>
+                  </div>
+
+                  <h2 className="counter">
+                    <VisibilitySensor
+                      onChange={onVisibilityChange}
+                      offset={{
+                        top: 10
+                      }}
+                      delayedCall
+                    >
+                      <CountUp
+                        start={0}
+                        end={
+                          didViewCountUp
+                            ? 20
+                            : 0
+                        }
+                        duration={3}
+                      />
+                    </VisibilitySensor>5
+                  </h2>
+
+                  <p>Completed Projects</p>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-4 col-sm-12">
+                <div className="count-box text-center">
+                  <div className="glyph">
+                    <i className="glyph-icon flaticon-005-trophy"></i>
+                  </div>
+
+                  <h2 className="counter">
+                    <VisibilitySensor
+                      onChange={onVisibilityChange}
+                      offset={{
+                        top: 10
+                      }}
+                      delayedCall
+                    >
+                      <CountUp
+                        start={0}
+                        end={
+                          didViewCountUp
+                            ? 5
+                            : 0
+                        }
+                        duration={3}
+                      />
+                    </VisibilitySensor>0
+                  </h2>
+
+                  <p>Winning Awards</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
     )
 }

@@ -13,70 +13,70 @@ const Banner = (props) => {
     const banneronedata = props.banneronesData.map(
         (bannerone, index) => (
             <div className={bannerone.BgClass} key={index}>
-                <div className="diplay-table">
-                    <div className="display-table-cell">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-7">
-                                    <span className="hero-text">
-                                        {bannerone.TopTitle}
-                                    </span>
+              <div className="diplay-table">
+                <div className="display-table-cell">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-lg-7">
+                        <span className="hero-text">
+                          {bannerone.TopTitle}
+                        </span>
 
-                                    <h1>{bannerone.Title}</h1>
-                                    <p>{bannerone.Content}</p>
+                        <h1>{bannerone.Title}</h1>
+                        <p>{bannerone.Content}</p>
 
-                                    <div className="center-wrap">
-                                        <Link to={bannerone.BtnLink} className="btn-a">
-                                            <div className="button">
-                                                {bannerone.BtnName}
-                                                {` `}
-                                                <i className="fa fa-long-arrow-right"></i>
-                                                <div className="mask" />
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </div>
+                        <div className="center-wrap">
+                          <Link to={bannerone.BtnLink} className="btn-a">
+                            <div className="button">
+                              {bannerone.BtnName}
+                              {` `}
+                              <i className="fa fa-long-arrow-right"></i>
+                              <div className="mask" />
                             </div>
+                          </Link>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
         )
     );
     // BannerOne loop END
-    
+
     // Thumbs loop Start
     const thumbdata = props.thumbsData.map((thumb, index) => (
         <div className="owl-thumb-item" key={index}>
-            <div className="glyph">
-                <i className={thumb.ThumbIcon}></i>
-            </div>
-            <h3>{thumb.ThumbTitle}</h3>
-            <p>{thumb.ThumbContent}</p>
+          <div className="glyph">
+            <i className={thumb.ThumbIcon}></i>
+          </div>
+          <h3>{thumb.ThumbTitle}</h3>
+          <p>{thumb.ThumbContent}</p>
         </div>
     ))
 
     // Thumbs loop END
     return (
         <React.Fragment>
-            <div className="hompage-slides-wrapper">
-                {display ? <OwlCarousel
-                    className="owl-theme homepage-slides"
-                    items={1}
-                    touchDrag={false}
-                    margin={0}
-                    mouseDrag={false}
-                    smartSpeed={1000}
-                    dotData={true}
-                    dotsContainer={".owl-thumbs"}
-                >
-                    {banneronedata}
-                </OwlCarousel> : '' }
+          <div className="hompage-slides-wrapper">
+            {display ? <OwlCarousel
+              className="owl-theme homepage-slides"
+              items={1}
+              touchDrag={false}
+              margin={0}
+              mouseDrag={false}
+              smartSpeed={1000}
+              dotData={true}
+              dotsContainer={".owl-thumbs"}
+                       >
+              {banneronedata}
+            </OwlCarousel> : '' }
 
-                <div className="owl-thumbs">
-                    {thumbdata}
-                </div>
+            <div className="owl-thumbs">
+              {thumbdata}
             </div>
+          </div>
         </React.Fragment>
     );
 }

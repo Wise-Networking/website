@@ -5,17 +5,17 @@ import { Link } from 'gatsby'
 const Comment = (props) => {
     const commentdata = props.commentsData.map((comment, index) => (
         <div className={comment.ClassName} key={index}>
-            <img src={comment.Image} alt="dtg" />
-            <h4>{comment.Name}</h4>
-            <p className="date">{comment.Time}</p>
-            <p>{comment.Comment}</p>
-            <Link to={comment.replyLink} className="reply">{comment.replyText}</Link>
+          <img src={comment.Image} alt="dtg" />
+          <h4>{comment.Name}</h4>
+          <p className="date">{comment.Time}</p>
+          <p>{comment.Comment}</p>
+          <Link to={comment.replyLink} className="reply">{comment.replyText}</Link>
         </div>
     ))
     return (
         <div className="comments-area">
-            <h3 className="comments-title">{props.TotalComments}</h3>
-            {commentdata}
+          <h3 className="comments-title">{props.TotalComments}</h3>
+          {commentdata}
         </div>
     )
 }

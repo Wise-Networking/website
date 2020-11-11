@@ -54,11 +54,11 @@ const Works = () => {
 
           <div id="Portfolio" className="row">
             {partners.map(partner => {
-                const {title,link,image} = partner
+              const {title,link,image} = partner
               return (
                 <div className="col-sm-6 col-lg-4">
                   <div className="work-details">
-                      <Image fluid={image.fluid}/>
+                    <Image fluid={image.fluid}/>
                     {/* <img src={smallImages[0]} alt="sample" /> */}
                     <div className="box-content">
                       <h3 className="title">{title}</h3>

@@ -8,113 +8,113 @@ import Layout from '../components/App/Layout';
 const blogDetails = (props) => {
     return (
         <Layout location="blog">
-            <div className="bread-cumbs-area bread-cumbs-bg">
-                <div className="diplay-table">
-                    <div className="display-table-cell">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-7">
-                                <h1>{props.Title}</h1>
-                                <p>{props.Content}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            
-            <section id="blog" className="our-blog main-blog bg-none">
+          <div className="bread-cumbs-area bread-cumbs-bg">
+            <div className="diplay-table">
+              <div className="display-table-cell">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="blog-details">
-                                        <div className="post-img">
-                                            <img src={props.SingleImage} alt="blog-one" />
-                                        </div>
-                                        
-                                        <div className="blog-info">
-                                            <div className="date-box">
-                                                {props.SingleDate} <span className="month">{props.SingleMonth}</span>
-                                            </div>
+                  <div className="row">
+                    <div className="col-lg-7">
+                      <h1>{props.Title}</h1>
+                      <p>{props.Content}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                                            <div className="title-meta">
-                                                <h2>{props.SingleTitle}</h2>
-                                                <div className="post-meta">
-                                                    <ul>
-                                                        <li>
-                                                            <i className="fa fa-user"></i>
-                                                            Posted By: 
-                                                            <Link to={props.authorLink}>
-                                                                {props.authorName}
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <i className="fa fa-comments-o"></i> 
-                                                            Comments: 
-                                                            <Link to={props.CommentsLink}>
-                                                                {props.TotalComments}
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <i className="fa fa-tags"></i> 
-                                                            Tags: 
-                                                            <Link to={props.TagLink}>
-                                                                {props.TagName}
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                            
-                                        <div className="post-content">
-                                            <p>{props.PostContent1}</p>
-                                            <p>{props.PostContent2}</p>
-                                            <p>{props.PostContent3}</p>
-                                   
-                                            <div className="post-tag-media">
-                                                <ul className="tag">
-                                                    <li><span>Tags:</span></li>
-                                                    <li><Link to="#">Business</Link></li>
-                                                    <li><Link to="#">ChatApp</Link></li>
-                                                    <li><Link to="#">Conversation</Link></li>
-                                                </ul>
-                                            </div>
-                                        </div> 
-                                        
-                                        <Comment />
-                                        
-                                        <div className="comments-form">
-                                            <h3 className="comments-title">Leave a Comments</h3>
-                                            <form>
-                                                <div className="form-group">
-                                                    <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <input type="email" className="form-control" id="email-address" placeholder="Your Email" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <textarea className="form-control" rows="5" placeholder="Type here..." />
-                                                </div>
-                                                <div className="text-center">
-                                                    <div className="button">
-                                                        <Link to="#">Post a comment</Link>
-                                                        <div className="mask"></div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+          <section id="blog" className="our-blog main-blog bg-none">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8">
+                  <div className="row">
+                    <div className="col-lg-12">
+                      <div className="blog-details">
+                        <div className="post-img">
+                          <img src={props.SingleImage} alt="blog-one" />
                         </div>
 
-                        <Sidebar />
+                        <div className="blog-info">
+                          <div className="date-box">
+                            {props.SingleDate} <span className="month">{props.SingleMonth}</span>
+                          </div>
+
+                          <div className="title-meta">
+                            <h2>{props.SingleTitle}</h2>
+                            <div className="post-meta">
+                              <ul>
+                                <li>
+                                  <i className="fa fa-user"></i>
+                                  Posted By:
+                                  <Link to={props.authorLink}>
+                                    {props.authorName}
+                                  </Link>
+                                </li>
+                                <li>
+                                  <i className="fa fa-comments-o"></i>
+                                  Comments:
+                                  <Link to={props.CommentsLink}>
+                                    {props.TotalComments}
+                                  </Link>
+                                </li>
+                                <li>
+                                  <i className="fa fa-tags"></i>
+                                  Tags:
+                                  <Link to={props.TagLink}>
+                                    {props.TagName}
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="post-content">
+                          <p>{props.PostContent1}</p>
+                          <p>{props.PostContent2}</p>
+                          <p>{props.PostContent3}</p>
+
+                          <div className="post-tag-media">
+                            <ul className="tag">
+                              <li><span>Tags:</span></li>
+                              <li><Link to="#">Business</Link></li>
+                              <li><Link to="#">ChatApp</Link></li>
+                              <li><Link to="#">Conversation</Link></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <Comment />
+
+                        <div className="comments-form">
+                          <h3 className="comments-title">Leave a Comments</h3>
+                          <form>
+                            <div className="form-group">
+                              <input type="text" className="form-control" id="name" placeholder="Your Name" />
+                            </div>
+                            <div className="form-group">
+                              <input type="email" className="form-control" id="email-address" placeholder="Your Email" />
+                            </div>
+                            <div className="form-group">
+                              <textarea className="form-control" rows="5" placeholder="Type here..." />
+                            </div>
+                            <div className="text-center">
+                              <div className="button">
+                                <Link to="#">Post a comment</Link>
+                                <div className="mask"></div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
+
+                <Sidebar />
+              </div>
+            </div>
+          </section>
         </Layout>
     )
 }

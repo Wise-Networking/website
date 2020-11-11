@@ -13,71 +13,71 @@ const blog = (props) => {
 
     const blogPosts = posts.map((post, index) => (
         <div className="col-md-6 col-lg-4" key={index}>
-            <div className="blog-card">
-                <Link to={`/blog/${post.slug}`} className="blog-img">
-                    <Image fluid={post.featuredImage.fluid} />
-                </Link>
+          <div className="blog-card">
+            <Link to={`/blog/${post.slug}`} className="blog-img">
+              <Image fluid={post.featuredImage.fluid} />
+            </Link>
 
-                <div className="blog-caption">
-                    <ul className="meta-tag">
-                        <li>
-                            <i className="fa fa-user"></i> 
-                            {/* {blogone.authorName} */}
-                        </li>
-                        <li>
-                            <i className="fa fa-calendar"></i>
-                            {/* {blogone.Date} */}
-                        </li>
-                    </ul>
+            <div className="blog-caption">
+              <ul className="meta-tag">
+                <li>
+                  <i className="fa fa-user"></i>
+                  {/* {blogone.authorName} */}
+                </li>
+                <li>
+                  <i className="fa fa-calendar"></i>
+                  {/* {blogone.Date} */}
+                </li>
+              </ul>
 
-                    <h3>
-                        {/* <Link to={blogone.postLink}>{blogone.posttitle}</Link> */}
-                    </h3>
-             
+              <h3>
+                {/* <Link to={blogone.postLink}>{blogone.posttitle}</Link> */}
+              </h3>
 
-                    <p>{post.contentNode.childMarkdownRemark.excerpt}</p>
 
-                    <Link className="read-more" to={`/blog/${post.slug}`}>
-                        Read More
-                    </Link>
-                </div>
+              <p>{post.contentNode.childMarkdownRemark.excerpt}</p>
+
+              <Link className="read-more" to={`/blog/${post.slug}`}>
+                Read More
+              </Link>
             </div>
+          </div>
         </div>
     ))
-    
+
     return (
         <Layout location="blog">
-            <div className="bread-cumbs-area bread-cumbs-bg">
-                <div className="diplay-table">
-                    <div className="display-table-cell">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-7">
-                                    <h1>Tag: {tag.title}</h1>
-                                    <p>{tag.title}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-
-            <section id="blog" className="our-blog main-blog bg-none">
+          <div className="bread-cumbs-area bread-cumbs-bg">
+            <div className="diplay-table">
+              <div className="display-table-cell">
                 <div className="container">
-                    <div className="row">
-                        {blogPosts}
-                        <div className="col-lg-12 pagination-area text-center">
-                            <ul className="pagination">
-                                <li><Link to="#"><i className="fa fa-angle-left"></i></Link></li>
-                                <li className="active"><Link to="#">1</Link></li>
-                                <li><Link to="#">2</Link></li>
-                                <li><Link to="#">3</Link></li>
-                                <li><Link to="#"><i className="fa fa-angle-right"></i></Link></li>
-                            </ul>
-                        </div>
+                  <div className="row">
+                    <div className="col-lg-7">
+                      <h1>Tag: {tag.title}</h1>
+                      <p>{tag.title}</p>
                     </div>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
+
+          <section id="blog" className="our-blog main-blog bg-none">
+            <div className="container">
+              <div className="row">
+                {blogPosts}
+                <div className="col-lg-12 pagination-area text-center">
+                  <ul className="pagination">
+                    <li><Link to="#"><i className="fa fa-angle-left"></i></Link></li>
+                    <li className="active"><Link to="#">1</Link></li>
+                    <li><Link to="#">2</Link></li>
+                    <li><Link to="#">3</Link></li>
+                    <li><Link to="#"><i className="fa fa-angle-right"></i></Link></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
         </Layout>
     )
 }
@@ -100,7 +100,7 @@ blog.defaultProps = {
             posttitle: "14 ridiculously cool websites you never know.",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 12, 2020", 
+            Date: "August 12, 2020",
         },
         {
             postImage: require("../images/blog-two.jpg"),
@@ -108,7 +108,7 @@ blog.defaultProps = {
             posttitle: "Top 10 hot marketing trends you need.",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 13, 2020", 
+            Date: "August 13, 2020",
         },
         {
             postImage: require("../images/blog-three.jpg"),
@@ -116,7 +116,7 @@ blog.defaultProps = {
             posttitle: "10 reasons you need a digital marketing strategy",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 14, 2020", 
+            Date: "August 14, 2020",
         },
         {
             postImage: require("../images/blog-four.jpg"),
@@ -124,7 +124,7 @@ blog.defaultProps = {
             posttitle: "How to build a programming career.",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 15, 2020", 
+            Date: "August 15, 2020",
         },
         {
             postImage: require("../images/blog-five.jpg"),
@@ -132,7 +132,7 @@ blog.defaultProps = {
             posttitle: "10 hot marketing trends you need.",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 16, 2020", 
+            Date: "August 16, 2020",
         },
         {
             postImage: require("../images/blog-six.jpg"),
@@ -140,7 +140,7 @@ blog.defaultProps = {
             posttitle: "Best programming language to learn.",
             postContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
             authorName: "Jone",
-            Date: "August 17, 2020", 
+            Date: "August 17, 2020",
         },
     ]
 }
