@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gloxy - Gatsby/React multipurpose responsive landing page template`,
-    description: `Gloxy - Gatsby/React multipurpose responsive landing page template`,
-    author: `@envy_theme`,
+    title: `Dandelions: Your Partner In Custom Smart Grids`,
+    description: `Dandelions provides standardized IT, power and communications enabling customers to build custom IOT grids.`,
+    author: `https://www.linkedin.com/company/wise-networking/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,9 +1,9 @@
 {
   "name": "gloxy-gatsby",
   "private": true,
-  "description": "Gloxy - Gatsby/React multipurpose responsive landing page template",
+  "description": "Dandelions Provides Standardized IT, Power and Comms - Build Your Own Custom Sensor Grid",
   "version": "1.0.0",
-  "author": "EnvyTheme.com",
+  "author": "Wise Networking &copy; 2020",
   "dependencies": {
     "@loadable/component": "^5.13.1",
     "gatsby": "^2.23.12",
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Wise-Networking/website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Wise-Networking/website/issues"
   }
 }
