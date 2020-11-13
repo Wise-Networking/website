@@ -61,6 +61,7 @@ const Navigationbar = () => {
                             className="img-fluid" 
                             src={data.logo2.childImageSharp.fixed.src}
                             alt="Logo"
+                            style={{maxWidth:'45%'}}
                         />
                     </Link>
 

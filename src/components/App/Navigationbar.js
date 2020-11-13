@@ -29,7 +29,7 @@ const getLogo = graphql`
     }
   }
 `
-const Navigationbar = () => {
+const Navigationbar = ({homepage}) => {
   const data = useStaticQuery(getLogo)
   const [collapsed, setCollapsed] = React.useState(false)
 
@@ -96,7 +96,7 @@ const Navigationbar = () => {
             <img
               className="img-fluid"
               style={{
-                maxWidth: "50%",
+                maxWidth: "45%",
               }}
               src={data.logo2.childImageSharp.fixed.src}
               alt="Logo"
@@ -121,7 +121,7 @@ const Navigationbar = () => {
               {data.links.navigationLinks.map(link => {
                 const { url, title, internalLink } = link
                 let linkReturn = null
-                if (url.startsWith("#")) {
+                if (url.startsWith("#") && !homepage) {
                   linkReturn = (
                     <AnchorLink
                       onClick={toggleNavbar}

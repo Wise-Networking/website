@@ -100,7 +100,7 @@ const OurPeople = () => {
             {persons.map(person => {
               return (
                 <div className="team-box">
-                  <Image fluid={person.image.fluid} />
+                  <Image fluid={person.image.fluid} style={{borderRadius:500}}/>
                   <div className="box-content">
                     <div className="box-inner-content">
                       <h3 className="title">{person.title}</h3>

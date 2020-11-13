@@ -20,7 +20,7 @@ const Layout = ({children, location}) => {
     return (
         <React.Fragment>
             <Helmet title="Gloxy - Gatsby/React multipurpose responsive landing page template" defer={false} />
-            {location === 'blog' ? <BlogNavigationbar /> : <Navigationbar />}
+             <Navigationbar homepage={location ==="home"}/>
             {children}
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
             <Footer />

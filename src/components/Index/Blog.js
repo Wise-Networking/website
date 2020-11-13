@@ -107,7 +107,7 @@ const Blog = () => {
                     {post.contentNode.childMarkdownRemark.excerpt}
                   </p>
 
-                  <Link className="read-more" to="/blog-details">
+                  <Link className="read-more" to={`/blog/${post.slug}`}>
                     Read More
                   </Link>
                 </div>

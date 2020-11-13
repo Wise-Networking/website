@@ -21,7 +21,7 @@ import ContactUs from "../components/Index/ContactUs"
 import WelcomeServices from "../components/Index/WelcomeServices"
 
 const IndexPage = () => (
-    <Layout>
+    <Layout location="home">
       <SEO title="Home" />
       <Banner />
       <News />

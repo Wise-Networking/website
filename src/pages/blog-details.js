@@ -7,7 +7,7 @@ import Layout from '../components/App/Layout';
 
 const blogDetails = (props) => {
     return (
-        <Layout location="blog">
+        <Layout>
           <div className="bread-cumbs-area bread-cumbs-bg">
             <div className="diplay-table">
               <div className="display-table-cell">

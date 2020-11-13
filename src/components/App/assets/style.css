@@ -408,7 +408,7 @@ color: #fff !important;
 }
 .menu-shrink .navbar-brand.logo-2{
     display: block;
-    top: 3px;
+    top: -7px;
 }
 .navbar-brand.logo-2, .menu-shrink .navbar-brand.logo{
 display: none;
