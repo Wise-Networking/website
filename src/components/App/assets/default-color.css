@@ -30,11 +30,11 @@
 	background-color: #e74c14 !important;
 }
 .navbar-light.fixed-top, .search-modal, .home-video-area::before, .owl-thumb-item.active, .owl-thumb-item:hover {
-	background-color: #fe5619;
-	border: 1px solid #fe5619;
+	background-color: #B68D40;
+	border: 1px solid #B68D40;
 }
 .navbar-light.fixed-top {
-    background-color: #fe5619 !important;
+    background-color: #B68D40 !important;
 }
 .filter-menu button.programs-filter-btn-active, .filter-menu button:hover {
 	background-color: #fe5619;
@@ -105,7 +105,7 @@
 	color: #fe5619;
 }
 .plan.featured .plan-price, .content-box.color-effect-1, .footer  {
-	background-color: #fe5619;
+	background-color: #D6AD60;
 }
 .single-testimonial-item i, .partners-slides .owl-nav div {
     color: #fe5619 !important;

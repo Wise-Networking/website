@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const PageTemplate = path.resolve("./src/templates/page.js")
   const BlogPostTemplate = path.resolve("./src/templates/blog-post.js")
   const TagTemplate = path.resolve("./src/templates/tag.js")
+  const CategoryTemplate = path.resolve("./src/templates/category.js")
 
   const allProductsQuery = await graphql(`
     query AllProducts {
@@ -108,9 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allTags = allTagsQuery.data.allDatoCmsTag.edges.map(
-    node => node.node
-  )
+  const allTags = allTagsQuery.data.allDatoCmsTag.edges.map(node => node.node)
 
   allTags.forEach(tag => {
     const { title, id } = tag
@@ -118,6 +117,36 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       component: TagTemplate,
       path: `tag/${slug}`,
+      context: {
+        id,
+      },
+    })
+  })
+
+  const allCategoryQuery = await graphql(`
+    query allCategory {
+      allDatoCmsCategory {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
+    }
+  `)
+
+  const allCategory = allCategoryQuery.data.allDatoCmsCategory.edges.map(
+    node => node.node
+  )
+
+  console.log({allCategory})
+  allCategory.forEach(category => {
+    const { title, id } = category
+    const slug = slugify(title.toLowerCase())
+    createPage({
+      component: CategoryTemplate,
+      path: `category/${slug}`,
       context: {
         id,
       },
