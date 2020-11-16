@@ -6,14 +6,14 @@ import SearchModal from "./SearchModal"
 
 const getLogo = graphql`
   {
-    logo: file(relativePath: { eq: "logo_wise.png" }) {
+    logo: file(relativePath: { eq: "logo_wise_new.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
-    logo2: file(relativePath: { eq: "logo_wise.png" }) {
+    logo2: file(relativePath: { eq: "logo_wise_new.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed_tracedSVG
