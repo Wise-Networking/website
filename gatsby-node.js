@@ -6,9 +6,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const ProductPageTemplate = path.resolve("./src/templates/product.js")
   const PageTemplate = path.resolve("./src/templates/page.js")
-  const BlogPostTemplate = path.resolve("./src/templates/blog-post.js")
+  const NewsItemTemplate = path.resolve("./src/templates/news-item.js")
   const TagTemplate = path.resolve("./src/templates/tag.js")
 
+
+  // Products
   const allProductsQuery = await graphql(`
     query AllProducts {
       allDatoCmsProduct {
@@ -24,9 +26,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allProducts = allProductsQuery.data.allDatoCmsProduct.edges.map(
-    node => node.node
-  )
+  const allProducts = allProductsQuery.data.allDatoCmsProduct.edges.map(node => node.node)
+
   allProducts.forEach(product => {
     const { link, id } = product
     createPage({
@@ -38,6 +39,8 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+
+  // Pages
   const allPagesQuery = await graphql(`
     query AllPages {
       allDatoCmsPage {
@@ -52,9 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allPages = allPagesQuery.data.allDatoCmsPage.edges.map(
-    node => node.node
-  )
+  const allPages = allPagesQuery.data.allDatoCmsPage.edges.map(node => node.node)
 
   allPages.forEach(product => {
     const { link, id } = product
@@ -66,6 +67,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // News
 
   const allBlogPostsQuery = await graphql(`
     query AllBlogPosts {
@@ -80,20 +83,20 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allBlogPosts = allBlogPostsQuery.data.allDatoCmsBlogPost.edges.map(
-    node => node.node
-  )
+  const allBlogPosts = allBlogPostsQuery.data.allDatoCmsBlogPost.edges.map(node => node.node)
 
   allBlogPosts.forEach(product => {
     const { slug, id } = product
     createPage({
-      component: BlogPostTemplate,
-      path: `blog/${slug}`,
+      component: NewsItemTemplate,
+      path: `news/${slug}`,
       context: {
         id,
       },
     })
   })
+
+  // Tags
 
   const allTagsQuery = await graphql(`
     query AllTags {
@@ -108,16 +111,14 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allTags = allTagsQuery.data.allDatoCmsTag.edges.map(
-    node => node.node
-  )
+  const allTags = allTagsQuery.data.allDatoCmsTag.edges.map(node => node.node)
 
   allTags.forEach(tag => {
     const { title, id } = tag
     const slug = slugify(title.toLowerCase())
     createPage({
       component: TagTemplate,
-      path: `tag/${slug}`,
+      path: `tags/${slug}`,
       context: {
         id,
       },

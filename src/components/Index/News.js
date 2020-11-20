@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+
 import Image from 'gatsby-image'
 
 const getData = graphql`
@@ -33,8 +34,6 @@ const getData = graphql`
 
 const News = () => {
   const data = useStaticQuery(getData)
-
-  console.log(data);
 
   const { newsTitle, newsDescription, newsBackgroundTitle } = data.dato
 
