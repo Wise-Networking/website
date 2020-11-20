@@ -47,7 +47,7 @@ const BlogDetails = props => {
                           </li>
                           {post.tags.map(tag => (
                             <li>
-                              <Link to={`tags/${slugify(tag.title.toLowerCase())}`}>{tag.title}</Link>
+                              <Link to={`/tag/${slugify(tag.title.toLowerCase())}`}>{tag.title}</Link>
                             </li>
                           ))}
                         </ul>
