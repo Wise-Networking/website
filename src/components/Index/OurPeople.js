@@ -40,7 +40,6 @@ const OurPeople = () => {
   } = data.titles
 
   const persons = data.persons.edges.map(node => node.node)
-  console.log({ persons })
   useEffect(() => {
     setDisplay(true)
   }, [])

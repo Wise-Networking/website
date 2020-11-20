@@ -66,7 +66,6 @@ const Blog = () => {
 
   const blogPosts = data.blogPosts.edges.map(node => node.node)
 
-  console.log({ blogPosts })
   return (
     <section id="news" className="our-blog ptb-100">
       <div className="container">

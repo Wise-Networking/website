@@ -7,6 +7,18 @@ const Sidebar = props => {
   const data = useStaticQuery(
     graphql`
       {
+        posts: allDatoCmsBlogPost(sort: {fields: publishedDate}){
+          edges{
+            node{
+              title
+              slug
+              publishedDate(formatString:"MMMM DD, YYYY")
+              featuredImage{
+                url
+              }
+            }
+          }
+        }
         tags: allDatoCmsTag {
           edges {
             node {
@@ -29,22 +41,23 @@ const Sidebar = props => {
 
   const tags = data.tags.edges.map(node => node.node)
   const categories = data.categories.edges.map(node => node.node)
-  const sidebardata = props.sideData.map((sidebar, index) => (
+  const posts = data.posts.edges.map( node => node.node)
+  const sidebardata = posts.map((post, index) => (
     <div className="single-post" key={index}>
-      <Link to={sidebar.postsLink}>
-        <img src={sidebar.Image} alt="post" />
+      <Link to={`/blog/${post.slug}`}>
+        <img src={post.featuredImage.url} alt="post" />
       </Link>
 
       <div className="post-meta">
         <ul>
           <li>
-            <i className="fa fa-calendar"></i> Date: {sidebar.postDate}
+            <i className="fa fa-calendar"></i> Date: {post.publishedDate}
           </li>
         </ul>
       </div>
 
       <h4>
-        <Link to={sidebar.postsLink}>{sidebar.PostTitle}</Link>
+        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
       </h4>
     </div>
   ))
@@ -96,99 +109,6 @@ const Sidebar = props => {
       </div>
     </div>
   )
-}
-
-//Props Types
-Sidebar.propTypes = {
-  widgetTitle2: PropTypes.string,
-  widgetTitle3: PropTypes.string,
-  widgetTitle4: PropTypes.string,
-  sideData: PropTypes.array,
-  categoriesData: PropTypes.array,
-  tagsData: PropTypes.array,
-}
-
-//Default Props
-Sidebar.defaultProps = {
-  widgetTitle2: "Recent posts",
-  widgetTitle3: "Categories",
-  widgetTitle4: "Tags",
-  sideData: [
-    {
-      postsLink: "#",
-      Image: require("../../images/post_1.jpg"),
-      PostTitle: "Risus commodo viverra mae.",
-      postDate: "10 Mar",
-    },
-    {
-      postsLink: "#",
-      Image: require("../../images/post_2.jpg"),
-      PostTitle: "Best way to learn java.",
-      postDate: "10 Mar",
-    },
-    {
-      postsLink: "#",
-      Image: require("../../images/post_3.jpg"),
-      PostTitle: "14 ridiculously cool websites.",
-      postDate: "10 Mar",
-    },
-  ],
-  categoriesData: [
-    {
-      categorieLink: "#",
-      categorieName: "Business",
-    },
-    {
-      categorieLink: "#",
-      categorieName: "Technology",
-    },
-    {
-      categorieLink: "#",
-      categorieName: "Food",
-    },
-    {
-      categorieLink: "#",
-      categorieName: "Family",
-    },
-  ],
-  tagsData: [
-    {
-      tagLink: "#",
-      tagName: "Business",
-    },
-    {
-      tagLink: "#",
-      tagName: "Family",
-    },
-    {
-      tagLink: "#",
-      tagName: "Technology",
-    },
-    {
-      tagLink: "#",
-      tagName: "Food",
-    },
-    {
-      tagLink: "#",
-      tagName: "IT Startup",
-    },
-    {
-      tagLink: "#",
-      tagName: "Marketing",
-    },
-    {
-      tagLink: "#",
-      tagName: "Lifestyle",
-    },
-    {
-      tagLink: "#",
-      tagName: "Creative",
-    },
-    {
-      tagLink: "#",
-      tagName: "Startup",
-    },
-  ],
 }
 
 export default Sidebar

@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
@@ -36,7 +35,7 @@ const Banner = props => {
       <BackgroundImage
         Tag="div"
         className="single-slider-item"
-        fluid={heroImage.fluid}
+        // fluid={heroImage.fluid}
         backgroundColor={`#B68D40`}
       >
         <div className="diplay-table">
@@ -68,25 +67,6 @@ const Banner = props => {
       </BackgroundImage>
     </div>
   )
-}
-
-// Props Types
-Banner.propTypes = {
-  TopTitle: PropTypes.string,
-  Title: PropTypes.string,
-  Content: PropTypes.string,
-  BtnLink: PropTypes.string,
-  BtnName: PropTypes.string,
-}
-
-// Default Props
-Banner.defaultProps = {
-  topTitle: "Clean & Creative",
-  title: "We Are an Expert!",
-  content:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget.",
-  btnLink: "#",
-  btnName: "get started",
 }
 
 export default Banner
