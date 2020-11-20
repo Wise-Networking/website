@@ -118,17 +118,17 @@ const Navigationbar = ({homepage}) => {
 
           <div className={classOne} id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              {data.links.navigationLinks.map(link => {
+              {data.links.navigationLinks.map((link, key) => {
                 const { url, title, internalLink } = link
                 let linkReturn = null
                 if (url.startsWith("#") && !homepage) {
                   linkReturn = (
                     <AnchorLink
+                      key={url}
                       onClick={toggleNavbar}
                       offset={() => 50}
                       className="nav-link"
                       href={url}
-                      key={url}
                     >
                       {title}
                     </AnchorLink>
@@ -137,8 +137,8 @@ const Navigationbar = ({homepage}) => {
                   if (internalLink) {
                     linkReturn = (
                       <Link
-                        to={url}
                         key={url}
+                        to={url}
                         className="nav-link"
                         activeClassName="active"
                       >
@@ -147,14 +147,14 @@ const Navigationbar = ({homepage}) => {
                     )
                   } else {
                     linkReturn = (
-                      <a href={url} key={url} className="nav-link">
+                      <a key={url} href={url} key={url} className="nav-link">
                         {title}
                       </a>
                     )
                   }
                 }
 
-                return <li className="nav-item">{linkReturn}</li>
+                return <li key={key} className="nav-item">{linkReturn}</li>
               })}
             </ul>
           </div>
