@@ -25,7 +25,7 @@ const getData = graphql`
   }
 `
 
-const Works = () => {
+const Partners = () => {
   const data = useStaticQuery(getData)
 
   const {
@@ -52,28 +52,32 @@ const Works = () => {
             </div>
           </div>
 
-          <div id="Portfolio" className="row">
-            {partners.map(partner => {
-              const {title,link,image} = partner
-              return (
-                <div className="col-sm-6 col-lg-4">
-                  <div className="work-details">
-                    <Image fluid={image.fluid}/>
-                    {/* <img src={smallImages[0]} alt="sample" /> */}
-                    <div className="box-content">
-                      <h3 className="title">{title}</h3>
-                      <ul className="icon">
-                        <li>
-                          <a href={link}>
-                            <i className="fa fa-link"></i>
-                          </a>
-                        </li>
-                      </ul>
+          <div id="partners" className="row">
+            {
+              partners.map((partner, key) => {
+
+                const {title, link, image} = partner
+
+                return (
+                  <div key={key} className="col-sm-6 col-lg-4">
+                    <div className="work-details">
+                      <Image fluid={image.fluid}/>
+
+                      <div className="box-content">
+                        <h3 className="title">{title}</h3>
+                        <ul className="icon">
+                          <li>
+                            <a href={link}>
+                              <i className="fa fa-link"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })
+            }
           </div>
         </div>
       </section>
@@ -81,4 +85,4 @@ const Works = () => {
   )
 }
 
-export default Works
+export default Partners

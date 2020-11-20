@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 
 const OwlCarousel = Loadable(() => import("react-owl-carousel3"))
 
-const getTeamImages = graphql`
+const getData = graphql`
   {
     titles: datoCmsHomePage {
       ourPeopleTitle
@@ -30,7 +30,7 @@ const getTeamImages = graphql`
 `
 
 const OurPeople = () => {
-  const data = useStaticQuery(getTeamImages)
+  const data = useStaticQuery(getData)
   const [display, setDisplay] = useState(false)
 
   const {
@@ -40,7 +40,7 @@ const OurPeople = () => {
   } = data.titles
 
   const persons = data.persons.edges.map(node => node.node)
-  console.log({ persons })
+
   useEffect(() => {
     setDisplay(true)
   }, [])
@@ -97,9 +97,9 @@ const OurPeople = () => {
               },
             }}
           >
-            {persons.map(person => {
+            {persons.map((person, key) => {
               return (
-                <div className="team-box">
+                <div key={key} className="team-box">
                   <Image fluid={person.image.fluid} style={{borderRadius:500}}/>
                   <div className="box-content">
                     <div className="box-inner-content">
