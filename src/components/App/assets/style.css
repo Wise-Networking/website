@@ -72,6 +72,10 @@ ul {
     padding-right: 5px;
     padding-left: 5px;
 }
+
+.footer-privacy a,a:visited{
+    color:white;
+}
 h2 {
     font-weight: 500;
     font-size: 36px;
@@ -2167,9 +2171,6 @@ Footer Area CSS
 .footer {
     color: #fff;
     padding: 20px 0;
-}
-.footer .copyright {
-margin: 3px 0 0;
 }
 .social-icons.bottom ul li a {
     width: 30px;

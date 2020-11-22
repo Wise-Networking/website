@@ -35,7 +35,7 @@ const Banner = props => {
       <BackgroundImage
         Tag="div"
         className="single-slider-item"
-        // fluid={heroImage.fluid}
+        fluid={heroImage.fluid}
         backgroundColor={`#B68D40`}
       >
         <div className="diplay-table">
@@ -46,7 +46,6 @@ const Banner = props => {
                   <span className="hero-text">{heroTopTitle}</span>
                   <h1>{heroTitle}</h1>
                   <p>{heroDescription}</p>
-
                   <div className="center-wrap">
                     <div className="center-wrap">
                       <Link to={heroButtonUrl} className="btn-a">

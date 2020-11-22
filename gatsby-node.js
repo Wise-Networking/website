@@ -1,14 +1,16 @@
 const path = require("path")
 const slugify = require("slugify")
+const { paginate } = require("gatsby-awesome-pagination")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const ProductPageTemplate = path.resolve("./src/templates/product.js")
   const PageTemplate = path.resolve("./src/templates/page.js")
-  const BlogPostTemplate = path.resolve("./src/templates/blog-post.js")
+  const NewsPostTemplate = path.resolve("./src/templates/news-post.js")
   const TagTemplate = path.resolve("./src/templates/tag.js")
   const CategoryTemplate = path.resolve("./src/templates/category.js")
+  const NewsTemplate = path.resolve("./src/templates/news.js")
 
   const allProductsQuery = await graphql(`
     query AllProducts {
@@ -81,15 +83,26 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allBlogPosts = allBlogPostsQuery.data.allDatoCmsBlogPost.edges.map(
+  const allNewsPosts = allBlogPostsQuery.data.allDatoCmsBlogPost.edges.map(
     node => node.node
   )
 
-  allBlogPosts.forEach(product => {
+
+  //Blog Page
+
+  paginate({
+    createPage,
+    items: allNewsPosts,
+    itemsPerPage: 3,
+    pathPrefix: `news`,
+    component: NewsTemplate,
+  })
+
+  allNewsPosts.forEach(product => {
     const { slug, id } = product
     createPage({
-      component: BlogPostTemplate,
-      path: `blog/${slug}`,
+      component: NewsPostTemplate,
+      path: `news/${slug}`,
       context: {
         id,
       },
@@ -111,16 +124,42 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const allTags = allTagsQuery.data.allDatoCmsTag.edges.map(node => node.node)
 
-  allTags.forEach(tag => {
+  allTags.forEach(async tag => {
     const { title, id } = tag
     const slug = slugify(title.toLowerCase())
-    createPage({
+
+    const allPostsByTag = await graphql(`
+      query  {
+        allPosts: allDatoCmsBlogPost(
+          filter: { tags: { elemMatch: { id: { eq: "${id}"} } } } 
+        ) {
+          edges {
+            node {
+              title
+            }
+          }
+        }
+      }
+    `)
+
+
+    paginate({
+      createPage,
+      items: allPostsByTag.data.allPosts.edges,
+      itemsPerPage: 1,
+      pathPrefix: `tag/${slug}`,
       component: TagTemplate,
-      path: `tag/${slug}`,
-      context: {
-        id,
-      },
+      context:{
+        id
+      }
     })
+    // createPage({
+    //   component: TagTemplate,
+    //   path: `tag/${slug}`,
+    //   context: {
+    //     id,
+    //   },
+    // })
   })
 
   const allCategoryQuery = await graphql(`

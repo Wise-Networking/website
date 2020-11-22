@@ -83,7 +83,7 @@ const Blog = () => {
           {blogPosts.map(post => (
             <div className="col-md-6 col-lg-4">
               <div className="blog-card">
-                <Link to={`/blog/${post.slug}`}>
+                <Link to={`/news/${post.slug}`}>
                   <Image
                     fluid={post.featuredImage.fluid}
                     alt="blog-one"
@@ -98,7 +98,7 @@ const Blog = () => {
                   </ul>
 
                   <h3>
-                    <Link to={`/blog/${post.slug}`}>
+                    <Link to={`/news/${post.slug}`}>
                       {post.title}
                     </Link>
                   </h3>
@@ -106,7 +106,7 @@ const Blog = () => {
                     {post.contentNode.childMarkdownRemark.excerpt}
                   </p>
 
-                  <Link className="read-more" to={`/blog/${post.slug}`}>
+                  <Link className="read-more" to={`/news/${post.slug}`}>
                     Read More
                   </Link>
                 </div>

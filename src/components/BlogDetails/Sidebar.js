@@ -44,7 +44,7 @@ const Sidebar = props => {
   const posts = data.posts.edges.map( node => node.node)
   const sidebardata = posts.map((post, index) => (
     <div className="single-post" key={index}>
-      <Link to={`/blog/${post.slug}`}>
+      <Link to={`/news/${post.slug}`}>
         <img src={post.featuredImage.url} alt="post" />
       </Link>
 
@@ -57,7 +57,7 @@ const Sidebar = props => {
       </div>
 
       <h4>
-        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+        <Link to={`/news/${post.slug}`}>{post.title}</Link>
       </h4>
     </div>
   ))
