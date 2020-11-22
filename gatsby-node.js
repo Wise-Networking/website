@@ -146,20 +146,13 @@ exports.createPages = async ({ graphql, actions }) => {
     paginate({
       createPage,
       items: allPostsByTag.data.allPosts.edges,
-      itemsPerPage: 1,
+      itemsPerPage: 3,
       pathPrefix: `tag/${slug}`,
       component: TagTemplate,
       context:{
         id
       }
     })
-    // createPage({
-    //   component: TagTemplate,
-    //   path: `tag/${slug}`,
-    //   context: {
-    //     id,
-    //   },
-    // })
   })
 
   const allCategoryQuery = await graphql(`
@@ -179,15 +172,33 @@ exports.createPages = async ({ graphql, actions }) => {
     node => node.node
   )
 
-  allCategory.forEach(category => {
+  allCategory.forEach(async category => {
     const { title, id } = category
     const slug = slugify(title.toLowerCase())
-    createPage({
+
+    const allPostsByCategory = await graphql(`
+    query  {
+      allPosts: allDatoCmsBlogPost(
+        filter: { category: { id: { eq: "${id}" } } }
+      ) {
+        edges {
+          node {
+            title
+          }
+        }
+      }
+    }
+  `)
+
+    paginate({
+      createPage,
+      items: allPostsByCategory.data.allPosts.edges,
+      itemsPerPage: 3,
+      pathPrefix: `category/${slug}`,
       component: CategoryTemplate,
-      path: `category/${slug}`,
-      context: {
-        id,
-      },
+      context:{
+        id
+      }
     })
   })
 }
