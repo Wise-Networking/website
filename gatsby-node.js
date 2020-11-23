@@ -12,6 +12,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const CategoryTemplate = path.resolve("./src/templates/category.js")
   const NewsTemplate = path.resolve("./src/templates/news.js")
 
+
+  // Products
   const allProductsQuery = await graphql(`
     query AllProducts {
       allDatoCmsProduct {
@@ -27,9 +29,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allProducts = allProductsQuery.data.allDatoCmsProduct.edges.map(
-    node => node.node
-  )
+  const allProducts = allProductsQuery.data.allDatoCmsProduct.edges.map(node => node.node)
+
   allProducts.forEach(product => {
     const { link, id } = product
     createPage({
@@ -41,6 +42,8 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+
+  // Pages
   const allPagesQuery = await graphql(`
     query AllPages {
       allDatoCmsPage {
@@ -55,9 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allPages = allPagesQuery.data.allDatoCmsPage.edges.map(
-    node => node.node
-  )
+  const allPages = allPagesQuery.data.allDatoCmsPage.edges.map(node => node.node)
 
   allPages.forEach(product => {
     const { link, id } = product
@@ -69,6 +70,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // News
 
   const allBlogPostsQuery = await graphql(`
     query AllBlogPosts {
@@ -108,6 +111,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // Tags
 
   const allTagsQuery = await graphql(`
     query AllTags {

@@ -1,11 +1,13 @@
 import React from "react"
 import { Link,graphql } from "gatsby"
-import Sidebar from "../components/BlogDetails/Sidebar"
-import Comment from "../components/BlogDetails/Comment"
-import Layout from "../components/App/Layout"
+
 import slugify from 'slugify';
 
-const BlogDetails = props => {
+import Layout from "../components/App/Layout"
+
+import Sidebar from "../components/BlogDetails/Sidebar"
+
+const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
   return (
@@ -67,7 +69,7 @@ const BlogDetails = props => {
 }
 
 export const query = graphql`
-  query getBlogPost($id: String!) {
+  query getNewsPost($id: String!) {
     datoCmsBlogPost(id: { eq: $id }) {
       id
       title
@@ -86,4 +88,4 @@ export const query = graphql`
   }
 `
 
-export default BlogDetails
+export default NewsItem
