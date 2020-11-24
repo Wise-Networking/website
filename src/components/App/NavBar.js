@@ -29,7 +29,7 @@ const getLogo = graphql`
     }
   }
 `
-const Navigationbar = ({homepage}) => {
+const NavBar = ({homepage}) => {
   const data = useStaticQuery(getLogo)
   const [collapsed, setCollapsed] = React.useState(false)
 
@@ -168,4 +168,4 @@ const Navigationbar = ({homepage}) => {
   )
 }
 
-export default Navigationbar
+export default NavBar
