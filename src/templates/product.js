@@ -14,6 +14,7 @@ const Product = props => {
     },
     featuredImage,
   } = product
+
   return (
     <Layout location="blog">
       <BackgroundImage
