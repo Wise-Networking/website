@@ -12,6 +12,7 @@ const Page = props => {
       childMarkdownRemark: { html },
     },
   } = product
+
   return (
     <Layout location="home">
       <div className="bread-cumbs-area">

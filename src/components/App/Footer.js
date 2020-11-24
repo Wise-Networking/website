@@ -2,17 +2,18 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 const Footer = () => {
-  const data = useStaticQuery(graphql
-    `query Footer {
+  const data = useStaticQuery(graphql`
+    query Footer {
       datoCmsSiteConfig {
         facebook
         twitter
         linkedin
       }
-    }`
-  )
+    }
+  `)
 
   const { facebook, twitter, linkedin } = data.datoCmsSiteConfig
+
   return (
     <footer className="footer">
       <div className="container">
