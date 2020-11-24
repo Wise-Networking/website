@@ -1,9 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/App/Layout"
+import BackgroundImage from "gatsby-background-image"
+
+export const query = graphql`
+  query getPage($id: String!) {
+    datoCmsPage(id: { eq: $id }) {
+      id
+      title
+      description
+      link
+      contentNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`
 
 const Page = props => {
-  const product = props.data.datoCmsPage
+  const page = props.data.datoCmsPage
 
   const {
     title,
@@ -11,10 +28,10 @@ const Page = props => {
     contentNode: {
       childMarkdownRemark: { html },
     },
-  } = product
+  } = page
 
   return (
-    <Layout location="home">
+    <Layout location={title}>
       <div className="bread-cumbs-area">
         <div className="diplay-table">
           <div className="display-table-cell">
@@ -30,7 +47,7 @@ const Page = props => {
         </div>
       </div>
 
-      <section id="blog" className="our-blog main-blog bg-none">
+      <section id="page" className="our-blog main-blog bg-none">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -51,21 +68,5 @@ const Page = props => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query getPagge($id: String!) {
-    datoCmsPage(id: { eq: $id }) {
-      id
-      title
-      description
-      link
-      contentNode {
-        childMarkdownRemark {
-          html
-        }
-      }
-    }
-  }
-`
 
 export default Page
