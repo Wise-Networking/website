@@ -28,7 +28,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <p className="copyright">
               © {new Date().getFullYear()} All Rights Reserved.
             </p>
@@ -36,7 +36,6 @@ const Footer = () => {
           <div className="col-md-4">
             <div className="social-icons bottom">
               <ul className="list-inline">
-                <li>Follow Us On: </li>
                 <li>
                   <a href={facebook}>
                     <i className="fa fa-facebook"></i>

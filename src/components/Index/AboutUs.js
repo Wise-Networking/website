@@ -12,10 +12,10 @@ const getAboutImages = graphql`
     }
 }
 `
-const About = () => {
+const AboutUs = () => {
     const data = useStaticQuery(getAboutImages)
     return (
-        <div id="about" className="about-us">
+        <div id="about-us" className="about-us">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 offset-lg-2 text-center">
@@ -46,4 +46,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default AboutUs;
