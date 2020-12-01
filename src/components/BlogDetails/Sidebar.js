@@ -62,7 +62,7 @@ const Sidebar = props => {
     </div>
   ))
 
-  const categoriedata = categories.map((category, index) => {
+  const categoryData = categories.map((category, index) => {
     const slug = slugify(category.title.toLowerCase())
     return (
       <li className="list-group-item" key={index}>
@@ -82,25 +82,13 @@ const Sidebar = props => {
   return (
     <div className="col-lg-4">
       <div className="side-widget">
-        <div className="search-form">
-          <form>
-            <input type="text" className="form-control" placeholder="Search" />
-            <button type="submit" className="btn btn-default">
-              <i className="fa fa-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div className="side-widget">
         <h3>{props.widgetTitle2}</h3>
-
         {sidebardata}
       </div>
 
       <div className="side-widget">
         <h3>{props.widgetTitle3}</h3>
-        <ul className="list-group">{categoriedata}</ul>
+        <ul className="list-group">{categoryData}</ul>
       </div>
 
       <div className="side-widget">
