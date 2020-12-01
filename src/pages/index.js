@@ -7,6 +7,7 @@ import Banner from "../components/HomeTwo/Banner"
 import News from "../components/Index/News"
 import Products from "../components/Index/Products"
 import Partners from "../components/Index/Partners"
+import AboutUs from "../components/Index/AboutUs"
 import OurPeople from "../components/Index/OurPeople"
 import ContactUs from "../components/Index/ContactUs"
 
@@ -17,6 +18,7 @@ const IndexPage = () => (
       <News />
       <Products />
       <Partners />
+      <AboutUs />
       <OurPeople />
       <ContactUs />
     </Layout>
