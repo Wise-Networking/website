@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react"
-import Layout from "../components/App/layout"
+import Layout from "../components/App/Layout"
 import Loadable from "@loadable/component"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
