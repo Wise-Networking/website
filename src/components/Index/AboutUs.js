@@ -19,11 +19,10 @@ const getData = graphql`
         }
       }
     }
-  }              
+  }
 `
 
 const AboutUs = () => {
-  // const data = useStaticQuery(getAboutImages)
   const contentData = useStaticQuery(getData);
 
   const { aboutUsTitle, aboutUsDescription, aboutUsBackgroundTitle } = contentData.titles;
