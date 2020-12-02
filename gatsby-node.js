@@ -12,7 +12,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const CategoryTemplate = path.resolve("./src/templates/category.js")
   const NewsTemplate = path.resolve("./src/templates/news.js")
 
-
   // Products
   const allProductsQuery = await graphql(`
     query AllProducts {
@@ -154,7 +153,7 @@ exports.createPages = async ({ graphql, actions }) => {
       itemsPerPage: 3,
       pathPrefix: `tag/${slug}`,
       component: TagTemplate,
-      context:{
+      context: {
         id
       }
     })
@@ -201,7 +200,7 @@ exports.createPages = async ({ graphql, actions }) => {
       itemsPerPage: 3,
       pathPrefix: `category/${slug}`,
       component: CategoryTemplate,
-      context:{
+      context: {
         id
       }
     })
