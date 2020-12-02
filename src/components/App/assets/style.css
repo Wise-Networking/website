@@ -54,6 +54,7 @@ html, body {
     letter-spacing: 0.5px;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth; 
 }
 .navbar{
     padding: 0;
@@ -99,6 +100,7 @@ p:last-child {
 }
 .ptb-100 {
 padding: 100px 0;
+height: 100vh;
 }
 .mrl-50 {
     margin-left: 50px;  
@@ -526,7 +528,7 @@ position: relative;
     background-size: cover;
     background-position: center center;
     background-color: #dddddd;
-    height: 700px;
+    height: 100vh;
     font-size: 15px;
     color: #fff;
 }
@@ -973,6 +975,7 @@ About Us Area CSS
 .about-us {
     background-color: #f5f8f9;
     padding: 100px 0;
+    height: 100vh;
 }
 .about-us .section-title {
     margin-bottom: 60px;
