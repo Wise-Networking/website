@@ -29,7 +29,7 @@ const getLogo = graphql`
     }
   }
 `
-const NavBar = ({homepage}) => {
+const NavBar = ({ homepage }) => {
   const data = useStaticQuery(getLogo)
   const [collapsed, setCollapsed] = React.useState(false)
 
@@ -61,8 +61,8 @@ const NavBar = ({homepage}) => {
           let section = document.querySelector(link.hash)
           if (!section) return
           if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
+            section.offsetTop <= (fromTop + 20) &&
+            section.offsetTop + section.offsetHeight > (fromTop + 20)
           ) {
             link.classList.add("active")
           } else {
@@ -164,7 +164,7 @@ const NavBar = ({homepage}) => {
           </div>
         </div>
       </nav>
-    </React.Fragment>
+    </React.Fragment >
   )
 }
 
