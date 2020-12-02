@@ -393,7 +393,6 @@ color: #fff !important;
 }
 .navbar-light .navbar-brand {
 position: absolute;
-top: -50px;
 z-index: 99999;
 padding: 0;
 }
@@ -416,6 +415,10 @@ color: #fff !important;
 }
 .navbar-brand.logo-2, .menu-shrink .navbar-brand.logo{
 display: none;
+}
+.img-logo-2{
+    background: #eeeeee;
+    border-radius: 10px;
 }
 /* End Navbar Style */
 

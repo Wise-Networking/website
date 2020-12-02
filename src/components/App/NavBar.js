@@ -28,7 +28,7 @@ const getLogo = graphql`
     }
   }
 `
-const NavBar = ({homepage}) => {
+const NavBar = ({ homepage }) => {
   const data = useStaticQuery(getLogo)
   const [collapsed, setCollapsed] = React.useState(false)
 
@@ -93,9 +93,9 @@ const NavBar = ({homepage}) => {
           </Link>
           <Link className="navbar-brand logo-2" to="/">
             <img
-              className="img-fluid"
+              className="img-fluid img-logo-2"
               style={{
-                maxWidth: "45%",
+                maxWidth: "46%",
               }}
               src={data.logo2.childImageSharp.fixed.src}
               alt="Logo"
