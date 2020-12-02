@@ -48,14 +48,15 @@ const Banner = props => {
                   <p>{heroDescription}</p>
                   <div className="center-wrap">
                     <div className="center-wrap">
-                      <Link to={heroButtonUrl} className="btn-a">
-                        <div className="button">
-                          {heroButtonTitle}
-                          {` `}
-                          <i className="fa fa-long-arrow-right"></i>
-                          <div className="mask" />
-                        </div>
-                      </Link>
+                      {/* <Link to={heroButtonUrl} className="btn-a"> */}
+                      <div className="button btn-a" onClick={props.onNewsLetter}>
+                        {heroButtonTitle}
+                        {` `}
+                        {props.name}
+                        <i className="fa fa-long-arrow-right"></i>
+                        <div className="mask" />
+                      </div>
+                      {/* </Link> */}
                     </div>
                   </div>
                 </div>
