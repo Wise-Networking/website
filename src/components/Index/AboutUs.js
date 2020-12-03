@@ -22,6 +22,8 @@ const getData = graphql`
   }
 `
 
+const htmlString = '<h1>Hello World! 👋</h1>';
+
 const AboutUs = () => {
   const contentData = useStaticQuery(getData);
 
@@ -52,7 +54,7 @@ const AboutUs = () => {
           <div className="col-lg-8 offset-lg-2 text-center">
             <div className="section-title text-center">
               <h2>{aboutUsTitle}</h2>
-              <p>{aboutUsDescription}</p>
+              <p dangerouslySetInnerHTML={{ __html: aboutUsDescription }}></p>
               <span className="section-title-bg">{aboutUsBackgroundTitle}</span>
             </div>
           </div>

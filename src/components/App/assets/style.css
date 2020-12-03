@@ -2827,3 +2827,7 @@ transform: translateX(-50%) translateY(-50%);
 .ReactModal__Overlay--after-open {
     z-index: 2;
 }
+.dato_link {
+    color: #fe5619 !important;
+    text-decoration:underline !important;
+}
