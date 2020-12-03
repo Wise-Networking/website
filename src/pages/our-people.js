@@ -31,7 +31,7 @@ const getData = graphql`
 `
 export default function OurPeople() {
     const data = useStaticQuery(getData)
-    console.log("Blog post=> ", data);
+
     const [display, setDisplay] = useState(false)
 
     const {
@@ -44,6 +44,7 @@ export default function OurPeople() {
     useEffect(() => {
         setDisplay(true)
     }, [])
+
     return (
         <Layout>
             <section id="our-people" className="our-team ptb-100">

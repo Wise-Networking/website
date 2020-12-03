@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+
 import Layout from "../components/App/Layout"
-import BackgroundImage from "gatsby-background-image"
 
 export const query = graphql`
   query getPage($id: String!) {

@@ -1,7 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
-import slugify from "slugify"
+
 import { Link, useStaticQuery, graphql } from "gatsby"
+import slugify from "slugify"
 
 const Sidebar = props => {
   const data = useStaticQuery(
