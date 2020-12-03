@@ -47,7 +47,7 @@ const News = () => {
             <div className="section-title">
               <h2>{newsTitle}</h2>
               <p>{newsDescription}</p>
-              <span className="section-title-bg">{newsBackgroundTitle}</span>
+              {/* <span className="section-title-bg">{newsBackgroundTitle}</span> */}
             </div>
           </div>
         </div>
