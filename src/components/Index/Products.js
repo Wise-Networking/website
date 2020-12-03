@@ -61,7 +61,6 @@ const Products = () => {
             <div className="section-title">
               <h2>{productsTitle}</h2>
               <p>{productDescription}</p>
-              <span className="section-title-bg">{productBackgroundTitle}</span>
             </div>
           </div>
         </div>

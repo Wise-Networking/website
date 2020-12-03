@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
 const GoTop = (props) => {
 
@@ -15,21 +15,21 @@ const GoTop = (props) => {
             }
         });
     }, [])
-    
-    const onScrollStep = () => {
-        if (window.pageYOffset === 0){
-            clearInterval(timeoutRef.current);
-        }
-        window.scroll(0, window.pageYOffset - props.scrollStepInPx);
-    }
+
+    // const onScrollStep = () => {
+    //     if (window.pageYOffset === 0) {
+    //         clearInterval(timeoutRef.current);
+    //     }
+    //     window.scroll(0, window.pageYOffset - props.scrollStepInPx);
+    // }
 
     const scrollToTop = () => {
-        timeoutRef.current = setInterval(onScrollStep, props.delayInMs);
+        window.scroll(0, 0)
     }
 
     const renderGoTopIcon = () => {
         return (
-            <Link to="#" className={`scrolltop ${thePosition ? 'scrolltopActive' : 'scrolltopInactive'}`} onClick={e=>{
+            <Link to="#" className={`scrolltop ${thePosition ? 'scrolltopActive' : 'scrolltopInactive'}`} onClick={e => {
                 e.preventDefault();
                 scrollToTop();
             }}>
