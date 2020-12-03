@@ -5,7 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 const Banner = props => {
   const data = useStaticQuery(
     graphql`
-      query HeroPageQuery {
+      query HeroPageQuery2 {
         datoCmsHomePage {
           heroTopTitle
           heroTitle

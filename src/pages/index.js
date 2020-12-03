@@ -4,7 +4,7 @@ import React from "react"
 import Layout from "../components/App/Layout"
 
 import SEO from "../components/App/Seo"
-import Banner from "../components/HomeTwo/Banner"
+import Banner from "../components/Index/Banner"
 import News from "../components/Index/News"
 import Products from "../components/Index/Products"
 import Partners from "../components/Index/Partners"

@@ -40,7 +40,7 @@ This files contents are outlined below>>>>>
 */
 
 
-/* ========================= 
+/* =========================
 Default CSS
 ========================= */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
@@ -54,7 +54,7 @@ html, body {
     letter-spacing: 0.5px;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 .navbar{
     padding: 0;
@@ -99,11 +99,10 @@ p:last-child {
     margin-bottom: 0;
 }
 .ptb-100 {
-padding: 100px 0;
-height: 100vh;
+    padding: 190px 0;
 }
 .mrl-50 {
-    margin-left: 50px;  
+    margin-left: 50px;
 }
 .mt-130 {
     margin-top: 245px;
@@ -234,11 +233,11 @@ color: #fff;
 .all-post .button a:hover {
 color: #fff;
 }
-/* ========================= 
+/* =========================
 End Default CSS
 ========================= */
 
-/* ========================= 
+/* =========================
 Preloader CSS
 ========================= */
 .site-preloader-wrap {
@@ -265,7 +264,7 @@ height: 33%;
 background-color: #fff;
 float: left;
 -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-        animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+        animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
 }
 .sk-cube-grid .sk-cube1 {
 -webkit-animation-delay: 0.2s;
@@ -302,8 +301,8 @@ float: left;
         -ms-transform: scale3D(1, 1, 1);
 } 35% {
 -webkit-transform: scale3D(0, 0, 1);
-        -ms-transform: scale3D(0, 0, 1); 
-        transform: scale3D(0, 0, 1); 
+        -ms-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
 }
 }
 
@@ -316,13 +315,13 @@ float: left;
 -webkit-transform: scale3D(0, 0, 1);
         transform: scale3D(0, 0, 1);
         -ms-transform: scale3D(0, 0, 1);
-} 
 }
-/* ========================= 
+}
+/* =========================
 End Preloader CSS
 ========================= */
 
-/* ========================= 
+/* =========================
 Top Header CSS
 ========================= */
 .top-header {
@@ -482,10 +481,10 @@ position: relative;
     width: 100%;
     background: #b74d27;
 }
-.header-search-form form input::-webkit-input-placeholder { 
+.header-search-form form input::-webkit-input-placeholder {
     color: #fff;
 }
-.header-search-form form input:-ms-input-placeholder { 
+.header-search-form form input:-ms-input-placeholder {
     color: #fff;
 }
 .header-search-form form input::placeholder {
@@ -509,11 +508,11 @@ position: relative;
 color: #ffae00;
 }
 /* =========================
-End Main Menu CSS 
+End Main Menu CSS
 ========================= */
 
 /* =========================
-Slider Area CSS 
+Slider Area CSS
 ========================= */
 .slide-bg-1 {
 background-image: url(../../../images/slide-bg-1.jpg);
@@ -667,11 +666,11 @@ color: #fff;
 }
 
 /* =========================
-End Slider Area CSS 
+End Slider Area CSS
 ========================= */
 
 /* =========================
-Feature Area CSS 
+Feature Area CSS
 ========================= */
 .feature-area {
 padding: 70px 0 0;
@@ -685,9 +684,9 @@ padding: 18px;
 margin-top: 30px;
 transition: .5s;
 -webkit-transition: .5s;
-}  
+}
 /* =========================
-Services Area CSS 
+Services Area CSS
 ========================= */
 .services {
     background-color: #fff;
@@ -741,7 +740,7 @@ Services Area CSS
     margin-right: auto;
     display: inline-block;
     line-height: 50px;
-} 
+}
 .service-item i::before {
     font-size: 40px !important;
     line-height: 70px !important;
@@ -794,14 +793,14 @@ Services Area CSS
         border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
     }
 }
-  
+
 
 /* =========================
-End Services Area CSS 
+End Services Area CSS
 ========================= */
 
 /* =========================
-CTA Area CSS 
+CTA Area CSS
 ========================= */
 .cta-area {
     background-color: #ddd;
@@ -839,11 +838,11 @@ margin-top: 42px;
     color: #606060;
 }
 /* =========================
-End CTA Area CSS 
+End CTA Area CSS
 ========================= */
 
 /* =========================
-Our Works Area CSS 
+Our Works Area CSS
 ========================= */
 .filtr-item {
 padding-top: 30px;
@@ -933,13 +932,13 @@ opacity: .9;
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
 }
-.work-details:hover .icon li:first-child { 
-    transition-delay: 0.1s; 
-    -webkit-transition-delay: 0.1s; 
+.work-details:hover .icon li:first-child {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
 }
-.box:hover .icon li:nth-child(2){ 
-    transition-delay: 0.2s; 
-    -webkit-transition-delay: 0.2s; 
+.box:hover .icon li:nth-child(2){
+    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
 }
 .work-details .icon li span{
     display: block;
@@ -969,16 +968,15 @@ display: none;
     font-size: 18px;
 }
 /* =========================
-End Our Works Area CSS 
+End Our Works Area CSS
 ========================= */
 
 /* =========================
-About Us Area CSS 
+About Us Area CSS
 ========================= */
 .about-us {
     background-color: #f5f8f9;
-    padding: 100px 0;
-    height: 100vh;
+    padding: 190px 0;
 }
 .about-us .section-title {
     margin-bottom: 60px;
@@ -1007,11 +1005,11 @@ color: #f5f8f9;
     margin-bottom: -5px;
 }
 /* =========================
-End About Us Area CSS 
+End About Us Area CSS
 ========================= */
 
 /* =========================
-Our Team Area CSS 
+Our Team Area CSS
 ========================= */
 .team-box{
     overflow: hidden;
@@ -1113,7 +1111,7 @@ Our Team Area CSS
     height: 30px;
     line-height: 30px;
 }
-.team-slides.owl-theme .owl-nav .owl-prev:hover, .team-slides.owl-theme .owl-nav .owl-next:hover { 
+.team-slides.owl-theme .owl-nav .owl-prev:hover, .team-slides.owl-theme .owl-nav .owl-next:hover {
     background-color: #fe5619;
     color: #fff !important;
 }
@@ -1137,11 +1135,11 @@ Our Team Area CSS
 }
 
 /* =========================
-End Our Team Area CSS 
+End Our Team Area CSS
 ========================= */
 
 /* =========================
-Blog & News Area CSS 
+Blog & News Area CSS
 ========================= */
 .our-blog {
 background-color: #f5f8f9;
@@ -1501,11 +1499,11 @@ margin: auto;
 }
 
 /* =========================
-End Blog & News Area CSS 
+End Blog & News Area CSS
 ========================= */
 
 /* =========================
-Video Area CSS 
+Video Area CSS
 ========================= */
 .video-area {
 height: 480px;
@@ -1600,11 +1598,11 @@ box-shadow: 0 0 1px 15px rgba(255, 255, 255, 0.4), 0 0 1px 30px rgba(255, 255, 2
 box-shadow: none;
 }
 /* =========================
-End Video Area CSS 
+End Video Area CSS
 ========================= */
 
 /* =========================
-Pricing Table Area CSS 
+Pricing Table Area CSS
 ========================= */
 .tab-slider .nav-tabs a {
     background-color: #f1f1f1;
@@ -1627,7 +1625,7 @@ margin-bottom: 40px;
 border: none;
 text-align: center;
 }
-.tab-slider .nav-tabs .nav-link.active, 
+.tab-slider .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link,
 .tab-slider .nav-tabs .nav-link:hover {
 color: #fff;
@@ -1774,11 +1772,11 @@ line-height: 23px;
     margin-bottom: 60px;
 }
 /* =========================
-End Pricing Table Area CSS 
+End Pricing Table Area CSS
 ========================= */
 
 /* =========================
-Fun Facts Area CSS 
+Fun Facts Area CSS
 ========================= */
 .fun-facts{
     background-color: #f5f8f9;
@@ -1802,11 +1800,11 @@ Fun Facts Area CSS
     font-weight: 600;
 }
 /* =========================
-End Fun Facts Area CSS 
+End Fun Facts Area CSS
 ========================= */
 
 /* =========================
-Testimonials Area CSS 
+Testimonials Area CSS
 ========================= */
 .single-testimonial-item p {
     max-width: 750px;
@@ -1862,11 +1860,11 @@ left: auto;
 right: 0;
 }
 /* =========================
-End Testimonials Area CSS 
+End Testimonials Area CSS
 ========================= */
 
 /* =========================
-FAQ Area CSS 
+FAQ Area CSS
 ========================= */
 .faq {
 background-color: #f5f8f9;
@@ -2028,8 +2026,8 @@ transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transition: all 0.5s ease 0s;
 }
-.react-sanfona-item-expanded a:before{ 
-    content: "\f068"; 
+.react-sanfona-item-expanded a:before{
+    content: "\f068";
     font-weight: bold;
 }
 .panel-body{
@@ -2045,11 +2043,11 @@ margin-bottom: 0;
     background-color: #fff;
 }
 /* =========================
-End FAQ Area CSS 
+End FAQ Area CSS
 ========================= */
 
 /* =========================
-Partners Area CSS 
+Partners Area CSS
 ========================= */
 .our-partners .section-title p {
     margin: 0 0 60px;
@@ -2084,10 +2082,10 @@ Partners Area CSS
     opacity: 0;
     transition: .5s;
 }
-.partners-slides.owl-theme:hover .owl-nav .owl-prev, .partners-slides.owl-theme:hover .owl-nav .owl-next { 
+.partners-slides.owl-theme:hover .owl-nav .owl-prev, .partners-slides.owl-theme:hover .owl-nav .owl-next {
     opacity: 1;
 }
-.partners-slides.owl-theme .owl-nav .owl-prev:hover, .partners-slides.owl-theme .owl-nav .owl-next:hover { 
+.partners-slides.owl-theme .owl-nav .owl-prev:hover, .partners-slides.owl-theme .owl-nav .owl-next:hover {
     background-color: #fe5619;
     color: #fff !important;
 }
@@ -2096,11 +2094,11 @@ Partners Area CSS
     right: -20px;
 }
 /* =========================
-End Partners Area CSS 
+End Partners Area CSS
 ========================= */
 
 /* =========================
-Contact Area CSS 
+Contact Area CSS
 ========================= */
 .contact-form {
     margin-top: 30px;
@@ -2162,17 +2160,17 @@ Contact Area CSS
     -webkit-transform: scale(0.77);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
-} 
+}
 #contact_send_status {
     color: red;
     margin: 0 0 10px;
 }
 /* =========================
-End Contact Area CSS 
+End Contact Area CSS
 ========================= */
 
 /* =========================
-Footer Area CSS 
+Footer Area CSS
 ========================= */
 .footer {
     color: #fff;
@@ -2189,11 +2187,11 @@ Footer Area CSS
 background-color: #fff;
 }
 /* =========================
-End Footer Area CSS 
+End Footer Area CSS
 ========================= */
 
 /* =========================
-Scroll Top link CSS 
+Scroll Top link CSS
 ========================= */
 .scrolltopActive{
 display: block;
@@ -2234,11 +2232,11 @@ font-size: 30px;
 font-style: normal;
 }
 /* =========================
-End Scroll Top link CSS 
+End Scroll Top link CSS
 ========================= */
 
 /* =========================
-Breadcumbs CSS 
+Breadcumbs CSS
 ========================= */
 .bread-cumbs-area {
 height: 400px;
@@ -2258,7 +2256,7 @@ margin: 0 0 25px;
 color: #ffffff;
 }
 /* =========================
-End Breadcumbs CSS 
+End Breadcumbs CSS
 ========================= */
 
 h3,h2{
@@ -2829,4 +2827,3 @@ transform: translateX(-50%) translateY(-50%);
 .ReactModal__Overlay--after-open {
     z-index: 2;
 }
-
