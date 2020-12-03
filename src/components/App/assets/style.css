@@ -343,6 +343,10 @@ margin-left: 104px;
 .social-icons {
 text-align: right;
 }
+.social-icons-footer{
+    /* text-align: center !important; */
+    display: flex;
+}
 .social-icons ul li a {
     background-color: #eae3e3;
     display: block;
