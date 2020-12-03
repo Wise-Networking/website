@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import TopHeader from "./TopHeader"
-import SearchModal from "./SearchModal"
 
 const getLogo = graphql`
   {
@@ -94,9 +93,9 @@ const NavBar = ({ homepage }) => {
           </Link>
           <Link className="navbar-brand logo-2" to="/">
             <img
-              className="img-fluid"
+              className="img-fluid img-logo-2"
               style={{
-                maxWidth: "45%",
+                maxWidth: "46%",
               }}
               src={data.logo2.childImageSharp.fixed.src}
               alt="Logo"
@@ -159,12 +158,9 @@ const NavBar = ({ homepage }) => {
             </ul>
           </div>
 
-          <div className="header-search">
-            <SearchModal />
-          </div>
         </div>
       </nav>
-    </React.Fragment >
+    </React.Fragment>
   )
 }
 
