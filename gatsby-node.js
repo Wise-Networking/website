@@ -95,7 +95,7 @@ exports.createPages = async ({ graphql, actions }) => {
   paginate({
     createPage,
     items: allNewsPosts,
-    itemsPerPage: 3,
+    itemsPerPage: 6,
     pathPrefix: `news`,
     component: NewsTemplate,
   })

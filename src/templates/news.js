@@ -5,10 +5,14 @@ import PropTypes from "prop-types"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 
-const blog = props => {
+const Blog = props => {
   const { data } = props
   const { pathContext } = props
-  const posts = data.allDatoCmsBlogPost.edges.map(node => node.node)
+  const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
+
+  console.log("POSTS => ", posts);
+
+  const backgroundImage = data.backgroundImage.edges[0].node.backgroundImage.url;
   const blogPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
       <div className="blog-card">
@@ -20,11 +24,11 @@ const blog = props => {
           <ul className="meta-tag">
             <li>
               <i className="fa fa-user"></i>
-              {/* {blogone.authorName} */}
+              {post.author}
             </li>
             <li>
               <i className="fa fa-calendar"></i>
-              {/* {blogone.Date} */}
+              {post.publishedDate}
             </li>
           </ul>
 
@@ -44,7 +48,9 @@ const blog = props => {
 
   return (
     <Layout location="blog">
-      <div className="bread-cumbs-area bread-cumbs-bg">
+      <div className="bread-cumbs-area " style={{
+        background: `url(${backgroundImage})`
+      }}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -95,12 +101,14 @@ const blog = props => {
 }
 
 export const query = graphql`
-  query getAllBlogs($skip: Int!, $limit: Int!) {
-    allDatoCmsBlogPost(skip: $skip, limit: $limit) {
+query getAllBlogs($skip: Int!, $limit: Int!) {
+  allDatoCmsBlogPost(skip: $skip, limit: $limit) {
       edges {
         node {
           title
           slug
+          author
+          publishedDate(formatString:"MMMM DD, YYYY")
           description
           contentNode {
             childMarkdownRemark {
@@ -115,17 +123,27 @@ export const query = graphql`
         }
       }
     }
+    backgroundImage: allDatoCmsNewsBlogBackgroundImage {
+      edges {
+        node {
+          backgroundImage {
+            url
+          }
+        }
+      }
+    }
   }
 `
+
 //Props Types
-blog.propTypes = {
+Blog.propTypes = {
   Title: PropTypes.string,
   Content: PropTypes.string,
   blogonesData: PropTypes.array,
 }
 
 //Default Props
-blog.defaultProps = {
+Blog.defaultProps = {
   Title: "Our Blog",
   Content:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
@@ -187,4 +205,4 @@ blog.defaultProps = {
   ],
 }
 
-export default blog
+export default Blog

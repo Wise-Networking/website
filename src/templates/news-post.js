@@ -1,5 +1,5 @@
 import React from "react"
-import { Link,graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import slugify from 'slugify';
 
@@ -10,9 +10,14 @@ import Sidebar from "../components/BlogDetails/Sidebar"
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
+  var divStyle = {
+    backgroundImage: 'url(' + post['blogBackgroundImage']?.url + ')'
+  }
+
   return (
     <Layout>
-      <div className="bread-cumbs-area bread-cumbs-bg">
+      {/* <div className="bread-cumbs-area bread-cumbs-bg"> */}
+      <div className="bread-cumbs-area" style={divStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -83,6 +88,9 @@ export const query = graphql`
       tags {
         title
         description
+      }
+      blogBackgroundImage{
+        url
       }
     }
   }
