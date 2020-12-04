@@ -346,6 +346,10 @@ text-align: right;
 .social-icons-footer{
     /* text-align: center !important; */
     display: flex;
+    justify-content: center;
+}
+.footer .copyright{
+    text-align: right;
 }
 .social-icons ul li a {
     background-color: #eae3e3;
