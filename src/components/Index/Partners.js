@@ -37,11 +37,11 @@ const Partners = () => {
   const partners = data.partners.edges.map(node => node.node)
 
   const partnersData = partners.map((partner, index) => {
-    const {title, link, image} = partner
+    const { title, link, image } = partner
     return (
       <div key={index} className="col-sm-6 col-lg-4">
         <div className="work-details">
-          <Image fluid={image.fluid}/>
+          <Image fluid={image.fluid} />
 
           <div className="box-content">
             <h3 className="title">{title}</h3>
@@ -67,9 +67,6 @@ const Partners = () => {
               <div className="section-title">
                 <h2>{partnersTitle}</h2>
                 <p>{partnersDescription}</p>
-                <span className="section-title-bg">
-                  {partnersBackgroundTitle}
-                </span>
               </div>
             </div>
           </div>

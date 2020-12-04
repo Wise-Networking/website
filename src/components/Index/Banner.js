@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const Banner = () => {
+const Banner = (props) => {
   const data = useStaticQuery(graphql`
       query HeroPageQuery {
         datoCmsHomePage {
@@ -47,14 +47,14 @@ const Banner = () => {
                   <p>{heroDescription}</p>
                   <div className="center-wrap">
                     <div className="center-wrap">
-                      <Link to={heroButtonUrl} className="btn-a">
-                        <div className="button">
-                          {heroButtonTitle}
-                          {` `}
-                          <i className="fa fa-long-arrow-right"></i>
-                          <div className="mask" />
-                        </div>
-                      </Link>
+                      {/* <Link to={heroButtonUrl} className="btn-a"> */}
+                      <div className="button btn-a" onClick={props.onNewsLetter}>
+                        {heroButtonTitle}
+                        {` `}
+                        <i className="fa fa-long-arrow-right"></i>
+                        <div className="mask" />
+                      </div>
+                      {/* </Link> */}
                     </div>
                   </div>
                 </div>

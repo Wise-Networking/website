@@ -15,7 +15,6 @@ const ContactUs = (props) => {
             <div className="section-title">
               <h2>{props.sectionTitle}</h2>
               <p>{props.sectionDescription}</p>
-              <span className="section-title-bg">{props.SectionbgTitle}</span>
             </div>
           </div>
         </div>
@@ -121,33 +120,33 @@ const ContactUs = (props) => {
         </div>
       </div>
     </section>
-    )
-  }
+  )
+}
 
-  //Props Types
-  ContactUs.propTypes = {
-    SectionbgTitle: PropTypes.string,
-    sectionTitle: PropTypes.string,
-    sectionDescription: PropTypes.string,
-    AddTitle: PropTypes.string,
-    Address: PropTypes.string,
-    EmailTitle: PropTypes.string,
-    Email: PropTypes.string,
-    PhoneTitle: PropTypes.string,
-    Phone: PropTypes.string,
-  }
+//Props Types
+ContactUs.propTypes = {
+  SectionbgTitle: PropTypes.string,
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string,
+  AddTitle: PropTypes.string,
+  Address: PropTypes.string,
+  EmailTitle: PropTypes.string,
+  Email: PropTypes.string,
+  PhoneTitle: PropTypes.string,
+  Phone: PropTypes.string,
+}
 
-  //Default Props
-  ContactUs.defaultProps = {
-    SectionbgTitle: "Contact Us",
-    sectionTitle: "Contact Us",
-    sectionDescription: "Learn more about how your enterprise can build its own IOT network. Reach out today!",
-    AddTitle: "Address",
-    Address: "Suite 4, 71 Balfour Street Chippendale, Sydney 2007",
-    EmailTitle: "Email",
-    Email: "hello@dandelions.cloud",
-    PhoneTitle: "Phone",
-    Phone: "+61 4 3707 9009",
-  }
+//Default Props
+ContactUs.defaultProps = {
+  SectionbgTitle: "Contact Us",
+  sectionTitle: "Contact Us",
+  sectionDescription: "Learn more about how your enterprise can build its own IOT network. Reach out today!",
+  AddTitle: "Address",
+  Address: "Suite 4, 71 Balfour Street Chippendale, Sydney 2007",
+  EmailTitle: "Email",
+  Email: "hello@dandelions.cloud",
+  PhoneTitle: "Phone",
+  Phone: "+61 4 3707 9009",
+}
 
-  export default ContactUs
+export default ContactUs
