@@ -46,8 +46,8 @@ const News = () => {
           <div className="col-lg-8 offset-lg-2 text-center">
             <div className="section-title">
               <h2>{newsTitle}</h2>
-              <p>{newsDescription}</p>
-              {/* <span className="section-title-bg">{newsBackgroundTitle}</span> */}
+              <p dangerouslySetInnerHTML={{ __html: newsDescription }}></p>
+              <span className="section-title-bg">{newsBackgroundTitle}</span>
             </div>
           </div>
         </div>
