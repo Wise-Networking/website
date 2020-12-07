@@ -9,20 +9,10 @@ import Sidebar from "../components/NewsDetails/Sidebar"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
-<<<<<<< HEAD
-  console.log("POST => ");
-  console.log(post);
-=======
 
-  var divStyle = {
-    backgroundImage: 'url(' + post['blogBackgroundImage']?.url + ')'
-  }
-
->>>>>>> master
   return (
     <Layout>
-      {/* <div className="bread-cumbs-area bread-cumbs-bg"> */}
-      <div className="bread-cumbs-area" style={divStyle}>
+      <div className="bread-cumbs-area bread-cumbs-bg">
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -43,20 +33,16 @@ const NewsItem = props => {
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-12">
-<<<<<<< HEAD
-                  <div className="blog-details">
+                  <div className="news-details">
 
+                    <div class="news-info">
+                      <div class="date-box">{post.publishDay}<span class="month">{post.publishMonth}</span></div>
 
-                    <div class="blog-info">
-                      <div class="date-box">{post.publishDay}
-                        <span class="month">{post.publishMonth}</span>
-                      </div>
                       <div class="title-meta">
                         <h2>{post.title}</h2>
                         <div class="post-meta">
                           <ul>
                             <li><i class="fa fa-user"></i>Posted By:<a href="/our-people">{post.author}</a></li>
-                            {/* <li><i class="fa fa-comments-o"></i>Comments:<a href="/blog-details/#">545</a></li> */}
                             <li>
                               <i class="fa fa-tags"></i>
                               {post.tags.map((tag, i) => (
@@ -70,31 +56,12 @@ const NewsItem = props => {
                       </div>
                     </div>
 
-
-=======
-                  <div className="news-details">
->>>>>>> master
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{
                         __html: post.contentNode.childMarkdownRemark.html,
                       }}
                     />
-
-                    {/* <div className="post-content">
-                      <div className="post-tag-media">
-                        <ul className="tag">
-                          <li>
-                            <span>Tags:</span>
-                          </li>
-                          {post.tags.map(tag => (
-                            <li>
-                              <Link to={`/tag/${slugify(tag.title.toLowerCase())}`}>{tag.title}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -116,8 +83,8 @@ export const query = graphql`
       description
       slug
       author
-     publishDay: publishedDate(formatString:"DD")
-     publishMonth : publishedDate(formatString:"MMM")
+      publishDay: publishedDate(formatString:"DD")
+      publishMonth : publishedDate(formatString:"MMM")
       contentNode {
         childMarkdownRemark {
           html
