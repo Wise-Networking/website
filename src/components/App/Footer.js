@@ -29,12 +29,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4">
-            <p className="copyright">
-              © {new Date().getFullYear()} All Rights Reserved.
-            </p>
-          </div>
-          <div className="col-md-4">
-            <div className="social-icons bottom">
+            <div className="social-icons-footer social-icons  bottom">
               <ul className="list-inline">
                 <li>
                   <a href={facebook}>
@@ -53,6 +48,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="col-md-4">
+            <p className="copyright">
+              © {new Date().getFullYear()} All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>
