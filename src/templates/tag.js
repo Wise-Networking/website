@@ -1,40 +1,34 @@
 import React from "react"
-import { Link, graphql,navigate } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import slugify from 'slugify'
 import ReactPaginate from "react-paginate"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 
-const blog = props => {
+const news = props => {
   const { data } = props
   const tag = data.tag
   const slug = slugify(tag.title.toLowerCase())
   const posts = data.allPosts.edges.map(node => node.node)
-  const {pathContext} = props;
+  const { pathContext } = props;
 
- 
-  const blogPosts = posts.map((post, index) => (
+
+  const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
-      <div className="blog-card">
-        <Link to={`/news/${post.slug}`} className="blog-img">
+      <div className="news-card">
+        <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
         </Link>
 
-        <div className="blog-caption">
+        <div className="news-caption">
           <ul className="meta-tag">
             <li>
               <i className="fa fa-user"></i>
-              {/* {blogone.authorName} */}
             </li>
             <li>
               <i className="fa fa-calendar"></i>
-              {/* {blogone.Date} */}
             </li>
           </ul>
-
-          <h3>
-            {/* <Link to={blogone.postLink}>{blogone.posttitle}</Link> */}
-          </h3>
 
           <p>{post.contentNode.childMarkdownRemark.excerpt}</p>
 
@@ -47,7 +41,7 @@ const blog = props => {
   ))
 
   return (
-    <Layout location="blog">
+    <Layout location="news">
       <div className="bread-cumbs-area bread-cumbs-bg">
         <div className="diplay-table">
           <div className="display-table-cell">
@@ -63,10 +57,10 @@ const blog = props => {
         </div>
       </div>
 
-      <section id="blog" className="our-blog main-blog bg-none">
+      <section id="news" className="our-news main-news bg-none">
         <div className="container">
           <div className="row">
-            {blogPosts}
+            {newsPosts}
             <div className="col-lg-12 pagination-area text-center">
               <ReactPaginate
                 previousLabel={"<"}
@@ -81,7 +75,7 @@ const blog = props => {
                   const selectedPage = value.selected + 1
                   let navigateTo = `/tag/${slug}`
 
-                  if(selectedPage !== 1){
+                  if (selectedPage !== 1) {
                     navigateTo += `/${selectedPage}`
                   }
                   navigate(navigateTo)
@@ -129,4 +123,4 @@ export const query = graphql`
   }
 `
 
-export default blog
+export default news

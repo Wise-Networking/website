@@ -1,18 +1,23 @@
 import React from "react"
-import { Link,graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import slugify from 'slugify';
 
 import Layout from "../components/App/Layout"
 
-import Sidebar from "../components/BlogDetails/Sidebar"
+import Sidebar from "../components/NewsDetails/Sidebar"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
+  var divStyle = {
+    backgroundImage: 'url(' + post['blogBackgroundImage']?.url + ')'
+  }
+
   return (
     <Layout>
-      <div className="bread-cumbs-area bread-cumbs-bg">
+      {/* <div className="bread-cumbs-area bread-cumbs-bg"> */}
+      <div className="bread-cumbs-area" style={divStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -27,13 +32,13 @@ const NewsItem = props => {
         </div>
       </div>
 
-      <section id="blog" className="our-blog main-blog bg-none">
+      <section id="news" className="our-news main-news bg-none">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="blog-details">
+                  <div className="news-details">
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{
@@ -83,6 +88,9 @@ export const query = graphql`
       tags {
         title
         description
+      }
+      blogBackgroundImage{
+        url
       }
     }
   }

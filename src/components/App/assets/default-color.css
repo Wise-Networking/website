@@ -48,7 +48,7 @@
 .date-box {
 	background-color: #fe5619;
 }
-.blog-item:hover .title-meta h2 a {
+.news-item:hover .title-meta h2 a {
     color: #fe5619;
 }
 .post-meta ul li a:hover {
