@@ -41,13 +41,12 @@ const Sidebar = props => {
 
   const tags = data.tags.edges.map(node => node.node)
   const categories = data.categories.edges.map(node => node.node)
-  const posts = data.posts.edges.map( node => node.node)
+  const posts = data.posts.edges.map(node => node.node)
   const sidebardata = posts.map((post, index) => (
     <div className="single-post" key={index}>
       <Link to={`/news/${post.slug}`}>
         <img src={post.featuredImage.url} alt="post" />
       </Link>
-
       <div className="post-meta">
         <ul>
           <li>
@@ -82,17 +81,17 @@ const Sidebar = props => {
   return (
     <div className="col-lg-4">
       <div className="side-widget">
-        <h3>{props.widgetTitle2}</h3>
+        <h3>Recent posts</h3>
         {sidebardata}
       </div>
 
       <div className="side-widget">
-        <h3>{props.widgetTitle3}</h3>
+        <h3>Categories</h3>
         <ul className="list-group">{categoryData}</ul>
       </div>
 
       <div className="side-widget">
-        <h3>{props.widgetTitle4}</h3>
+        <h3>Tags</h3>
         <ul className="list-tags">{tagdata}</ul>
       </div>
     </div>
