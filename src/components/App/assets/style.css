@@ -24,7 +24,7 @@ This files contents are outlined below>>>>>
 ** - About Us Area CSS
 ** - About Us area CSS
 ** - Our Team Area CSS
-** - Blog & News Area CSS
+** - News Area CSS
 ** - Video Area CSS
 ** - Projects area CSS
 ** - Pricing Table Area CSS
@@ -1139,12 +1139,12 @@ End Our Team Area CSS
 ========================= */
 
 /* =========================
-Blog & News Area CSS
+ News Area CSS
 ========================= */
-.our-blog {
+.our-news {
 background-color: #f5f8f9;
 }
-.blog-item {
+.news-item {
 margin-top: 30px;
 transition: .4s;
 -webkit-transition: .4s;
@@ -1154,17 +1154,17 @@ overflow: hidden;
 -moz-box-shadow:    0px 0px 8px 0px rgba(254, 86, 25, 0.30);
 box-shadow:         0px 0px 8px 0px rgba(254, 86, 25, 0.30);
 }
-.blog-item .blog-img {
+.news-item .news-img {
 display: block;
 overflow: hidden
 }
-.blog-item .blog-img img{
+.news-item .news-img img{
     width: 100%;
     height: auto;
     transition: all 1s ease 0s;
     -webkit-transition: all 1s ease 0s;
 }
-.blog-info {
+.news-info {
 position: relative;
 padding-left: 133px;
 }
@@ -1224,7 +1224,7 @@ padding-right: 15px;
 .post-content {
     padding: 20px;
 }
-.main-blog {
+.main-news {
     padding: 70px 0 90px;
 }
 .pagination-area .pagination {
@@ -1362,30 +1362,30 @@ font-size: 16px;
 .post-img img {
 width: 100%;
 }
-.blog-details {
+.news-details {
     margin-top: 30px;
     background-color: #fff;
     border: 1px solid #eee;
 }
-.blog-details .date-box {
+.news-details .date-box {
     top: -50px;
 }
-.blog-details .date-box {
+.news-details .date-box {
     padding: 23px 24px 20px;
     left: 30px;
 }
-.blog-details .title-meta h2 {
+.news-details .title-meta h2 {
     font-size: 24px;
     transition: .4s;
     -webkit-transition: .4s;
 }
-.blog-details .blog-info {
+.news-details .news-info {
     padding-left: 140px;
 }
-.blog-details .post-content p {
+.news-details .post-content p {
     margin-bottom: 15px;
 }
-.blog-details .post-content {
+.news-details .post-content {
     padding: 20px 30px 30px;
 }
 .sharing-link {
@@ -1497,9 +1497,11 @@ color: #fff;
 max-width: 210px;
 margin: auto;
 }
-
+.news-link-cls{
+    color:#606060!important;
+}
 /* =========================
-End Blog & News Area CSS
+End News Area CSS
 ========================= */
 
 /* =========================
@@ -2766,42 +2768,42 @@ transform: translateX(-50%) translateY(-50%);
     margin-bottom: 15px;
     margin-top: 0;
 }
-/* Blog card */
-.blog-card {
+/* News card */
+.news-card {
     margin-top: 30px;
 }
-.blog-card .blog-caption {
+.news-card .news-caption {
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #efefef;
 }
-.blog-card .blog-caption .meta-tag {
+.news-card .news-caption .meta-tag {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.blog-card .blog-caption .meta-tag li {
+.news-card .news-caption .meta-tag li {
     display: inline-block;
     margin-right: 15px;
     font-size: 13px;
 }
-.blog-card .blog-caption .meta-tag li i {
+.news-card .news-caption .meta-tag li i {
     margin-right: 5px;
 }
-.blog-card .blog-caption .meta-tag li:last-child {
+.news-card .news-caption .meta-tag li:last-child {
     margin-right: 0;
 }
-.blog-card .blog-caption h3 {
+.news-card .news-caption h3 {
     line-height: 1.4;
     margin: 10px 0 10px;
 }
-.blog-card .blog-caption h3 a {
+.news-card .news-caption h3 a {
     color: #333;
 }
-.blog-card .blog-caption h3 a:hover {
+.news-card .news-caption h3 a:hover {
     color: #fe5619;
 }
-.blog-card .blog-caption .read-more {
+.news-card .news-caption .read-more {
     background-color: #fe5619;
     color: #fff;
     display: inline-block;
@@ -2811,12 +2813,12 @@ transform: translateX(-50%) translateY(-50%);
     transition: .5s;
     -webkit-transition: .5s;
 }
-.blog-card .blog-caption .read-more:hover {
+.news-card .news-caption .read-more:hover {
     background-color: #000000;
     color: #fff;
 }
 
-.main-blog-content {
+.main-news-content {
     padding-top: 70px;
     padding-bottom: 100px;
 }

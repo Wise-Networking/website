@@ -10,7 +10,7 @@ const getData = graphql`
       newsDescription
       newsBackgroundTitle
     }
-    blogPosts: allDatoCmsBlogPost(limit: 3) {
+    newsPosts: allDatoCmsBlogPost(limit: 3) {
       edges {
         node {
           title
@@ -37,10 +37,10 @@ const News = () => {
 
   const { newsTitle, newsDescription, newsBackgroundTitle } = data.dato
 
-  const newsItems = data.blogPosts.edges.map(node => node.node)
+  const newsItems = data.newsPosts.edges.map(node => node.node)
 
   return (
-    <section id="news" className="our-blog ptb-100">
+    <section id="news" className="our-news ptb-100">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2 text-center">
@@ -56,15 +56,15 @@ const News = () => {
           {newsItems.map((newsItem, key) => {
             return (
               <div key={key} className="col-md-6 col-lg-4">
-                <div className="blog-card">
+                <div className="news-card">
                   <Link to={`/news/${newsItem.slug}`}>
                     <Image
                       fluid={newsItem.featuredImage.fluid}
-                      alt="blog-one"
+                      alt="news-one"
                     />
                   </Link>
 
-                  <div className="blog-caption">
+                  <div className="news-caption">
                     <ul className="meta-tag">
                       <li>
                         <i className="fa fa-calendar"></i>{newsItem.publishedDate}

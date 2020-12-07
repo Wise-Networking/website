@@ -162,7 +162,7 @@
         margin-bottom: 15px;
         font-weight: 600;
     }
-    .blog-info {
+    .news-info {
         padding-left: 15px;
         padding-top: 30px;
         padding-right: 15px;
@@ -266,7 +266,7 @@
         font-size: 25px;
         margin: 0 0 10px;
     }
-    .main-blog {
+    .main-news {
         padding: 20px 0 40px;
     }
     .all-post .button {
@@ -293,14 +293,14 @@
     .panel-body {
         padding: 15px 10px 15px;
     }
-    .blog-item {
+    .news-item {
         margin-top: 0;
         margin-bottom: 30px;
     }
     .video-inner-content h2 {
         font-size: 30px;
     }
-    .blog-details .title-meta h2 {
+    .news-details .title-meta h2 {
         font-size: 20px;
         margin-top: 35px;
     }
@@ -396,13 +396,13 @@
     .fun-facts .section-title p {
         margin-bottom: 0;
     }
-    .blog-details .post-content {
+    .news-details .post-content {
         padding: 20px 20px 30px;
     }
-    .blog-details .blog-info {
+    .news-details .news-info {
         padding-left: 20px;
     }
-    .blog-details .date-box {
+    .news-details .date-box {
         left: 20px;
     }
     .single-comment .reply {
@@ -433,7 +433,7 @@
         left: auto;
         right: 0;
     }
-    .our-blog .section-title p {
+    .our-news .section-title p {
         margin: 0;
     }
     .contact-area .section-title p {
@@ -545,7 +545,7 @@
         margin: 15px auto 0;
         padding-bottom: 10px;
     }
-    .blog-info {
+    .news-info {
         padding-left: 15px;
         padding-top: 60px;
     }
@@ -600,7 +600,7 @@
         font-size: 35px;
         margin: 0 0 12px;
     }
-    .main-blog {
+    .main-news {
         padding: 20px 0 60px;
     }
     .home-banner-area {
@@ -648,7 +648,7 @@
     .count-box p {
         font-size: 14px;
     }
-    .blog-details .blog-info {
+    .news-details .news-info {
         padding-left: 30px;
     }
     .section-title p {
@@ -707,7 +707,7 @@
         height: 100%;
         padding: 70px 0 50px;
     }
-    .main-blog {
+    .main-news {
         padding: 40px 0 60px;
     }
     .home-banner-area h1 {

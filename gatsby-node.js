@@ -72,8 +72,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // News
 
-  const allBlogPostsQuery = await graphql(`
-    query AllBlogPosts {
+  const allNewsPostsQuery = await graphql(`
+    query AllNewsPosts {
       allDatoCmsBlogPost {
         edges {
           node {
@@ -85,12 +85,12 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const allNewsPosts = allBlogPostsQuery.data.allDatoCmsBlogPost.edges.map(
+  const allNewsPosts = allNewsPostsQuery.data.allDatoCmsBlogPost.edges.map(
     node => node.node
   )
 
 
-  //Blog Page
+  //News Page
 
   paginate({
     createPage,

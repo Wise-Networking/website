@@ -47,13 +47,13 @@ const Page = props => {
         </div>
       </div>
 
-      <section id="page" className="our-blog main-blog bg-none">
+      <section id="page" className="our-news main-news bg-none">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="blog-details">
+                  <div className="news-details">
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{ __html: html }}

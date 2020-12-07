@@ -5,26 +5,27 @@ import PropTypes from "prop-types"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 
-const Blog = props => {
+const News = props => {
   const { data } = props
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
-  console.log("POSTS => ", posts);
 
   const backgroundImage = data.backgroundImage.edges[0].node.backgroundImage.url;
-  const blogPosts = posts.map((post, index) => (
+  const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
-      <div className="blog-card">
-        <Link to={`/news/${post.slug}`} className="blog-img">
+      <div className="news-card">
+        <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
         </Link>
 
-        <div className="blog-caption">
+        <div className="news-caption">
           <ul className="meta-tag">
             <li>
-              <i className="fa fa-user"></i>
-              {post.author}
+              <Link to={`/our-people`} className="news-link-cls">
+                <i className="fa fa-user"></i>
+                {post.author}
+              </Link>
             </li>
             <li>
               <i className="fa fa-calendar"></i>
@@ -47,7 +48,7 @@ const Blog = props => {
   ))
 
   return (
-    <Layout location="blog">
+    <Layout location="news">
       <div className="bread-cumbs-area " style={{
         background: `url(${backgroundImage})`
       }}>
@@ -65,10 +66,10 @@ const Blog = props => {
         </div>
       </div>
 
-      <section id="blog" className="our-blog main-blog bg-none">
+      <section id="news" className="our-news main-news bg-none">
         <div className="container">
           <div className="row">
-            {blogPosts}
+            {newsPosts}
             <div className="col-lg-12 pagination-area text-center">
               <ReactPaginate
                 previousLabel={"<"}
@@ -101,7 +102,7 @@ const Blog = props => {
 }
 
 export const query = graphql`
-query getAllBlogs($skip: Int!, $limit: Int!) {
+query getAllNews($skip: Int!, $limit: Int!) {
   allDatoCmsBlogPost(skip: $skip, limit: $limit) {
       edges {
         node {
@@ -136,21 +137,21 @@ query getAllBlogs($skip: Int!, $limit: Int!) {
 `
 
 //Props Types
-Blog.propTypes = {
+News.propTypes = {
   Title: PropTypes.string,
   Content: PropTypes.string,
-  blogonesData: PropTypes.array,
+  newsonesData: PropTypes.array,
 }
 
 //Default Props
-Blog.defaultProps = {
-  Title: "Our Blog",
+News.defaultProps = {
+  Title: "Our News",
   Content:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-  blogonesData: [
+  newsonesData: [
     {
       postImage: require("../images/blog-one.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "14 ridiculously cool websites you never know.",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -159,7 +160,7 @@ Blog.defaultProps = {
     },
     {
       postImage: require("../images/blog-two.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "Top 10 hot marketing trends you need.",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -168,7 +169,7 @@ Blog.defaultProps = {
     },
     {
       postImage: require("../images/blog-three.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "10 reasons you need a digital marketing strategy",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -177,7 +178,7 @@ Blog.defaultProps = {
     },
     {
       postImage: require("../images/blog-four.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "How to build a programming career.",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -186,7 +187,7 @@ Blog.defaultProps = {
     },
     {
       postImage: require("../images/blog-five.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "10 hot marketing trends you need.",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -195,7 +196,7 @@ Blog.defaultProps = {
     },
     {
       postImage: require("../images/blog-six.jpg"),
-      postLink: "/blog-details",
+      postLink: "/news-details",
       posttitle: "Best programming language to learn.",
       postContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -205,4 +206,4 @@ Blog.defaultProps = {
   ],
 }
 
-export default Blog
+export default News

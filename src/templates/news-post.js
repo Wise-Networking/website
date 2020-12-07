@@ -5,7 +5,7 @@ import slugify from 'slugify';
 
 import Layout from "../components/App/Layout"
 
-import Sidebar from "../components/BlogDetails/Sidebar"
+import Sidebar from "../components/NewsDetails/Sidebar"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
@@ -32,13 +32,13 @@ const NewsItem = props => {
         </div>
       </div>
 
-      <section id="blog" className="our-blog main-blog bg-none">
+      <section id="news" className="our-news main-news bg-none">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="blog-details">
+                  <div className="news-details">
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{
