@@ -70,7 +70,7 @@ const news = props => {
               pageRangeDisplayed={5}
               onPageChange={(value) => {
                 const selectedPage = value.selected + 1
-                let navigateTo = `/category/${slug}`
+                let navigateTo = `/categories/${slug}`
 
                 if (selectedPage !== 1) {
                   navigateTo += `/${selectedPage}`
