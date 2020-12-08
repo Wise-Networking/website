@@ -12,6 +12,7 @@ const News = props => {
 
 
   const backgroundImage = data.backgroundImage.edges[0].node.backgroundImage.url;
+
   const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
       <div className="news-card">
@@ -49,9 +50,7 @@ const News = props => {
 
   return (
     <Layout location="news">
-      <div className="bread-cumbs-area " style={{
-        background: `url(${backgroundImage})`
-      }}>
+      <div className="bread-cumbs-area" style={{ background: `url(${backgroundImage})`}}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">

@@ -42,7 +42,7 @@ const NewsItem = props => {
                         <h2>{post.title}</h2>
                         <div class="post-meta">
                           <ul>
-                            <li><i class="fa fa-user"></i>Posted By:<a href="/our-people">{post.author}</a></li>
+                            <li><i class="fa fa-user"></i><a href="/our-people">{post.author}</a></li>
                             <li>
                               <i class="fa fa-tags"></i>
                               {post.tags.map((tag, i) => (
