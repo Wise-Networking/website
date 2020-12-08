@@ -49,7 +49,7 @@ const news = props => {
               <div className="row">
                 <div className="col-lg-7">
                   <h1>Tag: {tag.title}</h1>
-                  <p>{tag.title}</p>
+                  <p>{tag.description}</p>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ const news = props => {
                 pageRangeDisplayed={5}
                 onPageChange={(value) => {
                   const selectedPage = value.selected + 1
-                  let navigateTo = `/tag/${slug}`
+                  let navigateTo = `/tags/${slug}`
 
                   if (selectedPage !== 1) {
                     navigateTo += `/${selectedPage}`

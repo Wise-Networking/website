@@ -46,7 +46,7 @@ const NewsItem = props => {
                             <li>
                               <i class="fa fa-tags"></i>
                               {post.tags.map((tag, i) => (
-                                <Link to={`/tag/${slugify(tag.title.toLowerCase())}`}>
+                                <Link to={`/tags/${slugify(tag.link)}`}>
                                   { tag.title = i !== post.tags.length - 1 ? tag.title + "," : tag.title}
                                 </Link>
                               ))}
@@ -93,6 +93,7 @@ export const query = graphql`
       tags {
         title
         description
+        link
       }
       blogBackgroundImage{
         url

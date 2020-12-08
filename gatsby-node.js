@@ -8,8 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const ProductPageTemplate = path.resolve("./src/templates/product.js")
   const PageTemplate = path.resolve("./src/templates/page.js")
   const NewsPostTemplate = path.resolve("./src/templates/news-post.js")
-  const TagTemplate = path.resolve("./src/templates/tag.js")
-  const CategoryTemplate = path.resolve("./src/templates/category.js")
+  const TagTemplate = path.resolve("./src/templates/tags.js")
+  const CategoryTemplate = path.resolve("./src/templates/categories.js")
   const NewsTemplate = path.resolve("./src/templates/news.js")
 
   // Products
@@ -151,7 +151,7 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage,
       items: allPostsByTag.data.allPosts.edges,
       itemsPerPage: 3,
-      pathPrefix: `tag/${slug}`,
+      pathPrefix: `tags/${slug}`,
       component: TagTemplate,
       context: {
         id
@@ -198,7 +198,7 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage,
       items: allPostsByCategory.data.allPosts.edges,
       itemsPerPage: 3,
-      pathPrefix: `category/${slug}`,
+      pathPrefix: `categories/${slug}`,
       component: CategoryTemplate,
       context: {
         id

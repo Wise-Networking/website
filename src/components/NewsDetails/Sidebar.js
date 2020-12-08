@@ -65,7 +65,7 @@ const Sidebar = props => {
     const slug = slugify(category.title.toLowerCase())
     return (
       <li className="list-group-item" key={index}>
-        <Link to={`/category/${slug}`}>{category.title}</Link>
+        <Link to={`/categories/${slug}`}>{category.title}</Link>
       </li>
     )
   })
@@ -74,7 +74,7 @@ const Sidebar = props => {
     const slug = slugify(tag.title.toLowerCase())
     return (
       <li key={index}>
-        <Link to={`/tag/${slug}`}>{tag.title}</Link>
+        <Link to={`/tags/${slug}`}>{tag.title}</Link>
       </li>
     )
   })
