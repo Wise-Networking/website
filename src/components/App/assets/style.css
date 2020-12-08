@@ -1012,6 +1012,10 @@ color: #f5f8f9;
 .about-info p {
     margin-bottom: -5px;
 }
+.about-desc-image{
+    border-radius: 4px;
+    border: 0.01px solid black;
+}
 /* =========================
 End About Us Area CSS
 ========================= */
