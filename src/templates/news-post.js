@@ -47,7 +47,7 @@ const NewsItem = props => {
                               <i class="fa fa-tags"></i>
                               {post.tags.map((tag, i) => (
                                 <Link to={`/tag/${slugify(tag.title.toLowerCase())}`}>
-                                  { tag.title = i != post.tags.length - 1 ? tag.title + "," : tag.title}
+                                  { tag.title = i !== post.tags.length - 1 ? tag.title + "," : tag.title}
                                 </Link>
                               ))}
                             </li>
