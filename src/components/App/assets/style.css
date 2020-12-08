@@ -1023,6 +1023,7 @@ Our Team Area CSS
     overflow: hidden;
     position: relative;
     margin-top: 30px;
+    width: 60%;
 }
 .team-box img{
     width: 100%;
@@ -1036,14 +1037,12 @@ Our Team Area CSS
     text-align: center;
     color: #fff;
     position: absolute;
-    top: 45px;
-    left: 45px;
-    bottom: 45px;
-    right: 45px;
     opacity: 1;
     z-index: 2;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    position: relative;
+    line-height: 18px;
 }
 .team-box:hover .box-content{
     top: 6px;
@@ -1064,14 +1063,15 @@ Our Team Area CSS
 }
 .team-box:hover .box-inner-content{ opacity: 1; }
 .team-box .title{
-    font-size: 26px;
+    font-size: 15px;
     margin: 0;
 }
 .team-box .post {
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
     margin-top: 5px;
+    padding:0px 5px;
 }
 .team-box .icon {
     padding: 0;
@@ -1140,6 +1140,10 @@ Our Team Area CSS
     left: 6px;
     bottom: 6px;
     right: 6px;
+    
+}
+.people-carousel{
+    margin-top:15%;
 }
 
 /* =========================

@@ -1,4 +1,7 @@
 @media only screen and (max-width : 767px) {
+    .team-box{
+        width: 100%!important;
+    }
     .top-header {
         text-align: center;
     }
