@@ -28,7 +28,7 @@ const Categories = props => {
               <div class="container"><div class="row">
                 <div class="col-lg-7">
                   <h1>Categories</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.</p>
+                  <p>cat·​e·​go·​ry (noun) : any of several fundamental and distinct classes to which entities or concepts belong</p>
                 </div>
               </div>
               </div>

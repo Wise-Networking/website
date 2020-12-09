@@ -28,7 +28,7 @@ const Tags = props => {
               <div class="container"><div class="row">
                 <div class="col-lg-7">
                   <h1>Tags</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.</p>
+                  <p>tag (noun) : a descriptive or identifying epithet</p>
                 </div>
               </div>
               </div>
