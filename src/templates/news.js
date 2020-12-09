@@ -1,28 +1,48 @@
 import React from "react"
 import { graphql, Link, navigate } from "gatsby"
 import ReactPaginate from "react-paginate"
-import PropTypes from "prop-types"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
+
+export const query = graphql`
+  query getAllNews($skip: Int!, $limit: Int!) {
+    allDatoCmsBlogPost(skip: $skip, limit: $limit) {
+      edges {
+        node {
+          title
+          slug
+          author
+          publishedDate(formatString:"MMMM DD, YYYY")
+          description
+          contentNode {
+            childMarkdownRemark {
+              newsItemDescription:excerpt
+            }
+          }
+          featuredImage {
+            fluid(maxWidth: 600) {
+              ...GatsbyDatoCmsFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const News = props => {
   const { data } = props
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
-
-  console.log("NEWS POST => ", posts);
-
   const newsPosts = posts.map((post, index) => (
-    <div className="col-md-6 col-lg-4" key={index}>
-
+    <div key={index} className="col-md-6 col-lg-4">
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
           <h3 className="news-title"><span>{post.title}</span></h3>
         </Link>
         <div className="news-caption">
-
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
@@ -36,12 +56,7 @@ const News = props => {
             </li>
           </ul>
 
-          <h3>
-            {/* <Link to={blogone.postLink}>{blogone.posttitle}</Link> */}
-          </h3>
-
           <p>{post.contentNode.childMarkdownRemark.newsItemDescription}</p>
-          {/* <p>{post.content}</p> */}
 
           <Link className="read-more" to={`/news/${post.slug}`}>
             Read More
@@ -59,8 +74,8 @@ const News = props => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-7 banner-txt">
-                  <h1>{props.Title}</h1>
-                  <p>{props.Content}</p>
+                  <h1>News</h1>
+                  <p>Stories from the world of On Demand IOT, Emergency Services and Space Logistics</p>
                 </div>
               </div>
             </div>
@@ -101,102 +116,6 @@ const News = props => {
       </section>
     </Layout>
   )
-}
-
-export const query = graphql`
-query getAllNews($skip: Int!, $limit: Int!) {
-  allDatoCmsBlogPost(skip: $skip, limit: $limit) {
-      edges {
-        node {
-          title
-          slug
-          author
-          publishedDate(formatString:"MMMM DD, YYYY")
-          description
-          contentNode {
-                        childMarkdownRemark {
-                          newsItemDescription:excerpt
-                        }
-                      }
-          featuredImage {
-            fluid(maxWidth: 600) {
-              ...GatsbyDatoCmsFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-//Props Types
-News.propTypes = {
-  Title: PropTypes.string,
-  Content: PropTypes.string,
-  newsonesData: PropTypes.array,
-}
-
-//Default Props
-News.defaultProps = {
-  Title: "Our News",
-  Content:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet.",
-  newsonesData: [
-    {
-      postImage: require("../images/blog-one.jpg"),
-      postLink: "/news-details",
-      posttitle: "14 ridiculously cool websites you never know.",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 12, 2020",
-    },
-    {
-      postImage: require("../images/blog-two.jpg"),
-      postLink: "/news-details",
-      posttitle: "Top 10 hot marketing trends you need.",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 13, 2020",
-    },
-    {
-      postImage: require("../images/blog-three.jpg"),
-      postLink: "/news-details",
-      posttitle: "10 reasons you need a digital marketing strategy",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 14, 2020",
-    },
-    {
-      postImage: require("../images/blog-four.jpg"),
-      postLink: "/news-details",
-      posttitle: "How to build a programming career.",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 15, 2020",
-    },
-    {
-      postImage: require("../images/blog-five.jpg"),
-      postLink: "/news-details",
-      posttitle: "10 hot marketing trends you need.",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 16, 2020",
-    },
-    {
-      postImage: require("../images/blog-six.jpg"),
-      postLink: "/news-details",
-      posttitle: "Best programming language to learn.",
-      postContent:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      authorName: "Jone",
-      Date: "August 17, 2020",
-    },
-  ],
 }
 
 export default News
