@@ -10,14 +10,19 @@ const News = props => {
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
+
+  console.log("NEWS POST => ", posts);
+
   const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
+
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
+          <h3 className="news-title"><span>{post.title}</span></h3>
         </Link>
-
         <div className="news-caption">
+
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
@@ -35,7 +40,8 @@ const News = props => {
             {/* <Link to={blogone.postLink}>{blogone.posttitle}</Link> */}
           </h3>
 
-          <p>{post.contentNode.childMarkdownRemark.excerpt}</p>
+          <p>{post.contentNode.childMarkdownRemark.newsItemDescription}</p>
+          {/* <p>{post.content}</p> */}
 
           <Link className="read-more" to={`/news/${post.slug}`}>
             Read More
@@ -108,10 +114,10 @@ query getAllNews($skip: Int!, $limit: Int!) {
           publishedDate(formatString:"MMMM DD, YYYY")
           description
           contentNode {
-            childMarkdownRemark {
-              excerpt
-            }
-          }
+                        childMarkdownRemark {
+                          newsItemDescription:excerpt
+                        }
+                      }
           featuredImage {
             fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid

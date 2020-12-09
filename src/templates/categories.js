@@ -28,7 +28,7 @@ const news = props => {
               <i className="fa fa-calendar"></i>
             </li>
           </ul>
-          <p>{post.contentNode.childMarkdownRemark.excerpt}</p>
+          <p>{post.contentNode.childMarkdownRemark.newsItemDescription}</p>
 
           <Link className="read-more" to={`/news/${post.slug}`}>
             Read More
@@ -106,7 +106,7 @@ export const query = graphql`
           description
           contentNode {
             childMarkdownRemark {
-              excerpt
+              newsItemDescription:excerpt
             }
           }
           featuredImage {

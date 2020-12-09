@@ -23,7 +23,7 @@ const getData = graphql`
           publishedDate(formatString:"MMMM DD, YYYY")
           contentNode {
             childMarkdownRemark {
-              excerpt
+              newsItemDescription:excerpt
             }
           }
         }
@@ -35,7 +35,7 @@ const getData = graphql`
 const News = () => {
   const data = useStaticQuery(getData)
 
-  const { newsTitle, newsDescription, newsBackgroundTitle } = data.dato
+  const { newsTitle, newsDescription } = data.dato
 
   const newsItems = data.newsPosts.edges.map(node => node.node)
 
@@ -47,7 +47,6 @@ const News = () => {
             <div className="section-title">
               <h2>{newsTitle}</h2>
               <p dangerouslySetInnerHTML={{ __html: newsDescription }}></p>
-              <span className="section-title-bg">{newsBackgroundTitle}</span>
             </div>
           </div>
         </div>
@@ -77,7 +76,7 @@ const News = () => {
                       </Link>
                     </h3>
                     <p>
-                      {newsItem.contentNode.childMarkdownRemark.excerpt}
+                      {newsItem.contentNode.childMarkdownRemark.newsItemDescription}
                     </p>
 
                     <Link className="read-more" to={`/news/${newsItem.slug}`}>
