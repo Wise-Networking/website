@@ -53,7 +53,6 @@ const AboutUs = () => {
             <div className="section-title text-center">
               <h2>{aboutUsTitle}</h2>
               <p dangerouslySetInnerHTML={{ __html: aboutUsDescription }}></p>
-              <span className="section-title-bg">{aboutUsBackgroundTitle}</span>
             </div>
           </div>
         </div>

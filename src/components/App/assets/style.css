@@ -852,6 +852,9 @@ End CTA Area CSS
 /* =========================
 Our Works Area CSS
 ========================= */
+.our-works{
+    background-color:#f5f8f9 ;
+}
 .filtr-item {
 padding-top: 30px;
 }
@@ -983,7 +986,7 @@ End Our Works Area CSS
 About Us Area CSS
 ========================= */
 .about-us {
-    background-color: #f5f8f9;
+    background-color: #fff;
     padding: 190px 0;
 }
 .about-us .section-title {
@@ -2118,6 +2121,9 @@ End Partners Area CSS
 /* =========================
 Contact Area CSS
 ========================= */
+.contact-area{
+    background-color: #f5f8f9;
+}
 .contact-form {
     margin-top: 30px;
 }
@@ -2843,6 +2849,21 @@ transform: translateX(-50%) translateY(-50%);
 .bg-none {
     background-color: transparent !important;
 }
+.news-title{
+    background-color: #F4EBD0;
+    position: absolute;
+    top: 200px;
+    left: 34px;
+    z-index: 1;
+    opacity: 80%;
+    font-weight: 600;
+    border-radius: 4px;
+    color:black;
+}
+.news-title span{
+    padding:0px 5px;
+}
+
 /* //MailChimp modal  */
 .ReactModal__Overlay--after-open {
     z-index: 2;
