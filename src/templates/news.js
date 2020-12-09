@@ -33,9 +33,7 @@ export const query = graphql`
 const News = props => {
   const { data } = props
   const { pathContext } = props
-  const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
-
-  //console.log("news js posts => ", posts);
+  const posts = data.allDatoCmsBlogPost.edges.map(node => node.node)
 
   const newsPosts = posts.map((post, index) => (
     <div key={index} className="col-md-6 col-lg-4">

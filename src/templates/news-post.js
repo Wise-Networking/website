@@ -16,7 +16,6 @@ const NewsItem = props => {
 
   return (
     <Layout>
-      {/* <div className="bread-cumbs-area news-banner"> */}
       <div className="bread-cumbs-area" style={bannerStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">
