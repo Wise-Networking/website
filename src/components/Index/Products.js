@@ -6,7 +6,6 @@ const getData = graphql`
   query AllProducts {
     titles: datoCmsHomePage {
       productsTitle
-      productBackgroundTitle
       productDescription
     }
     products: allDatoCmsProduct {
@@ -27,7 +26,6 @@ const Products = () => {
 
   const {
     productsTitle,
-    productBackgroundTitle,
     productDescription,
   } = data.titles
 
@@ -60,7 +58,7 @@ const Products = () => {
           <div className="col-lg-8 offset-lg-2 text-center">
             <div className="section-title">
               <h2>{productsTitle}</h2>
-              <p>{productDescription}</p>
+              <p dangerouslySetInnerHTML={{ __html: productDescription }}></p>
             </div>
           </div>
         </div>
