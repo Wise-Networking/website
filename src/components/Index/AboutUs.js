@@ -37,11 +37,11 @@ const AboutUs = () => {
         <div className="col-lg-6">
           <div className="about-text">
             <h3>{post.title}</h3>
-            <p>{post.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: post.description }}></p>
           </div>
         </div>
         <div className="col-lg-6">
-          <img src={post.image.url} alt="Image" />
+          <img src={post.image.url} alt="Image" className="about-desc-image" />
         </div>
       </div>
     )
