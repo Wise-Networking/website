@@ -3,45 +3,46 @@ import { Link } from 'gatsby'
 
 const GoTop = (props) => {
 
-    const [thePosition, setThePosition] = React.useState(false);
-    const timeoutRef = React.useRef(null);
+  const [thePosition, setThePosition] = React.useState(false);
 
-    React.useEffect(() => {
-        document.addEventListener("scroll", () => {
-            if (window.scrollY > 170) {
-                setThePosition(true)
-            } else {
-                setThePosition(false);
-            }
-        });
-    }, [])
+  //const timeoutRef = React.useRef(null);
 
-    // const onScrollStep = () => {
-    //     if (window.pageYOffset === 0) {
-    //         clearInterval(timeoutRef.current);
-    //     }
-    //     window.scroll(0, window.pageYOffset - props.scrollStepInPx);
-    // }
+  React.useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 170) {
+        setThePosition(true)
+      } else {
+        setThePosition(false);
+      }
+    });
+  }, [])
 
-    const scrollToTop = () => {
-        window.scroll(0, 0)
-    }
+  // const onScrollStep = () => {
+  //     if (window.pageYOffset === 0) {
+  //         clearInterval(timeoutRef.current);
+  //     }
+  //     window.scroll(0, window.pageYOffset - props.scrollStepInPx);
+  // }
 
-    const renderGoTopIcon = () => {
-        return (
-            <Link to="#" className={`scrolltop ${thePosition ? 'scrolltopActive' : 'scrolltopInactive'}`} onClick={e => {
-                e.preventDefault();
-                scrollToTop();
-            }}>
-            </Link>
-        )
-    }
+  const scrollToTop = () => {
+    window.scroll(0, 0)
+  }
 
+  const renderGoTopIcon = () => {
     return (
-        <React.Fragment>
-            {renderGoTopIcon()}
-        </React.Fragment>
-    )
+      <Link to="#" className={`scrolltop ${thePosition ? 'scrolltopActive' : 'scrolltopInactive'}`} onClick={e => {
+        e.preventDefault();
+        scrollToTop();
+      }}>
+      </Link>
+  )
+  }
+
+  return (
+    <React.Fragment>
+      {renderGoTopIcon()}
+    </React.Fragment>
+  )
 }
 
 export default GoTop;

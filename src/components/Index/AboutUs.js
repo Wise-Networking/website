@@ -22,8 +22,6 @@ const getData = graphql`
   }
 `
 
-const htmlString = '<h1>Hello World! 👋</h1>';
-
 const AboutUs = () => {
   const contentData = useStaticQuery(getData);
 
@@ -31,9 +29,9 @@ const AboutUs = () => {
 
   const aboutPosts = contentData.allAbouts.edges.map(item => item.node);
 
-  const posts = aboutPosts.map(post => {
+  const posts = aboutPosts.map((post, index) => {
     return (
-      <div className="row align-items-center">
+      <div key={index} className="row align-items-center">
         <div className="col-lg-6">
           <div className="about-text">
             <h3>{post.title}</h3>
@@ -41,7 +39,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="col-lg-6">
-          <img src={post.image.url} alt="Image" className="about-desc-image" />
+          <img src={post.image.url} alt={post.title} className="about-desc-image" />
         </div>
       </div>
     )

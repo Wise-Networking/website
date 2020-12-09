@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const Banner = (props) => {
@@ -46,15 +46,11 @@ const Banner = (props) => {
                   <h1>{heroTitle}</h1>
                   <p>{heroDescription}</p>
                   <div className="center-wrap">
-                    <div className="center-wrap">
-                      {/* <Link to={heroButtonUrl} className="btn-a"> */}
-                      <div className="button btn-a" onClick={props.onNewsLetter}>
-                        {heroButtonTitle}
-                        {` `}
-                        <i className="fa fa-long-arrow-right"></i>
-                        <div className="mask" />
-                      </div>
-                      {/* </Link> */}
+                    <div className="button btn-a" onClick={props.onNewsLetter}>
+                      {heroButtonTitle}
+                      {` `}
+                      <i className="fa fa-long-arrow-right"></i>
+                      <div className="mask" />
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,6 @@ const getData = graphql`
     titles: datoCmsHomePage {
       partnersTitle
       partnersDescription
-      partnersBackgroundTitle
     }
     partners: allDatoCmsPartner {
       edges {
@@ -31,7 +30,6 @@ const Partners = () => {
   const {
     partnersTitle,
     partnersDescription,
-    partnersBackgroundTitle,
   } = data.titles
 
   const partners = data.partners.edges.map(node => node.node)

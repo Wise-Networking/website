@@ -35,16 +35,16 @@ const NewsItem = props => {
                 <div className="col-lg-12">
                   <div className="news-details">
 
-                    <div class="news-info">
-                      <div class="date-box">{post.publishDay}<span class="month">{post.publishMonth}</span></div>
+                    <div className="news-info">
+                      <div className="date-box">{post.publishDay}<span className="month">{post.publishMonth}</span></div>
 
-                      <div class="title-meta">
+                      <div className="title-meta">
                         <h2>{post.title}</h2>
-                        <div class="post-meta">
+                        <div className="post-meta">
                           <ul>
-                            <li><i class="fa fa-user"></i><a href="/our-people">{post.author}</a></li>
+                            <li><i className="fa fa-user"></i><a href="/our-people">{post.author}</a></li>
                             <li>
-                              <i class="fa fa-tags"></i>
+                              <i className="fa fa-tags"></i>
                               {post.tags.map((tag, i) => (
                                 <Link to={`/tags/${slugify(tag.link)}`}>
                                   { tag.title = i !== post.tags.length - 1 ? tag.title + "," : tag.title}

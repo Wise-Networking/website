@@ -24,9 +24,9 @@ const Products = props => {
   return (
     <Layout location="products">
       <div className="bread-cumbs-area products-banner">
-        <div class="diplay-table"><div class="display-table-cell">
-          <div class="container"><div class="row">
-            <div class="col-lg-7 banner-txt">
+        <div className="diplay-table"><div className="display-table-cell">
+          <div className="container"><div className="row">
+            <div className="col-lg-7 banner-txt">
               <h1>Products</h1>
               <p>prod·​uct (noun) : something that is marketed or sold as a commodity</p>
             </div>
@@ -37,13 +37,13 @@ const Products = props => {
       </div>
 
       <section id="news" className="our-news main-news bg-none">
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             {productItems.map((productItem, key) => {
               return (
-                <div key={key} class="col-md-6 col-lg-4">
-                  <div class="news-card">
-                    <div class="news-caption">
+                <div key={key} className="col-md-6 col-lg-4">
+                  <div className="news-card">
+                    <div className="news-caption">
                       <h3>{productItem.title}</h3>
                       <p>{productItem.description}</p>
 

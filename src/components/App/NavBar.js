@@ -125,7 +125,7 @@ const NavBar = ({ homepage }) => {
                 if (url.startsWith("#") && !homepage) {
                   linkReturn = (
                     <AnchorLink
-                      key={url}
+                      key={key}
                       onClick={toggleNavbar}
                       offset={() => 50}
                       className="nav-link"
@@ -138,7 +138,7 @@ const NavBar = ({ homepage }) => {
                   if (internalLink) {
                     linkReturn = (
                       <Link
-                        key={url}
+                        key={key}
                         to={url}
                         className="nav-link"
                         activeClassName="active"
@@ -148,7 +148,7 @@ const NavBar = ({ homepage }) => {
                     )
                   } else {
                     linkReturn = (
-                      <a key={url} href={url} key={url} className="nav-link">
+                      <a key={key} href={url} className="nav-link">
                         {title}
                       </a>
                     )
