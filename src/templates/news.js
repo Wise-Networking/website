@@ -10,7 +10,6 @@ const News = props => {
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
-
   const backgroundImage = data.backgroundImage.edges[0].node.backgroundImage.url;
 
   const newsPosts = posts.map((post, index) => (

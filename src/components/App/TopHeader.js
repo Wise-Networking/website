@@ -14,6 +14,7 @@ const TopHeader = () => {
   `)
 
   const { email, facebook, twitter, linkedin } = data.datoCmsSiteConfig
+
   return (
     <div id="home" className="top-header">
       <div className="container">

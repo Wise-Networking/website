@@ -21,10 +21,10 @@ const Footer = () => {
           <div className="col-md-4">
             <ul className="list-inline footer-privacy">
               <li>
-                <Link to="/privacy-policy">Privacy Policy</Link>
+                <Link to="/terms-of-use/">Terms Of Use</Link>
               </li>
               <li>
-                <Link to="/terms-of-use">Terms Of Use</Link>
+                <Link to="/privacy-policy/">Privacy Policy</Link>
               </li>
             </ul>
           </div>
