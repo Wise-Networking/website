@@ -10,9 +10,14 @@ import Sidebar from "../components/NewsDetails/Sidebar"
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
+  var bannerStyle = {
+    backgroundImage: 'url(' + post['featuredImage']?.url + ')'
+  }
+
   return (
     <Layout>
-      <div className="bread-cumbs-area news-banner">
+      {/* <div className="bread-cumbs-area news-banner"> */}
+      <div className="bread-cumbs-area" style={bannerStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -95,7 +100,7 @@ export const query = graphql`
         description
         link
       }
-      blogBackgroundImage{
+      featuredImage {
         url
       }
     }
