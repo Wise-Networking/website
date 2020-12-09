@@ -79,6 +79,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             slug
+            publishedDate
           }
         }
       }

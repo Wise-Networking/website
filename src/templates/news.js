@@ -10,6 +10,8 @@ const News = props => {
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
+  //console.log("news js posts => ", posts);
+
   const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
       <div className="news-card">
