@@ -40,12 +40,12 @@ const news = props => {
 
   return (
     <Layout location="news">
-      <div className="bread-cumbs-area bread-cumbs-bg">
+      <div className="bread-cumbs-area categories-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <h1>Category: {category.title}</h1>
                   <p>{category.description}</p>
                 </div>

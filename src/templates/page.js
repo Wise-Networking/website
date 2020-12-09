@@ -21,7 +21,6 @@ export const query = graphql`
 
 const Page = props => {
   const page = props.data.datoCmsPage
-
   const {
     title,
     description,
@@ -32,12 +31,12 @@ const Page = props => {
 
   return (
     <Layout location={title}>
-      <div className="bread-cumbs-area">
+      <div className={title == "Terms Of Use" ? 'bread-cumbs-area  terms-of-use-banner' : 'bread-cumbs-area  privacy-policy-banner'}>
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <h1>{title}</h1>
                   <p>{description}</p>
                 </div>

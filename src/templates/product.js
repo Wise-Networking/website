@@ -47,7 +47,7 @@ const Product = props => {
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <h1>{title}</h1>
                   <p>{description}</p>
                 </div>

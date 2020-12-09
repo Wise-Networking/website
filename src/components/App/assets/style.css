@@ -2260,7 +2260,8 @@ Breadcumbs CSS
 height: 400px;
 width: 100%;
 background-color: #ddd;
-color: #fff;
+/* color: #fff; */
+color:#122620;
 background-size: cover;
 background-position: center center;
 }
@@ -2271,7 +2272,8 @@ background-image: url(../../../images/banner-bg.jpg);
 font-size: 50px;
 font-weight: 700;
 margin: 0 0 25px;
-color: #ffffff;
+/* color: #ffffff; */
+color:#122620;
 }
 /* =========================
 End Breadcumbs CSS
@@ -2848,4 +2850,32 @@ transform: translateX(-50%) translateY(-50%);
 .dato_link {
     color: #fe5619 !important;
     text-decoration:underline !important;
+}
+/* //Banners*/
+.news-banner{
+    background-image: url(../../../images/news_banner.jpg);
+}
+.products-banner{
+    background-image: url(../../../images/products_banner.jpg);
+}
+.tags-banner{
+    background-image: url(../../../images/tags_banner.jpg);
+}
+.categories-banner{
+    background-image: url(../../../images/categories_banner.jpg);
+}
+.terms-of-use-banner{
+    background-image: url(../../../images/terms_of_use_banner.jpg);
+}
+.privacy-policy-banner{
+    background-image: url(../../../images/privacy_policy_banner.jpg);
+}
+.our-people-banner{
+    background-image: url(../../../images/our_people_banner.jpg);
+}
+.banner-txt{
+    background: #F4EBD0;
+    opacity: 80%;
+    border-radius: 10px;
+    padding: 10px;
 }

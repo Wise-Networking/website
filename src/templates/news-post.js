@@ -12,12 +12,12 @@ const NewsItem = props => {
 
   return (
     <Layout>
-      <div className="bread-cumbs-area bread-cumbs-bg">
+      <div className="bread-cumbs-area news-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <h1>{post.title}</h1>
                   <p>{post.description}</p>
                 </div>

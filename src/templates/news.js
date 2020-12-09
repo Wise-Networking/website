@@ -10,8 +10,6 @@ const News = props => {
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node);
 
-  const backgroundImage = data.backgroundImage.edges[0].node.backgroundImage.url;
-
   const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
       <div className="news-card">
@@ -49,12 +47,12 @@ const News = props => {
 
   return (
     <Layout location="news">
-      <div className="bread-cumbs-area" style={{ background: `url(${backgroundImage})`}}>
+      <div className="bread-cumbs-area news-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <h1>{props.Title}</h1>
                   <p>{props.Content}</p>
                 </div>
@@ -118,15 +116,6 @@ query getAllNews($skip: Int!, $limit: Int!) {
             fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid
             }
-          }
-        }
-      }
-    }
-    backgroundImage: allDatoCmsNewsBlogBackgroundImage {
-      edges {
-        node {
-          backgroundImage {
-            url
           }
         }
       }
