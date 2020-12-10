@@ -446,6 +446,18 @@
     .pagination-area .pagination {
         margin: 30px 0 0;
     }
+    .title-meta{
+        padding-right: 15px;
+        top: 46px;
+        position: unset;
+        background: white;
+        }
+    .owl-prev{
+            top:120px!important;
+        }
+    .owl-next{
+            top:120px!important;
+        }
 }
 
 @media only screen and (min-width : 576px) and (max-width :767px) { 
@@ -458,6 +470,18 @@
         left: 6px;
         bottom: 6px;
         right: 6px;
+    }
+    .title-meta{
+    padding-right: 15px;
+    top: 46px;
+    position: unset;
+    background: white;
+    }
+    .owl-prev{
+        top:120px!important;
+    }
+.owl-next{
+        top:120px!important;
     }
 }
 

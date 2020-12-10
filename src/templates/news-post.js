@@ -39,6 +39,18 @@ const NewsItem = props => {
                 <div className="col-lg-12">
                   <div className="news-details">
 
+
+
+
+
+
+
+
+
+
+
+
+
                     <div className="news-info">
                       <div className="date-box">{post.publishDay}<span className="month">{post.publishMonth}</span></div>
 
@@ -55,10 +67,26 @@ const NewsItem = props => {
                                 </Link>
                               ))}
                             </li>
+                            <li><i className="fa fa-bars"></i><a href="/categories/">{post.category.title}</a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     <div
                       className="post-content"
@@ -95,6 +123,11 @@ export const query = graphql`
         }
       }
       tags {
+        title
+        description
+        link
+      }
+      category{
         title
         description
         link
