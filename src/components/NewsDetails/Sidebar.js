@@ -16,14 +16,6 @@ const Sidebar = props => {
               featuredImage{
                 url
               }
-              tags{
-                title
-                link
-              }
-              category{
-                title
-                link
-              } 
             }
           }
         }
@@ -51,8 +43,6 @@ const Sidebar = props => {
   const categories = data.categories.edges.map(node => node.node)
   const posts = data.posts.edges.map(node => node.node)
 
-  console.log("SIDEBAR POSTS =>", posts);
-
   const sidebardata = posts.map((post, index) => (
     <div className="single-post" key={index}>
       <Link to={`/news/${post.slug}`}>
@@ -66,23 +56,6 @@ const Sidebar = props => {
           <li>
             <i className="fa fa-calendar"></i> Date: {post.publishedDate}
           </li>
-
-          {/* <li>
-            <i class="fa fa-tags"></i>
-            {post.tags.map((tag, i) => (
-              <Link to={`/tags/${slugify(tag.link)}`}>
-                { tag.title = i !== post.tags.length - 1 ? tag.title + "," : tag.title}
-              </Link>
-            ))}
-          </li>
-
-          <li>
-            <i class="fa fa-bars"></i>
-            <Link to={`/categories/${slugify(post.category.link)}`}>
-              {post.category.title}
-            </Link>
-          </li> */}
-
         </ul>
       </div>
 

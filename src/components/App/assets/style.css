@@ -100,6 +100,7 @@ p:last-child {
 }
 .ptb-100 {
     padding: 190px 0;
+    /* padding: 110px 0; */
 }
 .mrl-50 {
     margin-left: 50px;
@@ -1118,7 +1119,8 @@ Our Team Area CSS
 .team-slides.owl-theme .owl-nav .owl-prev, .team-slides.owl-theme .owl-nav .owl-next {
     position: absolute;
     left: 0;
-    top: -40px;
+    /* top: -40px; */
+    top:79px;
     padding: 0;
     margin: 0;
     font-size: 15px !important;
@@ -1151,6 +1153,9 @@ Our Team Area CSS
 }
 .people-carousel{
     margin-top:15%;
+}
+.owl-item{
+    text-align: -webkit-center;
 }
 
 /* =========================
@@ -1239,6 +1244,9 @@ transition: .4s;
 .title-meta {
 vertical-align: bottom;
 padding-right: 15px;
+top: -53px;
+position: absolute;
+background: white;
 }
 .post-content {
     padding: 20px;
@@ -1405,7 +1413,7 @@ width: 100%;
     margin-bottom: 15px;
 }
 .news-details .post-content {
-    padding: 20px 30px 30px;
+    padding: 60px 30px 30px;
 }
 .sharing-link {
     background: #fff;
@@ -2853,15 +2861,20 @@ transform: translateX(-50%) translateY(-50%);
     background-color: #F4EBD0;
     position: absolute;
     top: 200px;
-    left: 34px;
+    left: 30px;
     z-index: 1;
     opacity: 80%;
     font-weight: 600;
     border-radius: 4px;
     color:black;
+    width: 84%;
 }
 .news-title span{
     padding:0px 5px;
+}
+.news-title a{
+    padding:0px 5px;
+    color:black;
 }
 
 /* //MailChimp modal  */
@@ -2899,4 +2912,8 @@ transform: translateX(-50%) translateY(-50%);
     opacity: 80%;
     border-radius: 10px;
     padding: 10px;
+    color: #122620;
+}
+.banner-txt h1,p{
+color: #122620;
 }

@@ -63,7 +63,7 @@ const NavBar = ({ homepage }) => {
           if (!section) return
           if (
             section.offsetTop <= (fromTop + 20) &&
-            section.offsetTop + section.offsetHeight > (fromTop + 20)
+            section.offsetTop + section.offsetHeight >= (fromTop + 20)
           ) {
             link.classList.add("active")
           } else {
@@ -141,7 +141,7 @@ const NavBar = ({ homepage }) => {
                         key={key}
                         to={url}
                         className="nav-link"
-                        activeClassName="active"
+                      // activeClassName="active"
                       >
                         {title}
                       </Link>

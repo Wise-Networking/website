@@ -10,7 +10,7 @@ const getData = graphql`
       newsDescription
       newsBackgroundTitle
     }
-    newsPosts: allDatoCmsBlogPost(limit: 3) {
+    newsPosts: allDatoCmsBlogPost(limit: 3,sort: {fields: publishedDate,order:DESC}) {
       edges {
         node {
           title
@@ -61,6 +61,11 @@ const News = () => {
                       fluid={newsItem.featuredImage.fluid}
                       alt="news-one"
                     />
+                    <h3 className="news-title">
+                      <Link to={`/news/${newsItem.slug}`}>
+                        {newsItem.title}
+                      </Link>
+                    </h3>
                   </Link>
 
                   <div className="news-caption">
@@ -69,12 +74,6 @@ const News = () => {
                         <i className="fa fa-calendar"></i>{newsItem.publishedDate}
                       </li>
                     </ul>
-
-                    <h3>
-                      <Link to={`/news/${newsItem.slug}`}>
-                        {newsItem.title}
-                      </Link>
-                    </h3>
                     <p>
                       {newsItem.contentNode.childMarkdownRemark.newsItemDescription}
                     </p>

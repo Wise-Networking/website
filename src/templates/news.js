@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 
 export const query = graphql`
   query getAllNews($skip: Int!, $limit: Int!) {
-    allDatoCmsBlogPost(skip: $skip, limit: $limit) {
+    allDatoCmsBlogPost(skip: $skip, limit: $limit,sort: {fields: publishedDate,order:DESC}) {
       edges {
         node {
           title

@@ -41,7 +41,7 @@ const Banner = (props) => {
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-7 banner-txt">
                   <span className="hero-text">{heroTopTitle}</span>
                   <h1>{heroTitle}</h1>
                   <p>{heroDescription}</p>
