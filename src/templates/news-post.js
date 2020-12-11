@@ -38,22 +38,8 @@ const NewsItem = props => {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="news-details">
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div className="news-info">
                       <div className="date-box">{post.publishDay}<span className="month">{post.publishMonth}</span></div>
-
                       <div className="title-meta">
                         <h2>{post.title}</h2>
                         <div className="post-meta">
@@ -72,22 +58,6 @@ const NewsItem = props => {
                         </div>
                       </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{

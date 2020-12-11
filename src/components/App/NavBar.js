@@ -49,7 +49,7 @@ const NavBar = ({ homepage }) => {
         elem.classList.remove("fixed-top")
       }
     })
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
     menuActiveClass()
   }, [])
 
