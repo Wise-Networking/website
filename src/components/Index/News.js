@@ -26,6 +26,7 @@ const getData = graphql`
               newsItemDescription:excerpt
             }
           }
+          author
         }
       }
     }
@@ -70,6 +71,12 @@ const News = () => {
 
                   <div className="news-caption">
                     <ul className="meta-tag">
+                      <li>
+                        <Link to={`/our-people`} className="news-link-cls">
+                          <i className="fa fa-user"></i>
+                          {newsItem.author}
+                        </Link>
+                      </li>
                       <li>
                         <i className="fa fa-calendar"></i>{newsItem.publishedDate}
                       </li>
