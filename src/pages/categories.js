@@ -20,9 +20,8 @@ const Categories = props => {
   const data = useStaticQuery(getData)
 
   const categoriesItems = data.categories.edges.map(node => node.node)
-
   return (
-    <Layout location="categories">
+    <Layout location="categories" keywords="categories, wise networking">
       <div className="bread-cumbs-area categories-banner">
         <div className="diplay-table"><div className="display-table-cell">
           <div className="container"><div className="row">
@@ -48,7 +47,7 @@ const Categories = props => {
 
                       <Link className="read-more" to={`/categories/${categoryItem.link}`}>
                         Read More
-                          </Link>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -24,7 +24,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout location="home">
+    <Layout location="home" keywords="home page, wise networking ">
       <SEO title="Home" />
       <Banner onNewsLetter={handleNewsLetter} />
       <News />

@@ -22,7 +22,7 @@ const Products = props => {
   const productItems = data.products.edges.map(node => node.node)
 
   return (
-    <Layout location="products">
+    <Layout location="products" keywords="products, wise networking">
       <div className="bread-cumbs-area products-banner">
         <div className="diplay-table"><div className="display-table-cell">
           <div className="container"><div className="row">

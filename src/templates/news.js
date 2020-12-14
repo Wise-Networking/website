@@ -67,7 +67,7 @@ const News = props => {
   ))
 
   return (
-    <Layout location="news">
+    <Layout location="news" keywords="news, wise networking">
       <div className="bread-cumbs-area news-banner">
         <div className="diplay-table">
           <div className="display-table-cell">

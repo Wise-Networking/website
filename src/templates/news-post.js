@@ -15,7 +15,7 @@ const NewsItem = props => {
   }
 
   return (
-    <Layout>
+    <Layout keywords={post.keywords}>
       <div className="bread-cumbs-area" style={bannerStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">
@@ -85,6 +85,7 @@ export const query = graphql`
       description
       slug
       author
+      keywords
       publishDay: publishedDate(formatString:"DD")
       publishMonth : publishedDate(formatString:"MMM")
       contentNode {

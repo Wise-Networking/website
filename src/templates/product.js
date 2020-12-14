@@ -9,6 +9,7 @@ export const query = graphql`
       icon
       title
       description
+      keywords
       contentNode {
         childMarkdownRemark {
           html
@@ -36,7 +37,7 @@ const Product = props => {
   } = product
 
   return (
-    <Layout location="products">
+    <Layout location="products" keywords={product.keywords}>
       <BackgroundImage
         Tag="div"
         className="bread-cumbs-area"

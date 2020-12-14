@@ -12,21 +12,25 @@ const news = props => {
   const posts = data.allPosts.edges.map(node => node.node)
   const { pathContext } = props;
 
-
   const newsPosts = posts.map((post, index) => (
     <div className="col-md-6 col-lg-4" key={index}>
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
+          <h3 className="news-title"><span>{post.title}</span></h3>
         </Link>
 
         <div className="news-caption">
           <ul className="meta-tag">
             <li>
-              <i className="fa fa-user"></i>
+              <Link to={`/our-people`} className="news-link-cls">
+                <i className="fa fa-user"></i>
+                {post.author}
+              </Link>
             </li>
             <li>
               <i className="fa fa-calendar"></i>
+              {post.publishedDate}
             </li>
           </ul>
 
@@ -41,7 +45,7 @@ const news = props => {
   ))
 
   return (
-    <Layout location="news">
+    <Layout location="news" keywords={tag.keywords}>
       <div className="bread-cumbs-area tags-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
@@ -97,6 +101,7 @@ export const query = graphql`
     tag: datoCmsTag(id: { eq: $id }) {
       title
       description
+      keywords
     }
     allPosts: allDatoCmsBlogPost(
       skip: $skip, limit: $limit,
@@ -107,6 +112,8 @@ export const query = graphql`
           title
           slug
           description
+          author
+          publishedDate(formatString:"MMMM DD, YYYY")
           contentNode {
             childMarkdownRemark {
               newsItemDescription: excerpt
