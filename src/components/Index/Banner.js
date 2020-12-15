@@ -10,7 +10,6 @@ const Banner = (props) => {
           heroTitle
           heroDescription
           heroButtonTitle
-          heroButtonUrl
           heroImage {
             fluid(maxWidth: 600) {
               ...GatsbyDatoCmsFluid
@@ -25,7 +24,6 @@ const Banner = (props) => {
     heroTitle,
     heroDescription,
     heroButtonTitle,
-    heroButtonUrl,
     heroImage,
   } = data.datoCmsHomePage
 

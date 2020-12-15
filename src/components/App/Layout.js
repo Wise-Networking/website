@@ -16,15 +16,12 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 import GoTop from './GoTop'
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, keywords }) => {
   return (
     <React.Fragment>
       <Helmet title="Dandelions: Your Partner In Custom Smart Grids" defer={false} />
       <Helmet>
-        <link rel="apple-touch-icon" sizes="180*180" href="../../images/favicons/apple-touch-icon.png"></link>
-        <link rel="icon" type="image/png" sizes="32*32" href="../../images/favicons/favicon-32x32.png"></link>
-        <link rel="icon" type="image/png" sizes="16*16" href="../../images/favicons/favicon-16x16.png"></link>
-        <link rel="manifest" href="../../images/favicons/site.webmanifest"></link>
+        <meta name="keywords" content={keywords}></meta>
       </Helmet>
       <NavBar homepage={location === "home"} />
       {children}
