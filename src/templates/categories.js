@@ -16,7 +16,7 @@ const news = props => {
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
-          <h3 className="news-title"><span>{post.title}</span></h3>
+          {/* <h3 className="news-title"><span>{post.title}</span></h3> */}
         </Link>
 
         <div className="news-caption">

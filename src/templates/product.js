@@ -64,11 +64,11 @@ const Product = props => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="news-details">
+                  <div className="news-details img-details">
                     <div
                       className="post-content"
                       dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                    /> 
                   </div>
                 </div>
               </div>
