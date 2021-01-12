@@ -2858,7 +2858,7 @@ transform: translateX(-50%) translateY(-50%);
 .bg-none {
     background-color: transparent !important;
 }
-.news-title{
+/*.news-title{
     background-color: #F4EBD0;
     position: absolute;
     top: 112px;
@@ -2876,7 +2876,7 @@ transform: translateX(-50%) translateY(-50%);
 .news-title a{
     padding:0px 5px;
     color:black;
-}
+}*/
 
 /* //MailChimp modal  */
 .ReactModal__Overlay--after-open {
@@ -2914,7 +2914,15 @@ transform: translateX(-50%) translateY(-50%);
     border-radius: 10px;
     padding: 10px;
     color: #122620;
+    margin:0px 16px;
 }
 .banner-txt h1,p{
 color: #122620;
+}
+ .img-details .gatsby-resp-image-image {
+    border: 10px solid #b68d40;
+    border-radius: 7px;
+}
+.img-details span{
+    border-radius: 7px;
 }
