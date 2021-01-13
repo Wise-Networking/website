@@ -30,7 +30,7 @@ const Products = () => {
   } = data.titles
 
   const products = data.products.edges.map(node => node.node)
-
+  console.log("PRODUCTS ==> ", products);
   const productsData = products.map((product, index) => (
     <div key={index} className="col-md-6 col-lg-6 text-center">
       <Link

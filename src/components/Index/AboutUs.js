@@ -28,7 +28,6 @@ const AboutUs = () => {
   const { aboutUsTitle, aboutUsDescription, aboutUsBackgroundTitle } = contentData.titles;
 
   const aboutPosts = contentData.allAbouts.edges.map(item => item.node);
-
   const posts = aboutPosts.map((post, index) => {
     return (
       <div key={index} className="row align-items-center">
@@ -38,8 +37,9 @@ const AboutUs = () => {
             <p dangerouslySetInnerHTML={{ __html: post.description }}></p>
           </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 about-img-div">
           <img src={post.image.url} alt={post.title} className="about-desc-image" />
+          <div class="img-caption">{post.title}</div>
         </div>
       </div>
     )

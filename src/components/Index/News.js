@@ -62,11 +62,6 @@ const News = () => {
                       fluid={newsItem.featuredImage.fluid}
                       alt="news-one"
                     />
-                    {/* <h3 className="news-title">
-                      <Link to={`/news/${newsItem.slug}`}>
-                        {newsItem.title}
-                      </Link>
-                    </h3> */}
                   </Link>
 
                   <div className="news-caption">
