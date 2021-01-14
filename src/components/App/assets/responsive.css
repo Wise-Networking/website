@@ -314,15 +314,6 @@
     .mrl-50 {
         margin-left: 0;
     }
-    .home-banner-area {
-        height: 100%;
-        padding: 70px 0;
-        margin-bottom: 20px;
-    }
-    .home-banner-area h1 {
-        font-size: 35px;
-        line-height: 50px;
-    }
     .home-video-area {
         height: 600px;
     }
@@ -631,14 +622,6 @@
     .main-news {
         padding: 20px 0 60px;
     }
-    .home-banner-area {
-        height: 100%;
-        padding: 110px 0;
-        margin-bottom: 40px;
-    }
-    .home-banner-area h1 {
-        font-size: 40px;
-    }
     .home-video-area {
         height: 600px;
     }
@@ -737,9 +720,6 @@
     }
     .main-news {
         padding: 40px 0 60px;
-    }
-    .home-banner-area h1 {
-        font-size: 45px;
     }
     .home-video-area h1 {
         font-size: 45px;

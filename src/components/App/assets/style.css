@@ -393,13 +393,13 @@ background-color: #B68D40 !important;
 color: #fff !important;
 background: none;
 }
-.navbar-light.fixed-top, .search-modal, .home-video-area::before, .owl-thumb-item.active .slide-service-item, .owl-thumb-item:hover .slide-service-item {
+.navbar-light.fixed-top, .home-video-area::before, .owl-thumb-item.active .slide-service-item, .owl-thumb-item:hover .slide-service-item {
 color: #fff;
 }
 .fixed-top {
 z-index: 99 !important;
 }
-.navbar-light.fixed-top, .search-modal, .home-video-area::before, .owl-thumb-item.active .slide-service-item, .owl-thumb-item:hover .slide-service-item {
+.navbar-light.fixed-top, .home-video-area::before, .owl-thumb-item.active .slide-service-item, .owl-thumb-item:hover .slide-service-item {
 color: #fff !important;
 }
 .navbar-light .navbar-brand {
@@ -462,10 +462,6 @@ line-height: 27px;
 }
 
 /*-- Search Modal --*/
-.search-modal {
-z-index: 9999999;
-cursor: url(../../../images/close.png), auto;
-}
 .modal-dialog {
 position: absolute;
 top: 50%;
@@ -524,15 +520,6 @@ End Main Menu CSS
 /* =========================
 Slider Area CSS
 ========================= */
-.slide-bg-1 {
-background-image: url(../../../images/slide-bg-1.jpg);
-}
-.slide-bg-2 {
-background-image: url(../../../images/slide-bg-2.jpg);
-}
-.slide-bg-3 {
-background-image: url(../../../images/slide-bg-3.jpg);
-}
 .hompage-slides-wrapper {
 position: relative;
 }
@@ -562,15 +549,6 @@ font-size: 18px;
 margin: 0 0 15px;
 font-weight: 500;
 display: inline-block;
-}
-.home-banner-area {
-background-image: url(../../../images/slide-bg-1.jpg);
-background-size: cover;
-background-position: center center;
-background-color: #dddddd;
-height: 700px;
-font-size: 15px;
-color: #fff;
 }
 .banner-text h1 {
 font-size: 51px;
@@ -831,9 +809,7 @@ CTA Area CSS
     position: absolute;
     opacity: .6;
 }
-.cta-bg-img {
-background-image: url(../../../images/cta-bg-img.jpg);
-}
+
 .cta-info {
 margin-top: 42px;
 }
@@ -1018,8 +994,14 @@ color: #f5f8f9;
     margin-bottom: -5px;
 }
 .about-desc-image{
-    border-radius: 4px;
+    border-bottom: 1px solid lightgrey;
+}
+.about-img-div{
     border: 0.01px solid black;
+    padding: 0px;
+}
+.about-img-div .img-caption{
+    padding:4px;
 }
 /* =========================
 End About Us Area CSS
@@ -1558,9 +1540,6 @@ height: 100%;
 opacity: .8;
 left: 0;
 top: 0;
-}
-.video-bg {
-background-image: url(../../../images/video-bg.jpg);
 }
 .video-inner-content {
 color: #fff;
@@ -2284,9 +2263,7 @@ color:#122620;
 background-size: cover;
 background-position: center center;
 }
-.bread-cumbs-bg {
-background-image: url(../../../images/banner-bg.jpg);
-}
+
 .bread-cumbs-area h1 {
 font-size: 50px;
 font-weight: 700;
@@ -2804,6 +2781,9 @@ transform: translateX(-50%) translateY(-50%);
     font-size: 27px;
     margin-bottom: 15px;
     margin-top: 0;
+}
+.about-text p{
+    white-space: pre-line;
 }
 /* News card */
 .news-card {

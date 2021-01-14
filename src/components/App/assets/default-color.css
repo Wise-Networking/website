@@ -29,7 +29,7 @@
 .navbar-light .navbar-nav .nav-item .nav-link.active {
 	background-color: #fe5619 !important;
 }
-.navbar-light.fixed-top, .search-modal, .home-video-area::before, .owl-thumb-item.active, .owl-thumb-item:hover {
+.navbar-light.fixed-top, .home-video-area::before, .owl-thumb-item.active, .owl-thumb-item:hover {
 	background-color: #B68D40;
 	border: 1px solid #B68D40;
 }
