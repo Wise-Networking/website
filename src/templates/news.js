@@ -12,6 +12,9 @@ export const query = graphql`
           title
           slug
           author
+          category{
+            title
+          }
           publishedDate(formatString:"MMMM DD, YYYY")
           description
           contentNode {
@@ -46,8 +49,9 @@ const News = props => {
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
-                <i className="fa fa-user"></i>
-                {post.author}
+                <i className="fa fa-bars"></i>
+                {/* {post.author} */}
+                {post.category.title}
               </Link>
             </li>
             <li>

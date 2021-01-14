@@ -44,7 +44,7 @@ This files contents are outlined below>>>>>
 Default CSS
 ========================= */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Monoton');
+/* @import url('https://fonts.googleapis.com/css?family=Monoton'); */
 html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -1252,6 +1252,10 @@ background: white;
 .post-content {
     padding: 20px;
 }
+.post-content h2{
+    font-weight: 400;
+    font-size: 28px;
+}
 .main-news {
     padding: 70px 0 90px;
 }
@@ -1351,9 +1355,9 @@ display: block;
 .single-post img {
 position: absolute;
 left: 0;
-top: 0;
+top: 12px;
 width: 75px;
-height: 75px;
+/* height: 75px; */
 border-radius: 3px;
 }
 .single-post h4 {
@@ -2809,6 +2813,9 @@ transform: translateX(-50%) translateY(-50%);
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #efefef;
+}
+.news-card p{
+    color:#606060!important;
 }
 .news-card .news-caption .meta-tag {
     list-style-type: none;

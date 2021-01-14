@@ -23,8 +23,9 @@ const news = props => {
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
-                <i className="fa fa-user"></i>
-                {post.author}
+                <i className="fa fa-bars"></i>
+                {/* {post.author} */}
+                {post.category.title}
               </Link>
             </li>
             <li>
@@ -110,6 +111,9 @@ export const query = graphql`
           slug
           description
           author
+          category{
+            title
+          }
           publishedDate(formatString:"MMMM DD, YYYY")
           contentNode {
             childMarkdownRemark {
