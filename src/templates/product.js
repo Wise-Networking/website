@@ -35,7 +35,7 @@ const Product = props => {
     },
     featuredImage,
   } = product
-
+console.log("PRODUCTS ==> ",product.contentNode);
   return (
     <Layout location="products" keywords={product.keywords}>
       <BackgroundImage
