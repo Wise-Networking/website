@@ -2888,13 +2888,8 @@ transform: translateX(-50%) translateY(-50%);
 color: #122620;
 }
 .img-details .gatsby-resp-image-image {
-    border: 10px solid #b68d40;
-    border-radius: 7px;
+    border: 0.01px solid black;
 }
 .img-details span{
     border-radius: 7px;
-}
-.products-div{
-    border: 1px solid #eee;
-    padding:0px 15px 30px 15px;
 }

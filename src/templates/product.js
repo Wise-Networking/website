@@ -35,7 +35,7 @@ const Product = props => {
     },
     featuredImage,
   } = product
-console.log("PRODUCTS ==> ",product.contentNode);
+  
   return (
     <Layout location="products" keywords={product.keywords}>
       <BackgroundImage
@@ -67,8 +67,8 @@ console.log("PRODUCTS ==> ",product.contentNode);
                   <div className="news-details img-details">
                     <div
                       className="post-content"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    /> 
+                      dangerouslySetInnerHTML={{ __html: html.replace('sizes="',"") }}
+                    />
                   </div>
                 </div>
               </div>
