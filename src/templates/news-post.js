@@ -21,10 +21,10 @@ const NewsItem = props => {
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div className="col-lg-7 banner-txt">
+                {/* <div className="col-lg-7 banner-txt">
                   <h1>{post.title}</h1>
                   <p>{post.description}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

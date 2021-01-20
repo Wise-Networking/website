@@ -38,7 +38,7 @@ const Products = props => {
 
       <section id="news" className="our-news main-news bg-none">
         <div className="container">
-          <div className="row">
+          <div className="row products-div">
             {productItems.map((productItem, key) => {
               return (
                 <div key={key} className="col-md-6 col-lg-4">
