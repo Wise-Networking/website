@@ -1,5 +1,5 @@
-# name: Deploy To Github Pages
-#
+name: Deploy To Github Pages
+
 on:
   push:
     branches:
@@ -14,3 +14,4 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
