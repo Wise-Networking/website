@@ -42,7 +42,7 @@ const News = () => {
   const { newsTitle, newsDescription } = data.dato
 
   const newsItems = data.newsPosts.edges.map(node => node.node)
-  console.log("NEWS ITEMS => ", newsItems);
+
   return (
     <section id="news" className="our-news ptb-100">
       <div className="container">
