@@ -40,38 +40,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
-        // icons: [
-        //   {
-        //     src: `src/images/favicons/android-chrome-192x192.png`,
-        //     sizes: `192x192`,
-        //     type: `image/png`,
-        //   },
-        //   {
-        //     src: `src/images/android-chrome-512x512.png`,
-        //     sizes: `512x512`,
-        //     type: `image/png`,
-        //   },
-        //   {
-        //     src: `src/images/favicons/apple-touch-icon.png`,
-        //     sizes: `180x180`,
-        //     type: `image/png`,
-        //   },
-        //   {
-        //     src: `src/images/favicons/favicon.ico`,
-        //     sizes: `48x48`,
-        //     type: `image/png`,
-        //   },
-        //   {
-        //     src: `src/images/favicons/favicon-16x16.png`,
-        //     sizes: `16x16`,
-        //     type: `image/png`,
-        //   },
-        //   {
-        //     src: `src/images/favicons/favicon-32x32.png`,
-        //     sizes: `32x32`,
-        //     type: `image/png`,
-        //   },
-        // ], // Add or remove icon sizes as desired
       },
     },
     {
