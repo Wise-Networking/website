@@ -4,7 +4,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 import Loadable from "@loadable/component"
+
 const OwlCarousel = Loadable(() => import("react-owl-carousel3"))
+
 export const query = graphql`
   query getPage($id: String!) {
     datoCmsPage(id: { eq: $id }) {
@@ -129,11 +131,8 @@ const Page = props => {
                                         <span className="post">{person.post}</span>
                                         {person.linkedinUrl && (
                                           <ul className="icon">
-                                            <li>
-                                              <a
-                                                className="fa fa-linkedin"
-                                                href={person.linkedinUrl}
-                                              ></a>
+                                            <li key={person.linkedinUrl}>
+                                              <a className="fa fa-linkedin" aria-label="LinkedIn" href={person.linkedinUrl}></a>
                                             </li>
                                           </ul>
                                         )}
@@ -143,9 +142,8 @@ const Page = props => {
                                 )
                               })}
                             </OwlCarousel>
-                          ) : (
-                              ""
-                            )}
+                          ) : ("")
+                          }
                         </div>
                         :
                         <div
