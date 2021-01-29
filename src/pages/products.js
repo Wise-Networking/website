@@ -28,7 +28,7 @@ const Products = props => {
           <div className="container"><div className="row">
             <div className="col-lg-7 banner-txt">
               <h1>Products</h1>
-              <p>prod·​uct (noun) : something that is marketed or sold as a commodity</p>
+              <p>Dandelions offers a number of different solutions for your IOT project. How can we help?</p>
             </div>
           </div>
           </div>

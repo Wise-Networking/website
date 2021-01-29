@@ -28,6 +28,7 @@ const AboutUs = () => {
   const { aboutUsTitle, aboutUsDescription, aboutUsBackgroundTitle } = contentData.titles;
 
   const aboutPosts = contentData.allAbouts.edges.map(item => item.node);
+
   const posts = aboutPosts.map((post, index) => {
     return (
       <div key={index} className="row align-items-center">

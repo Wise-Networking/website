@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/website`,
   siteMetadata: {
     title: `Dandelions: Your Partner In Custom Smart Grids`,
     description: `Dandelions provides standardized IT, power and communications enabling customers to build custom IOT grids.`,
