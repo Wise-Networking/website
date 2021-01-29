@@ -4,7 +4,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 import Loadable from "@loadable/component"
+
 const OwlCarousel = Loadable(() => import("react-owl-carousel3"))
+
 export const query = graphql`
   query getPage($id: String!) {
     datoCmsPage(id: { eq: $id }) {
