@@ -2878,7 +2878,7 @@ transform: translateX(-50%) translateY(-50%);
 }
 .banner-txt{
     background: #F4EBD0;
-    opacity: 80%;
+    opacity: 0.8;
     border-radius: 10px;
     padding: 10px;
     color: #122620;
