@@ -17,6 +17,7 @@
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.21",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images-datocms": "^0.1.0",
     "gatsby-source-datocms": "^2.5.7",
     "gatsby-source-filesystem": "^2.3.22",

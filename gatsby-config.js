@@ -17,6 +17,13 @@ module.exports = {
               maxWidth: 590,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow",
+            },
+          },
         ],
       },
     },
@@ -91,12 +98,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: 'https://gmail.us7.list-manage.com/subscribe/post?u=e015e55c8d55076e9d6892fca&amp;id=b67c77420b',
+        endpoint:
+          "https://gmail.us7.list-manage.com/subscribe/post?u=e015e55c8d55076e9d6892fca&amp;id=b67c77420b",
         timeout: 3500,
-      }
-    }
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

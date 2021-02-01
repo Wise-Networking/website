@@ -2981,13 +2981,14 @@ h2 {
 .our-people-banner {
   background-image: url(../../../images/our_people_banner.jpg);
 }
-.banner-txt {
-  background: #f4ebd0;
-  opacity: 80%;
-  border-radius: 10px;
-  padding: 10px;
-  color: #122620;
-  margin: 0px 16px;
+
+.banner-txt{
+    background: #F4EBD0;
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 10px;
+    color: #122620;
+    margin:0px 16px;
 }
 .banner-txt h1,
 p {
