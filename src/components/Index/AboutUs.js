@@ -1,12 +1,11 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby'
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 const getData = graphql`
   {
     titles: datoCmsHomePage {
       aboutUsTitle
       aboutUsDescription
-      aboutUsBackgroundTitle
     }
     allAbouts: allDatoCmsAbout {
       edges {
@@ -15,6 +14,7 @@ const getData = graphql`
           description
           image {
             url
+            title
           }
         }
       }
@@ -23,11 +23,11 @@ const getData = graphql`
 `
 
 const AboutUs = () => {
-  const contentData = useStaticQuery(getData);
+  const contentData = useStaticQuery(getData)
 
-  const { aboutUsTitle, aboutUsDescription, aboutUsBackgroundTitle } = contentData.titles;
+  const { aboutUsTitle, aboutUsDescription } = contentData.titles
 
-  const aboutPosts = contentData.allAbouts.edges.map(item => item.node);
+  const aboutPosts = contentData.allAbouts.edges.map(item => item.node)
 
   const posts = aboutPosts.map((post, index) => {
     return (
@@ -39,8 +39,12 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="col-lg-6 about-img-div">
-          <img src={post.image.url} alt={post.title} className="about-desc-image" />
-          <div className="img-caption">{post.title}</div>
+          <img
+            src={post.image.url}
+            alt={post.image.title}
+            className="about-desc-image"
+          />
+          <div className="img-caption">{post.image.title}</div>
         </div>
       </div>
     )
@@ -63,4 +67,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
+export default AboutUs
