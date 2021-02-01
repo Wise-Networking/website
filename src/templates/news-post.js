@@ -9,7 +9,9 @@ import Sidebar from "../components/NewsDetails/Sidebar"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
-  console.log("news item ==> ", post)
+
+  //console.log("news item ==> ", post)
+
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",
   }
