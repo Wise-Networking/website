@@ -21,7 +21,7 @@ export const query = graphql`
         }
       }
     }
-   allDatoCmsPerson {
+    allDatoCmsPerson {
       edges {
         node {
           name
@@ -53,10 +53,17 @@ const Page = props => {
     },
   } = page
 
-
   return (
     <Layout location={title} keywords={page.keywords}>
-      <div className={title === "Terms Of Use" ? 'bread-cumbs-area terms-of-use-banner' : title === "Privacy Policy" ? 'bread-cumbs-area privacy-policy-banner' : 'bread-cumbs-area our-people-banner'}>
+      <div
+        className={
+          title === "Terms Of Use"
+            ? "bread-cumbs-area terms-of-use-banner"
+            : title === "Privacy Policy"
+            ? "bread-cumbs-area privacy-policy-banner"
+            : "bread-cumbs-area our-people-banner"
+        }
+      >
         <div className="diplay-table">
           <div className="display-table-cell">
             <div className="container">
@@ -72,7 +79,6 @@ const Page = props => {
       </div>
 
       <section id="page" className="our-news main-news bg-none">
-
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -80,7 +86,7 @@ const Page = props => {
                 <div className="col-lg-12">
                   <div className="news-details">
                     <div className="post-content">
-                      {title === "Our People" ?
+                      {title === "Our People" ? (
                         <div>
                           <h1>{title}</h1>
                           <p>{description}</p>
@@ -124,15 +130,25 @@ const Page = props => {
                               {persons.map((person, key) => {
                                 return (
                                   <div key={key} className="team-box">
-                                    <Image fluid={person.image.fluid} style={{ borderRadius: 500 }} />
+                                    <Image
+                                      fluid={person.image.fluid}
+                                      style={{ borderRadius: 500 }}
+                                    />
                                     <div className="box-content">
                                       <div className="box-inner-content">
                                         <h3 className="title">{person.name}</h3>
-                                        <span className="post">{person.post}</span>
+                                        <span className="post">
+                                          {person.post}
+                                        </span>
                                         {person.linkedinUrl && (
                                           <ul className="icon">
                                             <li key={person.linkedinUrl}>
-                                              <a className="fa fa-linkedin" aria-label="LinkedIn" href={person.linkedinUrl}></a>
+                                              <a
+                                                aria-label="LinkedIn"
+                                                href={person.linkedinUrl}
+                                              >
+                                                <i className="fa fa-linkedin"></i>
+                                              </a>
                                             </li>
                                           </ul>
                                         )}
@@ -142,20 +158,23 @@ const Page = props => {
                                 )
                               })}
                             </OwlCarousel>
-                          ) : ("")
-                          }
+                          ) : (
+                            ""
+                          )}
                         </div>
-                        :
+                      ) : (
                         <div
                           className="post-content"
                           dangerouslySetInnerHTML={{ __html: html }}
                         />
-                      }
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
-            </div></div></div>
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   )
