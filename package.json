@@ -6,7 +6,7 @@
   "author": "Wise Networking &copy; 2020",
   "dependencies": {
     "@loadable/component": "^5.13.1",
-    "gatsby": "^2.27.0",
+    "gatsby": "^2.32.0",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-background-image": "^1.1.2",
     "gatsby-cli": "^2.18.0",
