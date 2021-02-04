@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from "prop-types";
-import { ValidationForm, TextInput } from "react-bootstrap4-form-validation";
+import React from "react"
+import PropTypes from "prop-types"
+import { ValidationForm, TextInput } from "react-bootstrap4-form-validation"
 
-const ContactUs = (props) => {
+const ContactUs = props => {
   const handleForm = e => {
-    e.preventDefault();
+    e.preventDefault()
   }
 
   return (
-    <section id="contact-us" className="contact-area ptb-100">
+    <section id="contact-us" className="contact-area">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2 text-center">
@@ -22,10 +22,12 @@ const ContactUs = (props) => {
         <div className="row">
           <div className="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
             <div className="contact-form">
-              <ValidationForm
-                id="contactForm"
-                onSubmit={handleForm}
-              >
+
+
+
+
+              
+              <ValidationForm id="contactForm" onSubmit={handleForm}>
                 <div className="row">
                   <div className="col-lg-6 col-md-12">
                     <div className="form-group">
@@ -58,37 +60,6 @@ const ContactUs = (props) => {
                       <div className="help-block with-errors" />
                     </div>
                   </div>
-
-                  <div className="col-lg-6 col-md-6">
-                    <div className="form-group">
-                      <TextInput
-                        name="subject"
-                        id="subject"
-                        type="text"
-                        successMessage=""
-                        errorMessage="Please enter your email subject"
-                        className="form-control"
-                        placeholder="Subject"
-                        autoComplete="off"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6">
-                    <div className="form-group">
-                      <TextInput
-                        name="number"
-                        id="number"
-                        type="text"
-                        successMessage=""
-                        errorMessage="Please enter your phone number"
-                        className="form-control"
-                        placeholder="Phone"
-                        autoComplete="off"
-                      />
-                    </div>
-                  </div>
-
                   <div className="col-lg-12 col-md-12">
                     <div className="form-group">
                       <TextInput
@@ -109,7 +80,9 @@ const ContactUs = (props) => {
 
                 <div className="center-wrap text-center">
                   <div className="button">
-                    <button type="submit">Submit <i className="fa fa-long-arrow-right"></i> </button>
+                    <button type="submit">
+                      Submit <i className="fa fa-long-arrow-right"></i>{" "}
+                    </button>
                     <div className="mask"></div>
                   </div>
                 </div>
@@ -140,7 +113,8 @@ ContactUs.propTypes = {
 ContactUs.defaultProps = {
   SectionbgTitle: "Contact Us",
   sectionTitle: "Contact Us",
-  sectionDescription: "Learn more about how your enterprise can build its own IOT network. Reach out today!",
+  sectionDescription:
+    "Learn more about how your enterprise can build its own IOT network. Reach out today!",
   AddTitle: "Address",
   Address: "Suite 4, 71 Balfour Street Chippendale, Sydney 2007",
   EmailTitle: "Email",
