@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql, Link, navigate } from "gatsby"
 import ReactPaginate from "react-paginate"
-import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
+
+import Layout from "../components/App/layout"
 
 export const query = graphql`
   query getAllNews($skip: Int!, $limit: Int!) {

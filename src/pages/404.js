@@ -1,5 +1,6 @@
 import React from "react"
-import Layout from "../components/App/Layout"
+
+import Layout from "../components/App/layout"
 
 const CustomError = () => {
   return (

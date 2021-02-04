@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/App/Layout"
 import BackgroundImage from "gatsby-background-image"
+
+import Layout from "../components/App/layout"
 
 export const query = graphql`
   query getProduct($id: String!) {
@@ -35,7 +36,7 @@ const Product = props => {
     },
     featuredImage,
   } = product
-  
+
   return (
     <Layout location="products" keywords={product.keywords}>
       <BackgroundImage

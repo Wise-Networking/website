@@ -3,14 +3,11 @@ import { Link, graphql } from "gatsby"
 
 import slugify from "slugify"
 
-import Layout from "../components/App/Layout"
-
-import Sidebar from "../components/NewsDetails/Sidebar"
+import Layout from "../components/App/layout"
+import Sidebar from "../components/NewsDetails/sideBar"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
-
-  //console.log("news item ==> ", post)
 
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",

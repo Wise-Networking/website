@@ -2,8 +2,9 @@ import React from "react"
 import { Link, graphql, navigate } from "gatsby"
 import slugify from 'slugify'
 import ReactPaginate from "react-paginate"
-import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
+
+import Layout from "../components/App/layout"
 
 const news = props => {
   const { data } = props

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
-import TopHeader from "./TopHeader"
+import TopHeader from "./topHeader"
 
 const getLogo = graphql`
   {

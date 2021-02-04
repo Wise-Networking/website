@@ -12,9 +12,9 @@ import './assets/style.css'
 import './assets/responsive.css'
 import './assets/default-color.css'
 
-import NavBar from './NavBar'
-import Footer from './Footer'
-import GoTop from './GoTop'
+import NavBar from './navBar'
+import Footer from './footer'
+import GoTop from './goTop'
 
 const Layout = ({ children, location, keywords }) => {
   return (

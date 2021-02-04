@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
 import Loadable from "@loadable/component"
+
+import Layout from "../components/App/layout"
 
 const OwlCarousel = Loadable(() => import("react-owl-carousel3"))
 
