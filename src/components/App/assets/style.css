@@ -114,7 +114,8 @@ p:last-child {
 }
 
 section#contact-us {
-  padding: 240px 0;
+  /* padding: 240px 0; */
+  padding: 300px 0px;
 }
 
 .mrl-50 {
@@ -2269,6 +2270,11 @@ Contact Area CSS
 #contact_send_status {
   color: red;
   margin: 0 0 10px;
+}
+.txt-thanks{
+  color:#fff;
+  font-size: 15px;
+  font-weight: 500;
 }
 /* =========================
 End Contact Area CSS
