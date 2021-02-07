@@ -112,6 +112,12 @@ p:last-child {
   padding: 190px 0;
   /* padding: 110px 0; */
 }
+
+section#contact-us {
+  /* padding: 240px 0; */
+  padding: 300px 0px;
+}
+
 .mrl-50 {
   margin-left: 50px;
 }
@@ -2265,6 +2271,11 @@ Contact Area CSS
   color: red;
   margin: 0 0 10px;
 }
+.txt-thanks{
+  color:#fff;
+  font-size: 15px;
+  font-weight: 500;
+}
 /* =========================
 End Contact Area CSS
 ========================= */
@@ -2982,13 +2993,13 @@ h2 {
   background-image: url(../../../images/our_people_banner.jpg);
 }
 
-.banner-txt{
-    background: #F4EBD0;
-    opacity: 0.8;
-    border-radius: 10px;
-    padding: 10px;
-    color: #122620;
-    margin:0px 16px;
+.banner-txt {
+  background: #f4ebd0;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 10px;
+  color: #122620;
+  margin: 0px 16px;
 }
 .banner-txt h1,
 p {
