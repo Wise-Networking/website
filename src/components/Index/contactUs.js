@@ -158,8 +158,8 @@ export default class ContactUs extends React.Component {
           <div className="row">
             <div className="col-lg-8 offset-lg-2 text-center">
               <div className="section-title">
-                {/* <h2>{props.sectionTitle}</h2>
-              <p>{props.sectionDescription}</p> */}
+                <h2>Contact Us</h2>
+                <p>Learn more about how your enterprise can build its own IOT network. Reach out today!</p>
               </div>
             </div>
           </div>
@@ -172,10 +172,10 @@ export default class ContactUs extends React.Component {
                   method="POST"
                 >
                   {/* <ValidationForm id="contactForm" > */}
-                    <div className="row">
-                      <div className="col-lg-6 col-md-12">
-                        <div className="form-group">
-                          {/* <TextInput
+                  <div className="row">
+                    <div className="col-lg-6 col-md-12">
+                      <div className="form-group">
+                        {/* <TextInput
                             name="name"
                             id="name"
                             required
@@ -184,15 +184,15 @@ export default class ContactUs extends React.Component {
                             className="form-control"
                             placeholder="Name"
                             autoComplete="off"
-                          /> */}
-                          <label>Name:</label>
-                          <input type="text" name="name"  className="form-control" autoComplete="off" placeholder="Name" required/>
-                          <div className="help-block with-errors" />
-                        </div>
+                        /> */}
+                        <label>Name:</label>
+                        <input type="text" name="name"  className="form-control" autoComplete="off" placeholder="Your Name" required/>
+                        <div className="help-block with-errors" />
                       </div>
-                      <div className="col-lg-6 col-md-12">
-                        <div className="form-group">
-                          {/* <TextInput
+                    </div>
+                    <div className="col-lg-6 col-md-12">
+                      <div className="form-group">
+                        {/* <TextInput
                             name="email"
                             id="email"
                             type="email"
@@ -202,15 +202,15 @@ export default class ContactUs extends React.Component {
                             className="form-control"
                             placeholder="Email"
                             autoComplete="off"
-                          /> */}
-                          <label>Email:</label>
-                          <input type="email" name="email" className="form-control" autoComplete="off" placeholder="Email"  required/>
-                          <div className="help-block with-errors" />
-                        </div>
+                        /> */}
+                        <label>Email:</label>
+                        <input type="email" name="email" className="form-control" autoComplete="off" placeholder="Your Email Address" required/>
+                        <div className="help-block with-errors" />
                       </div>
-                      <div className="col-lg-12 col-md-12">
-                        <div className="form-group">
-                          {/* <TextInput
+                    </div>
+                    <div className="col-lg-12 col-md-12">
+                      <div className="form-group">
+                        {/* <TextInput
                             name="message"
                             id="description"
                             multiline
@@ -221,48 +221,35 @@ export default class ContactUs extends React.Component {
                             errorMessage="Please write your message"
                             rows="5"
                             autoComplete="off"
-                          /> */}
-                          <label>Message:</label>
-                          <input type="text" name="message" className="form-control" autoComplete="off" placeholder="Your message" required/>
-                        </div>
+                        /> */}
+                        <label>Message:</label>
+                        <input type="text" name="message" className="form-control" autoComplete="off" placeholder="Your message" required/>
                       </div>
                     </div>
+                  </div>
 
-                    <div className="center-wrap text-center">
-                      <div className="button">
-                        {/* <button type="submit">
-                      Submit <i className="fa fa-long-arrow-right"></i>{" "}
-                    </button> */}
+                  <div className="center-wrap text-center">
+                    <div className="button">
+                      {/* <button type="submit">
+                        Submit <i className="fa fa-long-arrow-right"></i>{" "}
+                      </button> */}
 
-                        {status === "SUCCESS" ? <span className="txt-thanks">Thanks!</span> : <button type="submit">
-                          Submit <i className="fa fa-long-arrow-right"></i>{" "}
-                        </button>}
-                        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+                      {status === "SUCCESS" ? <span className="txt-thanks">Thanks!</span> : <button type="submit">
+                        Submit <i className="fa fa-long-arrow-right"></i>{" "}
+                      </button>}
+                      {status === "ERROR" && <p>Ooops! There was an error.</p>}
 
-                        <div className="mask"></div>
-                      </div>
+                      <div className="mask"></div>
                     </div>
-                    <div className="clearfix" />
+                  </div>
+                  <div className="clearfix" />
                   {/* </ValidationForm> */}
                 </form>
               </div>
             </div>
           </div>
-
-
-
-
-
         </div>
       </section>
-
-
-
-
-
-
-
-
     );
   }
 
