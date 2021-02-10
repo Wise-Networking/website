@@ -24,13 +24,16 @@ const MailChimpModal = (props) => {
   const _handleSubmit = async (e) => {
     e.preventDefault();
 
-    const result = await addToMailchimp('test@gmail.com', null)
-    if (result.result === "error") {
-      //console.log(result.msg);
-    }
-    if (result.result === "success") {
-      //console.log(result.msg);
-    }
+    const result = await addToMailchimp(email, null)
+
+    console.log(result);
+    
+    // if (result.result === "error") {
+    //   //console.log(result.msg);
+    // }
+    // if (result.result === "success") {
+    //   //console.log(result.msg);
+    // }
   }
 
   return (
