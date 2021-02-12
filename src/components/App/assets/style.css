@@ -1474,6 +1474,10 @@ End Our Team Area CSS
 .news-details .post-content {
   padding: 60px 30px 30px;
 }
+.news-details .post-content  a{
+  overflow-wrap: break-word;
+  color: #007bff!important;
+}
 .sharing-link {
   background: #fff;
   padding: 5px 15px;
