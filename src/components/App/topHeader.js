@@ -9,11 +9,12 @@ const TopHeader = () => {
         facebook
         twitter
         linkedin
+        instagram
       }
     }
   `)
-
-  const { email, facebook, twitter, linkedin } = data.datoCmsSiteConfig
+  console.log("datoCmsSiteConfig DATA => ", data);
+  const { email, facebook, twitter, linkedin,instagram } = data.datoCmsSiteConfig
 
   return (
     <div id="home" className="top-header">
@@ -47,6 +48,11 @@ const TopHeader = () => {
                 <li>
                   <a href={linkedin}>
                     <i className="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href={instagram}>
+                    <i className="fa fa-instagram"></i>
                   </a>
                 </li>
               </ul>
