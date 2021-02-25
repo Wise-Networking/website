@@ -1290,7 +1290,7 @@ End Our Team Area CSS
   vertical-align: bottom;
   padding-right: 15px;
   top: -53px;
-  position: absolute;
+  position: relative;
   background: white;
 }
 .post-content {
@@ -1472,7 +1472,8 @@ End Our Team Area CSS
   margin-bottom: 15px;
 }
 .news-details .post-content {
-  padding: 60px 30px 30px;
+  padding: 0 30px 30px;
+  margin-top: -60px;
 }
 .news-details .post-content  a{
   overflow-wrap: break-word;
