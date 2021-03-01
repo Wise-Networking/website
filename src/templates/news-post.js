@@ -15,7 +15,7 @@ const NewsItem = props => {
   }
 
   return (
-    <Layout keywords={post.keywords}>
+    <Layout keywords={post.keywords} title={`News | ${post.title}`}>
       <div className="bread-cumbs-area" style={bannerStyle}>
         <div className="diplay-table">
           <div className="display-table-cell">

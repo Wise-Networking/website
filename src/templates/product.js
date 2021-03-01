@@ -37,7 +37,7 @@ const Product = props => {
   } = product
 
   return (
-    <Layout location="products" keywords={product.keywords}>
+    <Layout location="products" keywords={product.keywords} title={`Products | ${title}`}>
       <BackgroundImage
         Tag="div"
         className="bread-cumbs-area"

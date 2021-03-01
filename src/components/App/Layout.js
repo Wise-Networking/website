@@ -16,10 +16,10 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 import GoTop from './GoTop'
 
-const Layout = ({ children, location, keywords }) => {
+const Layout = ({ children, location, keywords, title }) => {
   return (
     <React.Fragment>
-      <Helmet title="Dandelions: Your Partner In Custom Smart Grids" defer={false} />
+      <Helmet title={title} defer={false} />
       <Helmet>
         <meta name="keywords" content={keywords}></meta>
       </Helmet>

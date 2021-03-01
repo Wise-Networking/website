@@ -27,6 +27,7 @@ const Banner = (props) => {
     heroImage,
   } = data.datoCmsHomePage
 
+  console.log("banner => ", data.datoCmsHomePage);
   return (
     <div className="hompage-slides-wrapper">
       <BackgroundImage

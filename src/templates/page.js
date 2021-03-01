@@ -53,7 +53,7 @@ const Page = props => {
 
 
   return (
-    <Layout location={title} keywords={page.keywords}>
+    <Layout location={title} keywords={page.keywords} title={`${page.title}`}>
       <div className={title === "Terms Of Use" ? 'bread-cumbs-area terms-of-use-banner' : title === "Privacy Policy" ? 'bread-cumbs-area privacy-policy-banner' : 'bread-cumbs-area our-people-banner'}>
         <div className="diplay-table">
           <div className="display-table-cell">

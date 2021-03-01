@@ -34,7 +34,7 @@ const News = props => {
   const { data } = props
   const { pathContext } = props
   const posts = data.allDatoCmsBlogPost.edges.map(node => node.node)
-
+  
   const newsPosts = posts.map((post, index) => (
     <div key={index} className="col-md-6 col-lg-4">
       <div className="news-card">
@@ -67,7 +67,7 @@ const News = props => {
   ))
 
   return (
-    <Layout location="news" keywords="news, wise networking">
+    <Layout location="news" keywords="news, wise networking" title="News">
       <div className="bread-cumbs-area news-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
