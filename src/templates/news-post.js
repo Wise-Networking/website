@@ -14,7 +14,6 @@ const NewsItem = props => {
   }
 
   return (
-<<<<<<< HEAD
     <Layout keywords={post.keywords} title={`News | ${post.title}`}>
       <div className="bread-cumbs-area" style={bannerStyle}>
         <div className="diplay-table">
@@ -30,10 +29,6 @@ const NewsItem = props => {
           </div>
         </div>
       </div>
-=======
-    <Layout keywords={post.keywords}>
-      <div className="bread-cumbs-area" style={bannerStyle} />
->>>>>>> master
 
       <section id="news" className="our-news main-news bg-none">
         <div className="container">

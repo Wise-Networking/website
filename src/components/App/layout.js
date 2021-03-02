@@ -16,17 +16,12 @@ import NavBar from './navBar'
 import Footer from './footer'
 import GoTop from './goTop'
 
-<<<<<<< HEAD:src/components/App/Layout.js
 const Layout = ({ children, location, keywords, title }) => {
-=======
-const Layout = ({ children, location, keywords, description }) => {
->>>>>>> master:src/components/App/layout.js
   return (
     <React.Fragment>
       <Helmet title={title} defer={false} />
       <Helmet>
         <meta name="keywords" content={keywords}></meta>
-        <meta name="description" content={description}></meta>
       </Helmet>
       <NavBar homepage={location === "home"} />
       {children}
