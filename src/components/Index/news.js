@@ -27,6 +27,9 @@ const getData = graphql`
             }
           }
           author
+          category{
+            title
+          }
         }
       }
     }
@@ -62,19 +65,15 @@ const News = () => {
                       fluid={newsItem.featuredImage.fluid}
                       alt="news-one"
                     />
-                    <h3 className="news-title">
-                      <Link to={`/news/${newsItem.slug}`}>
-                        {newsItem.title}
-                      </Link>
-                    </h3>
                   </Link>
 
                   <div className="news-caption">
                     <ul className="meta-tag">
                       <li>
                         <Link to={`/our-people`} className="news-link-cls">
-                          <i className="fa fa-user"></i>
-                          {newsItem.author}
+                          <i className="fa fa-bars"></i>
+                          {/* {newsItem.author} */}
+                          {newsItem.category.title}
                         </Link>
                       </li>
                       <li>

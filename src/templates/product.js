@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/App/Layout"
 import BackgroundImage from "gatsby-background-image"
+
+import Layout from "../components/App/layout"
 
 export const query = graphql`
   query getProduct($id: String!) {
@@ -64,10 +65,10 @@ const Product = props => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="news-details">
+                  <div className="news-details img-details">
                     <div
                       className="post-content"
-                      dangerouslySetInnerHTML={{ __html: html }}
+                      dangerouslySetInnerHTML={{ __html: html.replace('sizes="',"") }}
                     />
                   </div>
                 </div>

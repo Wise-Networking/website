@@ -8,11 +8,12 @@ const Footer = () => {
         facebook
         twitter
         linkedin
+        instagram
       }
     }
   `)
 
-  const { facebook, twitter, linkedin } = data.datoCmsSiteConfig
+  const { facebook, twitter, linkedin, instagram } = data.datoCmsSiteConfig
 
   return (
     <footer className="footer">
@@ -44,6 +45,11 @@ const Footer = () => {
                 <li>
                   <a href={linkedin}>
                     <i className="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href={instagram}>
+                    <i className="fa fa-instagram"></i>
                   </a>
                 </li>
               </ul>

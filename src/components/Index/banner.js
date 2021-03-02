@@ -2,22 +2,22 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const Banner = (props) => {
+const Banner = props => {
   const data = useStaticQuery(graphql`
-      query HeroPageQuery {
-        datoCmsHomePage {
-          heroTopTitle
-          heroTitle
-          heroDescription
-          heroButtonTitle
-          heroImage {
-            fluid(maxWidth: 600) {
-              ...GatsbyDatoCmsFluid
-            }
+    query HeroPageQuery {
+      datoCmsHomePage {
+        heroTopTitle
+        heroTitle
+        heroDescription
+        heroButtonTitle
+        heroImage {
+          fluid(maxWidth: 600) {
+            ...GatsbyDatoCmsFluid
           }
         }
       }
-    `)
+    }
+  `)
 
   const {
     heroTopTitle,
@@ -45,7 +45,13 @@ const Banner = (props) => {
                   <h1>{heroTitle}</h1>
                   <p>{heroDescription}</p>
                   <div className="center-wrap">
-                    <div className="button btn-a" onClick={props.onNewsLetter}>
+                    <div
+                      className="button btn-a"
+                      onClick={props.onNewsLetter}
+                      onKeyDown={props.onNewsLetter}
+                      role="button"
+                      tabIndex="0"
+                    >
                       {heroButtonTitle}
                       {` `}
                       <i className="fa fa-long-arrow-right"></i>

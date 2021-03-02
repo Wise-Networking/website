@@ -16,7 +16,6 @@ const customStyles = {
 
 const MailChimpModal = (props) => {
   var subtitle;
-
   function afterOpenModal() {
     subtitle.style.color = 'red';
   }
@@ -24,12 +23,17 @@ const MailChimpModal = (props) => {
   const _handleSubmit = async (e) => {
     e.preventDefault();
 
-    const result = await addToMailchimp('test@gmail.com', null)
+   const { email } = e.target.elements
+
+    const result = await addToMailchimp(email.value, null)
     if (result.result === "error") {
-      //console.log(result.msg);
+      var res = result.msg.split(". ");
+      alert(res[0]);
+      props.closeModal();
     }
     if (result.result === "success") {
-      //console.log(result.msg);
+      alert(result.msg);
+      props.closeModal();
     }
   }
 
@@ -77,7 +81,6 @@ const MailChimpModal = (props) => {
           </div>
           <div className="clearfix" />
         </ValidationForm>
-
       </Modal>
     </div>
   )

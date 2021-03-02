@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
-import TopHeader from "./TopHeader"
+import TopHeader from "./topHeader"
 
 const getLogo = graphql`
   {
@@ -62,8 +62,10 @@ const NavBar = ({ homepage }) => {
           let section = document.querySelector(link.hash)
           if (!section) return
           if (
-            section.offsetTop <= (fromTop + 20) &&
-            section.offsetTop + section.offsetHeight >= (fromTop + 20)
+            // section.offsetTop <= (fromTop + 20) &&
+            // section.offsetTop + section.offsetHeight >= (fromTop + 20)
+            section.offsetTop <= fromTop + 20 &&
+            section.offsetTop + section.offsetHeight >= fromTop + 10
           ) {
             link.classList.add("active")
           } else {
@@ -87,10 +89,7 @@ const NavBar = ({ homepage }) => {
 
       <nav id="navbar" className="navbar navbar-expand-md navbar-light">
         <div className="container">
-          <Link
-            className="navbar-brand logo logo-one"
-            to="/"
-          >
+          <Link className="navbar-brand logo logo-one" to="/">
             <img src={data.logo.childImageSharp.fixed.src} alt="Logo" />
           </Link>
           <Link className="navbar-brand logo-2" to="/">
@@ -141,7 +140,7 @@ const NavBar = ({ homepage }) => {
                         key={key}
                         to={url}
                         className="nav-link"
-                      // activeClassName="active"
+                        // activeClassName="active"
                       >
                         {title}
                       </Link>
@@ -155,11 +154,14 @@ const NavBar = ({ homepage }) => {
                   }
                 }
 
-                return <li key={key} className="nav-item">{linkReturn}</li>
+                return (
+                  <li key={key} className="nav-item">
+                    {linkReturn}
+                  </li>
+                )
               })}
             </ul>
           </div>
-
         </div>
       </nav>
     </React.Fragment>

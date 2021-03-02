@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql, Link, navigate } from "gatsby"
 import ReactPaginate from "react-paginate"
-import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
+
+import Layout from "../components/App/layout"
 
 export const query = graphql`
   query getAllNews($skip: Int!, $limit: Int!) {
@@ -12,6 +13,9 @@ export const query = graphql`
           title
           slug
           author
+          category{
+            title
+          }
           publishedDate(formatString:"MMMM DD, YYYY")
           description
           contentNode {
@@ -40,14 +44,15 @@ const News = props => {
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
-          <h3 className="news-title"><span>{post.title}</span></h3>
+          {/* <h3 className="news-title"><span>{post.title}</span></h3> */}
         </Link>
         <div className="news-caption">
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
-                <i className="fa fa-user"></i>
-                {post.author}
+                <i className="fa fa-bars"></i>
+                {/* {post.author} */}
+                {post.category.title}
               </Link>
             </li>
             <li>

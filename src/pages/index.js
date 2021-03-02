@@ -1,16 +1,16 @@
 import React from "react"
 
 
-import Layout from "../components/App/Layout"
+import Layout from "../components/App/layout"
 
-import SEO from "../components/App/Seo"
-import Banner from "../components/Index/Banner"
-import News from "../components/Index/News"
-import Products from "../components/Index/Products"
-import Partners from "../components/Index/Partners"
-import AboutUs from "../components/Index/AboutUs"
-import ContactUs from "../components/Index/ContactUs"
-import MailChimpModal from "../components/Index/Modal"
+import SEO from "../components/App/seo"
+import Banner from "../components/Index/banner"
+import News from "../components/Index/news"
+import Products from "../components/Index/products"
+import Partners from "../components/Index/partners"
+import AboutUs from "../components/Index/aboutUs"
+import ContactUs from "../components/Index/contactUs"
+import MailChimpModal from "../components/Index/modal"
 
 const IndexPage = () => {
   const [showModal, setShowModal] = React.useState(false);

@@ -1,6 +1,7 @@
 import React from "react"
-import Layout from "../components/App/Layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
+
+import Layout from "../components/App/layout"
 
 const getData = graphql`
   {
@@ -28,7 +29,7 @@ const Products = props => {
           <div className="container"><div className="row">
             <div className="col-lg-7 banner-txt">
               <h1>Products</h1>
-              <p>prod·​uct (noun) : something that is marketed or sold as a commodity</p>
+              <p>Dandelions offers a number of different solutions for your IOT project. How can we help?</p>
             </div>
           </div>
           </div>
@@ -38,7 +39,7 @@ const Products = props => {
 
       <section id="news" className="our-news main-news bg-none">
         <div className="container">
-          <div className="row">
+          <div className="row products-div">
             {productItems.map((productItem, key) => {
               return (
                 <div key={key} className="col-md-6 col-lg-4">

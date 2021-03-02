@@ -2,8 +2,9 @@ import React from "react"
 import { Link, graphql, navigate } from "gatsby"
 import slugify from 'slugify'
 import ReactPaginate from "react-paginate"
-import Layout from "../components/App/Layout"
 import Image from "gatsby-image"
+
+import Layout from "../components/App/layout"
 
 const news = props => {
   const { data } = props
@@ -17,15 +18,14 @@ const news = props => {
       <div className="news-card">
         <Link to={`/news/${post.slug}`} className="news-img">
           <Image fluid={post.featuredImage.fluid} />
-          <h3 className="news-title"><span>{post.title}</span></h3>
         </Link>
 
         <div className="news-caption">
           <ul className="meta-tag">
             <li>
               <Link to={`/our-people`} className="news-link-cls">
-                <i className="fa fa-user"></i>
-                {post.author}
+                <i className="fa fa-bars"></i>
+                {post.category.title}
               </Link>
             </li>
             <li>
@@ -113,6 +113,9 @@ export const query = graphql`
           slug
           description
           author
+          category{
+            title
+          }
           publishedDate(formatString:"MMMM DD, YYYY")
           contentNode {
             childMarkdownRemark {
