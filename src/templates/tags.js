@@ -45,7 +45,7 @@ const news = props => {
   ))
 
   return (
-    <Layout location="news" keywords={tag.keywords}>
+    <Layout location="news" keywords={tag.keywords} description={tag.description}>
       <div className="bread-cumbs-area tags-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
