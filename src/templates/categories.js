@@ -45,7 +45,7 @@ const news = props => {
   ))
 
   return (
-    <Layout location="news" keywords={category.keywords}>
+    <Layout location="news" keywords={category.keywords} description={category.description}>
       <div className="bread-cumbs-area categories-banner">
         <div className="diplay-table">
           <div className="display-table-cell">
