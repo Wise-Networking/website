@@ -16,11 +16,7 @@ import NavBar from './navBar'
 import Footer from './footer'
 import GoTop from './goTop'
 
-<<<<<<< HEAD:src/components/App/Layout.js
-const Layout = ({ children, location, keywords, title }) => {
-=======
-const Layout = ({ children, location, keywords, description }) => {
->>>>>>> master:src/components/App/layout.js
+const Layout = ({ children, location, keywords, title, description }) => {
   return (
     <React.Fragment>
       <Helmet title={title} defer={false} />
