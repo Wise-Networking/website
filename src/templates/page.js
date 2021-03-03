@@ -61,8 +61,8 @@ const Page = props => {
           title === "Terms Of Use"
             ? "bread-cumbs-area terms-of-use-banner"
             : title === "Privacy Policy"
-            ? "bread-cumbs-area privacy-policy-banner"
-            : "bread-cumbs-area our-people-banner"
+              ? "bread-cumbs-area privacy-policy-banner"
+              : "bread-cumbs-area our-people-banner"
         }
       >
         <div className="diplay-table">

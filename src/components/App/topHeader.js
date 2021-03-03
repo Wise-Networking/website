@@ -13,8 +13,8 @@ const TopHeader = () => {
       }
     }
   `)
-  console.log("datoCmsSiteConfig DATA => ", data);
-  const { email, facebook, twitter, linkedin,instagram } = data.datoCmsSiteConfig
+  // console.log("datoCmsSiteConfig DATA => ", data);
+  const { email, facebook, twitter, linkedin, instagram } = data.datoCmsSiteConfig
 
   return (
     <div id="home" className="top-header">
