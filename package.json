@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Wise Networking &copy; 2020",
   "dependencies": {
+    "@babel/plugin-syntax-typescript": "^7.12.13",
     "@loadable/component": "^5.13.1",
     "gatsby": "^2.32.0",
     "gatsby-awesome-pagination": "^0.3.6",
