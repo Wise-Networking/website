@@ -22,7 +22,7 @@ const Categories = props => {
 
   const categoriesItems = data.categories.edges.map(node => node.node)
   return (
-    <Layout location="categories" keywords="categories, wise networking" description={`cat·​e·​go·​ry (noun) : any of several fundamental and distinct classes to which entities or concepts belong`}>
+    <Layout location="categories" keywords="categories, wise networking" title="Categories | cat·​e·​go·​ry (noun) : any of several fundamental and distinct classes to which entities or concepts belong" description={`cat·​e·​go·​ry (noun) : any of several fundamental and distinct classes to which entities or concepts belong`}>
       <div className="bread-cumbs-area categories-banner">
         <div className="diplay-table"><div className="display-table-cell">
           <div className="container"><div className="row">

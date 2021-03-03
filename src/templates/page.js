@@ -55,7 +55,7 @@ const Page = props => {
   } = page
 
   return (
-    <Layout location={title} keywords={page.keywords} description={description}>
+    <Layout location={title} keywords={page.keywords} title={`${title} | ${description}`} description={description}>
       <div
         className={
           title === "Terms Of Use"

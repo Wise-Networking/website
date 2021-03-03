@@ -22,6 +22,7 @@ const Layout = ({ children, location, keywords, title, description }) => {
       <Helmet title={title} defer={false} />
       <Helmet>
         <meta name="keywords" content={keywords}></meta>
+         <meta name="description" content={description}></meta>
       </Helmet>
       <NavBar homepage={location === "home"} />
       {children}
