@@ -23,7 +23,7 @@ const Tags = props => {
   const tagsItems = data.tags.edges.map(node => node.node)
 
   return (
-    <Layout location="tags" keywords="tags, wise networking">
+    <Layout location="tags" keywords="tags, wise networking" description="tag (noun) : a descriptive or identifying epithet">
       <div className="bread-cumbs-area tags-banner">
         <div className="diplay-table"><div className="display-table-cell">
           <div className="container"><div className="row">
