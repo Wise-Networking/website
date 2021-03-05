@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: https://wise-networking.admin.datocms.com/sign_in
-Sitemap: https://dandelions.cloud//sitemap.xml
+Disallow: /*.png$
+Sitemap: https://dandelions.cloud/sitemap.xml
