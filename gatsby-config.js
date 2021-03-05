@@ -3,6 +3,7 @@ module.exports = {
     title: `Dandelions: Your Partner In Custom Smart Grids`,
     description: `Dandelions provides standardized IT, power and communications enabling customers to build custom IOT grids.`,
     author: `https://www.linkedin.com/company/wise-networking/`,
+    siteUrl: `https://www.dandelions.cloud`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -105,6 +106,7 @@ module.exports = {
         timeout: 3500,
       },
     },
+    `gatsby-plugin-sitemap`
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
