@@ -59,6 +59,11 @@ body {
 .navbar {
   padding: 0;
 }
+
+nav#navbar {
+  z-index: 99999 !important;
+}
+
 a:hover,
 a:focus {
   text-decoration: none;
@@ -1474,10 +1479,14 @@ End Our Team Area CSS
 .news-details .post-content {
   padding: 0 30px 30px;
   margin-top: -60px;
+  z-index: 9999;
+  position: relative;
 }
+
 .news-details .post-content  a{
   overflow-wrap: break-word;
   color: #007bff!important;
+  
 }
 .sharing-link {
   background: #fff;
