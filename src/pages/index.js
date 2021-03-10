@@ -11,7 +11,7 @@ import Partners from "../components/Index/partners"
 import AboutUs from "../components/Index/aboutUs"
 import ContactUs from "../components/Index/contactUs"
 import MailChimpModal from "../components/Index/modal"
-
+// import {trackCustomEvent} from "gatsby-plugin-google-analytics"
 const IndexPage = () => {
   const [showModal, setShowModal] = React.useState(false);
 
@@ -22,6 +22,10 @@ const IndexPage = () => {
   const closeModal = () => {
     setShowModal(false);
   }
+  
+ /* trackCustomEvent({
+    category: "Page View"
+  })*/
 
   return (
     <Layout location="home" keywords="home page, wise networking ">
