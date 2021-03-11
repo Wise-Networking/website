@@ -107,15 +107,13 @@ module.exports = {
       },
     },
     {
-        resolve: `gatsby-plugin-google-analytics`,
-        options: {
-          // The property ID; the tracking code won't be generated without it
-          trackingId: "G-7JNL3L758K",
-          // Defines where to place the tracking script - `true` in the head and `false` in the body
-          head: false,
-          // Defers execution of google analytics script after page load
-          defer: true,
-        },
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-7JNL3L758K", // Google Analytics / GA
+        ],
+      },
     },
     `gatsby-plugin-sitemap`,
 
