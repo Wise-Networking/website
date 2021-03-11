@@ -110,15 +110,19 @@ module.exports = {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
           // The property ID; the tracking code won't be generated without it
-          //trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+          trackingId: "G-7JNL3L758K",
+          // Defines where to place the tracking script - `true` in the head and `false` in the body
+          head: false,
+          // Defers execution of google analytics script after page load
+          defer: true,
         },
-    }
-    `gatsby-plugin-sitemap`
+    },
+    `gatsby-plugin-sitemap`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 
-    
+
   ],
 }
