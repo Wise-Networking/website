@@ -93,9 +93,6 @@ module.exports = {
         apiToken: `eb67bceab631dc1ec53d6df0a32af9`,
         previewMode: false,
         disableLiveReload: false,
-        localeFallbacks: {
-          it: ["en"],
-        },
       },
     },
     {
@@ -116,11 +113,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.dandelions.cloud',
+        sitemap: 'https://www.dandelions.cloud/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-
 
   ],
 }
