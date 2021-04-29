@@ -10,6 +10,7 @@ import Sidebar from "../components/NewsDetails/sideBar"
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
+  const hasRichText = post.richText && post.richText.value
   const options = {
     renderBlock({ record, adapter: { renderNode } }) {
       return renderNode(
@@ -28,7 +29,7 @@ const NewsItem = props => {
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",
   }
-
+  console.log(hasRichText)
   return (
     <Layout
       keywords={post.keywords}
@@ -76,18 +77,22 @@ const NewsItem = props => {
                   </div>
                 </div>
                 <br />
-                {/* <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{
-                    __html: post.contentNode.childMarkdownRemark.html,
-                  }}
-                /> */}
-                <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{
-                    __html: render(post.richText, options),
-                  }}
-                />
+                {hasRichText && (
+                  <div
+                    className="post-content"
+                    dangerouslySetInnerHTML={{
+                      __html: render(post.richText, options),
+                    }}
+                  />
+                )}
+                {!hasRichText && post.contentNode && (
+                  <div
+                    className="post-content"
+                    dangerouslySetInnerHTML={{
+                      __html: post.contentNode.childMarkdownRemark.html,
+                    }}
+                  />
+                )}
               </div>
             </div>
 
