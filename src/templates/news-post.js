@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { render } from "datocms-structured-text-to-html-string"
 
 import slugify from "slugify"
 
@@ -9,12 +10,32 @@ import Sidebar from "../components/NewsDetails/sideBar"
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
 
+  const hasRichText = post.richText && post.richText.value
+  const options = {
+    renderBlock({ record, adapter: { renderNode } }) {
+      return renderNode(
+        "figure",
+        {},
+        renderNode("img", { src: record.image.url, alt: record.image.alt }),
+        renderNode(
+          "figcaption",
+          { style: "text-align: center" },
+          record.image.title
+        )
+      )
+    },
+  }
+
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",
   }
-
+  console.log(hasRichText)
   return (
-    <Layout keywords={post.keywords} title={ `News | ${post.title}`} description={post.description}>
+    <Layout
+      keywords={post.keywords}
+      title={`News | ${post.title}`}
+      description={post.description}
+    >
       <div className="bread-cumbs-area" style={bannerStyle} />
       <section id="news" className="our-news main-news bg-none">
         <div className="container">
@@ -56,12 +77,22 @@ const NewsItem = props => {
                   </div>
                 </div>
                 <br />
-                <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{
-                    __html: post.contentNode.childMarkdownRemark.html,
-                  }}
-                />
+                {hasRichText && (
+                  <div
+                    className="post-content"
+                    dangerouslySetInnerHTML={{
+                      __html: render(post.richText, options),
+                    }}
+                  />
+                )}
+                {!hasRichText && post.contentNode && (
+                  <div
+                    className="post-content"
+                    dangerouslySetInnerHTML={{
+                      __html: post.contentNode.childMarkdownRemark.html,
+                    }}
+                  />
+                )}
               </div>
             </div>
 
@@ -84,6 +115,20 @@ export const query = graphql`
       keywords
       publishDay: publishedDate(formatString: "DD")
       publishMonth: publishedDate(formatString: "MMM")
+      richText {
+        value
+        blocks {
+          __typename
+          ... on DatoCmsImageBlock {
+            id: originalId
+            image {
+              url
+              title
+              alt
+            }
+          }
+        }
+      }
       contentNode {
         childMarkdownRemark {
           html
