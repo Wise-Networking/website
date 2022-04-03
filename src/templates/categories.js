@@ -3,8 +3,10 @@ import { Link, graphql, navigate } from "gatsby"
 import slugify from 'slugify'
 import ReactPaginate from "react-paginate"
 import Image from "gatsby-image"
+import { render } from 'datocms-structured-text-to-plain-text';
 
 import Layout from "../components/App/layout"
+import trimString from "../utils/trim-string";
 
 const news = props => {
   const { data } = props
@@ -34,7 +36,7 @@ const news = props => {
               {post.publishedDate}
             </li>
           </ul>
-          <p>{post.contentNode.childMarkdownRemark.newsItemDescription}</p>
+          <p>{trimString(render(post.richText))}</p>
 
           <Link className="read-more" to={`/news/${post.slug}`}>
             Read More
@@ -116,10 +118,8 @@ export const query = graphql`
             title
           }
           publishedDate(formatString:"MMMM DD, YYYY")
-          contentNode {
-            childMarkdownRemark {
-              newsItemDescription:excerpt
-            }
+          richText {
+            value
           }
           featuredImage {
             fluid(maxWidth: 600) {

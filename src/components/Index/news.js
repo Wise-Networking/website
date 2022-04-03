@@ -1,7 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import { render } from 'datocms-structured-text-to-plain-text';
 
-import Image from 'gatsby-image'
+import Image from "gatsby-image"
+
+import trimString from "../../utils/trim-string";
 
 const getData = graphql`
   {
@@ -10,7 +13,10 @@ const getData = graphql`
       newsDescription
       newsBackgroundTitle
     }
-    newsPosts: allDatoCmsBlogPost(limit: 3,sort: {fields: publishedDate,order:DESC}) {
+    newsPosts: allDatoCmsBlogPost(
+      limit: 3
+      sort: { fields: publishedDate, order: DESC }
+    ) {
       edges {
         node {
           title
@@ -20,14 +26,12 @@ const getData = graphql`
               ...GatsbyDatoCmsFluid
             }
           }
-          publishedDate(formatString:"MMMM DD, YYYY")
-          contentNode {
-            childMarkdownRemark {
-              newsItemDescription:excerpt
-            }
+          publishedDate(formatString: "MMMM DD, YYYY")
+          richText {
+            value
           }
           author
-          category{
+          category {
             title
           }
         }
@@ -77,13 +81,11 @@ const News = () => {
                         </Link>
                       </li>
                       <li>
-                        <i className="fa fa-calendar"></i>{newsItem.publishedDate}
+                        <i className="fa fa-calendar"></i>
+                        {newsItem.publishedDate}
                       </li>
                     </ul>
-                    <p>
-                      {newsItem.contentNode.childMarkdownRemark.newsItemDescription}
-                    </p>
-
+                    <p>{trimString(render(newsItem.richText))}</p>
                     <Link className="read-more" to={`/news/${newsItem.slug}`}>
                       Read More
                     </Link>
