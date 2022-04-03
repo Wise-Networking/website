@@ -29,7 +29,6 @@ const NewsItem = props => {
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",
   }
-  console.log(hasRichText)
   return (
     <Layout
       keywords={post.keywords}
