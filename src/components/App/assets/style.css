@@ -1483,9 +1483,10 @@ End Our Team Area CSS
   position: relative;
 }
 
-.news-details .post-content  a{
+.news-details .post-content a {
   overflow-wrap: break-word;
   color: #007bff!important;
+  text-decoration: underline;
   
 }
 .sharing-link {
