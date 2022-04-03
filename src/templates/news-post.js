@@ -6,25 +6,10 @@ import slugify from "slugify"
 
 import Layout from "../components/App/layout"
 import Sidebar from "../components/NewsDetails/sideBar"
+import options from "../utils/render-options"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
-
-  const hasRichText = post.richText && post.richText.value
-  const options = {
-    renderBlock({ record, adapter: { renderNode } }) {
-      return renderNode(
-        "figure",
-        {},
-        renderNode("img", { src: record.image.url, alt: record.image.alt }),
-        renderNode(
-          "figcaption",
-          { style: "text-align: center" },
-          record.image.title
-        )
-      )
-    },
-  }
 
   var bannerStyle = {
     backgroundImage: "url(" + post["featuredImage"]?.url + ")",
@@ -76,22 +61,12 @@ const NewsItem = props => {
                   </div>
                 </div>
                 <br />
-                {hasRichText && (
-                  <div
-                    className="post-content"
-                    dangerouslySetInnerHTML={{
-                      __html: render(post.richText, options),
-                    }}
-                  />
-                )}
-                {!hasRichText && post.contentNode && (
-                  <div
-                    className="post-content"
-                    dangerouslySetInnerHTML={{
-                      __html: post.contentNode.childMarkdownRemark.html,
-                    }}
-                  />
-                )}
+                <div
+                  className="post-content"
+                  dangerouslySetInnerHTML={{
+                    __html: render(post.richText, options),
+                  }}
+                />
               </div>
             </div>
 
@@ -126,11 +101,6 @@ export const query = graphql`
               alt
             }
           }
-        }
-      }
-      contentNode {
-        childMarkdownRemark {
-          html
         }
       }
       tags {

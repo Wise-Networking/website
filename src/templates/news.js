@@ -2,8 +2,10 @@ import React from "react"
 import { graphql, Link, navigate } from "gatsby"
 import ReactPaginate from "react-paginate"
 import Image from "gatsby-image"
+import { render } from 'datocms-structured-text-to-plain-text';
 
 import Layout from "../components/App/layout"
+import trimString from "../utils/trim-string";
 
 export const query = graphql`
   query getAllNews($skip: Int!, $limit: Int!) {
@@ -18,10 +20,8 @@ export const query = graphql`
           }
           publishedDate(formatString:"MMMM DD, YYYY")
           description
-          contentNode {
-            childMarkdownRemark {
-              newsItemDescription:excerpt
-            }
+          richText {
+            value
           }
           featuredImage {
             fluid(maxWidth: 600) {
@@ -61,7 +61,7 @@ const News = props => {
             </li>
           </ul>
 
-          <p>{post.contentNode.childMarkdownRemark.newsItemDescription}</p>
+          <p>{trimString(render(post.richText))}</p>
 
           <Link className="read-more" to={`/news/${post.slug}`}>
             Read More
