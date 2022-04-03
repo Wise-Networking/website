@@ -17,7 +17,10 @@ export default class ContactUs extends React.Component {
             <div className="col-lg-8 offset-lg-2 text-center">
               <div className="section-title">
                 <h2>Contact Us</h2>
-                <p>Learn more about how your enterprise can build its own IOT network. Reach out today!</p>
+                <p>
+                  Learn more about how your enterprise can build its own IOT
+                  network. Reach out today!
+                </p>
               </div>
             </div>
           </div>
@@ -32,32 +35,56 @@ export default class ContactUs extends React.Component {
                   <div className="row">
                     <div className="col-lg-6 col-md-12">
                       <div className="form-group">
-                     
-                        <label>Name:</label>
-                        <input type="text" name="name"  className="form-control" autoComplete="off" placeholder="Your Name" required/>
+                        <label htmlFor="name">Name:</label>
+                        <input
+                          type="text"
+                          name="name"
+                          className="form-control"
+                          autoComplete="off"
+                          placeholder="Your Name"
+                          required
+                        />
                         <div className="help-block with-errors" />
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
                       <div className="form-group">
-                        <label>Email:</label>
-                        <input type="email" name="email" className="form-control" autoComplete="off" placeholder="Your Email Address" required/>
+                        <label htmlFor="email">Email:</label>
+                        <input
+                          type="email"
+                          name="email"
+                          className="form-control"
+                          autoComplete="off"
+                          placeholder="Your Email Address"
+                          required
+                        />
                         <div className="help-block with-errors" />
                       </div>
                     </div>
                     <div className="col-lg-12 col-md-12">
                       <div className="form-group">
-                        <label>Message:</label>
-                        <input type="text" name="message" className="form-control" autoComplete="off" placeholder="Your message" required/>
+                        <label htmlFor="message">Message:</label>
+                        <input
+                          type="text"
+                          name="message"
+                          className="form-control"
+                          autoComplete="off"
+                          placeholder="Your message"
+                          required
+                        />
                       </div>
                     </div>
                   </div>
 
                   <div className="center-wrap text-center">
                     <div className="button">
-                      {status === "SUCCESS" ? <span className="txt-thanks">Thanks!</span> : <button type="submit">
-                        Submit <i className="fa fa-long-arrow-right"></i>{" "}
-                      </button>}
+                      {status === "SUCCESS" ? (
+                        <span className="txt-thanks">Thanks!</span>
+                      ) : (
+                        <button type="submit">
+                          Submit <i className="fa fa-long-arrow-right"></i>{" "}
+                        </button>
+                      )}
                       {status === "ERROR" && <p>Ooops! There was an error.</p>}
 
                       <div className="mask"></div>
@@ -70,7 +97,7 @@ export default class ContactUs extends React.Component {
           </div>
         </div>
       </section>
-    );
+    )
   }
 
   submitForm(ev) {
