@@ -70,12 +70,17 @@ const NewsItem = props => {
                     data={post.richText}
                     renderBlock={({ record }) => {
                       switch (record.__typename) {
-                        case "DatoCmsImage":
+                        case "DatoCmsImageBlock":
                           return (
-                            <img
-                              src={record.imageUpload.url}
-                              alt={record.imageUpload.alt}
-                            />
+                            <figure>
+                              <img
+                                src={record.image.url}
+                                alt={record.image.alt}
+                              />
+                              <figcaption style={{ textAlign: "center" }}>
+                                {record.image.title}
+                              </figcaption>
+                            </figure>
                           )
                         case "DatoCmsYoutube":
                           return (
@@ -99,6 +104,17 @@ const NewsItem = props => {
                               />
                             </div>
                           )
+                        case "DatoCmsVideo":
+                          return (
+                            <div>
+                              <video width="100%" controls="controls">
+                                <source
+                                  src={record.video.url}
+                                  type={`video/${record.video.format}`}
+                                />
+                              </video>
+                            </div>
+                          )
                         default:
                           return null
                       }
@@ -117,49 +133,64 @@ const NewsItem = props => {
 }
 
 export const query = graphql`
-         query getNewsPost($id: String!) {
-           datoCmsBlogPost(id: { eq: $id }) {
-             id
-             title
-             description
-             slug
-             author
-             keywords
-             publishDay: publishedDate(formatString: "DD")
-             publishMonth: publishedDate(formatString: "MMM")
-             richText {
-               value
-               blocks {
-                 __typename
-                 ... on DatoCmsImageBlock {
-                   id
-                   image {
-                     url
-                     title
-                     alt
-                   }
-                 }
-                 ... on DatoCmsYoutube {
-                   id
-                   url
-                 }
-               }
-             }
-             tags {
-               title
-               description
-               link
-             }
-             category {
-               title
-               description
-               link
-             }
-             featuredImage {
-               url
-             }
-           }
-         }
-       `
+  query getNewsPost($id: String!) {
+    datoCmsBlogPost(id: { eq: $id }) {
+      id
+      title
+      description
+      slug
+      author
+      keywords
+      publishDay: publishedDate(formatString: "DD")
+      publishMonth: publishedDate(formatString: "MMM")
+      richText {
+        value
+        blocks {
+          __typename
+          ... on DatoCmsImageBlock {
+            id: originalId
+            image {
+              url
+              title
+              alt
+            }
+          }
+          ... on DatoCmsYoutube {
+            id: originalId
+            url
+          }
+          ... on DatoCmsTwitter {
+            id: originalId
+            url
+          }
+          ... on DatoCmsLinkedin {
+            id: originalId
+            url
+          }
+          ... on DatoCmsVideo {
+            id: originalId
+            video {
+              format
+              url
+            }
+          }
+        }
+      }
+      tags {
+        title
+        description
+        link
+      }
+      category {
+        title
+        description
+        link
+      }
+      featuredImage {
+        url
+      }
+    }
+  }
+`
 
 export default NewsItem
