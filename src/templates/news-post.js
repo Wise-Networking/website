@@ -1,12 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { render } from "datocms-structured-text-to-html-string"
+import { StructuredText } from "react-datocms"
+import {
+  LinkedInEmbed,
+  TwitterEmbed,
+  YouTubeEmbed,
+} from "react-social-media-embed"
 
 import slugify from "slugify"
 
 import Layout from "../components/App/layout"
 import Sidebar from "../components/NewsDetails/sideBar"
-import options from "../utils/render-options"
 
 const NewsItem = props => {
   const post = props.data.datoCmsBlogPost
@@ -61,12 +65,46 @@ const NewsItem = props => {
                   </div>
                 </div>
                 <br />
-                <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{
-                    __html: render(post.richText, options),
-                  }}
-                />
+                <div className="post-content">
+                  <StructuredText
+                    data={post.richText}
+                    renderBlock={({ record }) => {
+                      switch (record.__typename) {
+                        case "DatoCmsImage":
+                          return (
+                            <img
+                              src={record.imageUpload.url}
+                              alt={record.imageUpload.alt}
+                            />
+                          )
+                        case "DatoCmsYoutube":
+                          return (
+                            <div className="block-container block-container--youtube">
+                              <YouTubeEmbed url={record.url} />
+                            </div>
+                          )
+                        case "DatoCmsTwitter":
+                          return (
+                            <div className="block-container">
+                              <TwitterEmbed url={record.url} width={480} />
+                            </div>
+                          )
+                        case "DatoCmsLinkedin":
+                          return (
+                            <div className="block-container">
+                              <LinkedInEmbed
+                                url={record.url}
+                                width={480}
+                                height={640}
+                              />
+                            </div>
+                          )
+                        default:
+                          return null
+                      }
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
@@ -79,45 +117,49 @@ const NewsItem = props => {
 }
 
 export const query = graphql`
-  query getNewsPost($id: String!) {
-    datoCmsBlogPost(id: { eq: $id }) {
-      id
-      title
-      description
-      slug
-      author
-      keywords
-      publishDay: publishedDate(formatString: "DD")
-      publishMonth: publishedDate(formatString: "MMM")
-      richText {
-        value
-        blocks {
-          __typename
-          ... on DatoCmsImageBlock {
-            id: originalId
-            image {
-              url
-              title
-              alt
-            }
-          }
-        }
-      }
-      tags {
-        title
-        description
-        link
-      }
-      category {
-        title
-        description
-        link
-      }
-      featuredImage {
-        url
-      }
-    }
-  }
-`
+         query getNewsPost($id: String!) {
+           datoCmsBlogPost(id: { eq: $id }) {
+             id
+             title
+             description
+             slug
+             author
+             keywords
+             publishDay: publishedDate(formatString: "DD")
+             publishMonth: publishedDate(formatString: "MMM")
+             richText {
+               value
+               blocks {
+                 __typename
+                 ... on DatoCmsImageBlock {
+                   id
+                   image {
+                     url
+                     title
+                     alt
+                   }
+                 }
+                 ... on DatoCmsYoutube {
+                   id
+                   url
+                 }
+               }
+             }
+             tags {
+               title
+               description
+               link
+             }
+             category {
+               title
+               description
+               link
+             }
+             featuredImage {
+               url
+             }
+           }
+         }
+       `
 
 export default NewsItem

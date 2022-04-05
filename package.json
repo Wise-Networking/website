@@ -38,6 +38,7 @@
     "react-bootstrap-tabs": "^2.0.0",
     "react-bootstrap4-form-validation": "^1.0.10",
     "react-countup": "^4.3.3",
+    "react-datocms": "^3.0.12",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-image-lightbox": "^5.1.1",
@@ -47,6 +48,7 @@
     "react-page-loading": "^1.0.2",
     "react-paginate": "^6.5.0",
     "react-scroll": "^1.8.0",
+    "react-social-media-embed": "^2.0.12",
     "react-visibility-sensor": "^5.1.1",
     "slugify": "^1.4.6"
   },
