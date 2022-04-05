@@ -70,11 +70,11 @@ const NewsItem = props => {
                     data={post.richText}
                     renderBlock={({ record }) => {
                       switch (record.__typename) {
-                        case "DatoCmsImage":
+                        case "DatoCmsImageBlock":
                           return (
                             <img
-                              src={record.imageUpload.url}
-                              alt={record.imageUpload.alt}
+                              src={record.image.url}
+                              alt={record.image.alt}
                             />
                           )
                         case "DatoCmsYoutube":
@@ -132,7 +132,7 @@ export const query = graphql`
                blocks {
                  __typename
                  ... on DatoCmsImageBlock {
-                   id
+                   id: originalId
                    image {
                      url
                      title
@@ -140,7 +140,15 @@ export const query = graphql`
                    }
                  }
                  ... on DatoCmsYoutube {
-                   id
+                   id: originalId
+                   url
+                 }
+                 ... on DatoCmsTwitter {
+                   id: originalId
+                   url
+                 }
+                 ... on DatoCmsLinkedin {
+                   id: originalId
                    url
                  }
                }
