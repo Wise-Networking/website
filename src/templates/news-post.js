@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { StructuredText } from "react-datocms"
 import {
+  FacebookEmbed,
+  InstagramEmbed,
   LinkedInEmbed,
   TwitterEmbed,
   YouTubeEmbed,
@@ -104,6 +107,18 @@ const NewsItem = props => {
                               />
                             </div>
                           )
+                        case "DatoCmsFacebook":
+                          return (
+                            <div className="block-container">
+                              <FacebookEmbed url={record.url} width={480} />
+                            </div>
+                          )
+                        case "DatoCmsInstagram":
+                          return (
+                            <div className="block-container">
+                              <InstagramEmbed url={record.url} width={480} />
+                            </div>
+                          )
                         case "DatoCmsVideo":
                           return (
                             <div>
@@ -164,6 +179,14 @@ export const query = graphql`
             url
           }
           ... on DatoCmsLinkedin {
+            id: originalId
+            url
+          }
+          ... on DatoCmsFacebook {
+            id: originalId
+            url
+          }
+          ... on DatoCmsInstagram {
             id: originalId
             url
           }
