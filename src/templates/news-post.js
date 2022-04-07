@@ -110,7 +110,9 @@ const NewsItem = props => {
                         case "DatoCmsFacebook":
                           return (
                             <div className="block-container">
-                              <FacebookEmbed url={record.url} width={480} />
+                              {typeof window !== "undefined" && (
+                                <FacebookEmbed url={record.url} width={480} />
+                              )}
                             </div>
                           )
                         case "DatoCmsInstagram":
