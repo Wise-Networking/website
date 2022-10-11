@@ -1482,12 +1482,13 @@ End Our Team Area CSS
   z-index: 9999;
   position: relative;
 }
-
+.news-details .post-content ul {
+  margin-left: 1.25rem;
+}
 .news-details .post-content a {
   overflow-wrap: break-word;
-  color: #007bff!important;
+  color: #007bff !important;
   text-decoration: underline;
-  
 }
 .sharing-link {
   background: #fff;
@@ -2286,8 +2287,8 @@ Contact Area CSS
   color: red;
   margin: 0 0 10px;
 }
-.txt-thanks{
-  color:#fff;
+.txt-thanks {
+  color: #fff;
   font-size: 15px;
   font-weight: 500;
 }

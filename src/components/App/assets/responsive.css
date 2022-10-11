@@ -715,7 +715,8 @@
         margin: 0 0 20px;
     }
     .bread-cumbs-area {
-        height: 100%;
+        background-position: 50% 35%;
+        height: 400px;
         padding: 70px 0 50px;
     }
     .main-news {
@@ -745,5 +746,11 @@
     }
     .about-text h3 {
         font-size: 23px;
+    }
+}
+
+@media only screen and (min-width : 1201px) {
+    .bread-cumbs-area {
+        background-position: 50% 30%;
     }
 }
