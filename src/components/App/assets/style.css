@@ -12,6 +12,7 @@ This files contents are outlined below>>>>>
 
 ==== INDEX PAGE CSS
 
+** - Themes Colors
 ** - Default CSS
 ** - Preloaders CSS
 ** - Top Header area CSS
@@ -38,6 +39,16 @@ This files contents are outlined below>>>>>
 ** - Breadcumbs CSS
 
 */
+
+/* =========================
+Themes Colors
+========================= */
+:root {
+  --grey: #bababa;
+  --dark-grey: #616153;
+  --black: #262626;
+  --primary: #ff7500;
+}
 
 /* =========================
 Default CSS
@@ -367,20 +378,16 @@ End Preloader CSS
 Top Header CSS
 ========================= */
 .top-header {
-  background-color: #eeeeee;
-  color: #848484;
-  padding: 10px 0 10px;
+  background-color: var(--grey);
+  color: var(--black);
+  padding: 10px 0;
 }
 .glyph i {
   font-size: 60px;
 }
-.address-bar {
-  background-color: #eee;
-  margin-left: 104px;
-}
-.address-bar ul li a {
-  color: #675a5a;
-  font-size: 14px;
+.address-bar a {
+  color: var(--black);
+  font-size: 0.875rem;
 }
 .social-icons {
   text-align: right;
@@ -394,11 +401,11 @@ Top Header CSS
   text-align: right;
 }
 .social-icons ul li a {
-  background-color: #eae3e3;
+  background-color: var(--black);
   display: block;
   width: 25px;
   height: 25px;
-  color: #675a5a;
+  color: var(--grey);
   border-radius: 50%;
   text-align: center;
   line-height: 26px;
