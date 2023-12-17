@@ -26,7 +26,7 @@ const TopHeader = () => {
     <div id="home" className="top-header">
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-7">
             <div className="address-bar">
               <a href={`mailto:${email}`}>
                 <i className="fa fa-envelope"></i> {email}
@@ -34,7 +34,7 @@ const TopHeader = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-5">
             <div className="social-icons">
               <ul className="list-inline">
                 <li>

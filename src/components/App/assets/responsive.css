@@ -1,4 +1,8 @@
 @media only screen and (max-width: 767px) {
+  .cta-link {
+    margin-left: 0;
+    padding: 0.75rem 1rem !important;
+  }
   .team-box {
     width: 100% !important;
   }
@@ -16,17 +20,17 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .navbar-nav {
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
   .navbar-light .navbar-nav .nav-link {
     text-align: center;
     color: #fff;
-    padding: 12px 15px;
-  }
-  .navbar-light .navbar-brand {
-    position: relative;
-    top: 0;
+    padding: 0.75rem 0;
   }
   .navbar-light .navbar-brand.logo {
-    display: none;
+    display: block;
   }
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(254, 86, 25, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -36,7 +40,7 @@
   }
   .navbar-light .navbar-toggler {
     border-color: #fe5619;
-    border-radius: 0;
+    border-radius: 0.5rem;
   }
   .navbar-light .navbar-toggler {
     border-color: #ffffff;
@@ -64,12 +68,8 @@
   .list-inline li {
     padding-left: 3px;
   }
-  .menu-shrink .navbar-brand {
-    top: 0 !important;
-    left: 15px;
-  }
   .logo img {
-    width: 50px;
+    width: 10rem;
   }
 
   .address-bar {
@@ -332,12 +332,8 @@
     font-size: 16px;
   }
   .navbar-light {
-    background-color: #b68d40 !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .navbar-light.menu-shrink {
-    padding: 5px 0;
+    background-color: var(--black) !important;
+    padding-top: 0.5rem 0;
   }
   .navbar-light.menu-shrink .navbar-toggler {
     margin-right: 15px;
@@ -485,12 +481,6 @@
   }
   .address-bar ul li a {
     font-size: 13px;
-  }
-  .logo > img {
-    width: 70px;
-  }
-  .main-nav .navbar-brand {
-    left: 15px;
   }
   .navbar-light .navbar-nav .nav-link {
     padding-right: 8px;
