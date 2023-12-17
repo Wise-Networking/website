@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery, Link, withPrefix } from "gatsby"
 
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
@@ -41,7 +41,7 @@ const NavBar = ({ homepage }) => {
   React.useEffect(() => {
     let elem = document.getElementById("navbar")
     document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
+      if (window.scrollY > 46) {
         elem.classList.add("menu-shrink")
         elem.classList.add("fixed-top")
       } else {
@@ -49,36 +49,11 @@ const NavBar = ({ homepage }) => {
         elem.classList.remove("fixed-top")
       }
     })
-    // window.scrollTo(0, 0)
-    menuActiveClass()
   }, [])
 
-  const menuActiveClass = () => {
-    let mainNavLinks = document.querySelectorAll(".navbar-nav li a")
-    window.addEventListener("scroll", () => {
-      let fromTop = window.scrollY
-      mainNavLinks.forEach(link => {
-        if (link.hash) {
-          let section = document.querySelector(link.hash)
-          if (!section) return
-          if (
-            // section.offsetTop <= (fromTop + 20) &&
-            // section.offsetTop + section.offsetHeight >= (fromTop + 20)
-            section.offsetTop <= fromTop + 20 &&
-            section.offsetTop + section.offsetHeight >= fromTop + 10
-          ) {
-            link.classList.add("active")
-          } else {
-            link.classList.remove("active")
-          }
-        }
-      })
-    })
-  }
-
   const classOne = collapsed
-    ? "collapse navbar-collapse"
-    : "navbar-collapse collapse show"
+    ? "collapse navbar-collapse justify-content-end"
+    : "navbar-collapse collapse justify-content-end show"
   const classTwo = collapsed
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right"
@@ -89,17 +64,12 @@ const NavBar = ({ homepage }) => {
 
       <nav id="navbar" className="navbar navbar-expand-md navbar-light">
         <div className="container">
-          <Link className="navbar-brand logo logo-one" to="/">
-            <img src={data.logo.childImageSharp.fixed.src} alt="Logo" />
-          </Link>
-          <Link className="navbar-brand logo-2" to="/">
+          <Link className="navbar-brand logo" to="/">
             <img
-              className="img-fluid img-logo-2"
-              style={{
-                maxWidth: "46%",
-              }}
-              src={data.logo2.childImageSharp.fixed.src}
-              alt="Logo"
+              src={withPrefix("/dandelions-logo-primary.png")}
+              alt="Dandelions"
+              width={180}
+              loading="lazy"
             />
           </Link>
 
@@ -117,7 +87,7 @@ const NavBar = ({ homepage }) => {
           </button>
 
           <div className={classOne} id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav">
               {data.links.navigationLinks.map((link, key) => {
                 const { url, title, internalLink } = link
                 let linkReturn = null
@@ -139,8 +109,12 @@ const NavBar = ({ homepage }) => {
                       <Link
                         key={key}
                         to={url}
-                        className="nav-link"
-                        // activeClassName="active"
+                        className={
+                          title !== "Contact Us"
+                            ? "nav-link"
+                            : "nav-link cta-link"
+                        }
+                        activeClassName="nav-link-active"
                       >
                         {title}
                       </Link>

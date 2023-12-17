@@ -68,7 +68,7 @@ body {
   scroll-behavior: smooth;
 }
 .navbar {
-  padding: 0;
+  padding: 0.75rem 0;
 }
 
 nav#navbar {
@@ -421,21 +421,20 @@ Top Header CSS
 .navbar-light {
   transition: 0.6s;
   -webkit-transition: 0.6s;
-  background-color: #b68d40 !important;
+  background-color: var(--black);
 }
 .navbar-light .navbar-nav .nav-link {
-  /* color: #000; */
-  color: #122620;
-  padding: 17px 15px;
+  color: var(--grey);
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -1px;
 }
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
   color: #fff;
-}
-.navbar-light .navbar-nav {
-  padding-right: 38px;
 }
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
@@ -459,35 +458,24 @@ Top Header CSS
 .owl-thumb-item:hover .slide-service-item {
   color: #fff !important;
 }
-.navbar-light .navbar-brand {
-  position: absolute;
-  z-index: 99999;
-  padding: 0;
-}
 .navbar-brand img {
   cursor: pointer;
-}
-.logo-one {
-  background: #eeeeee !important;
-  border-radius: 10px;
-}
-.menu-shrink {
-  box-shadow: 0 0 10px #ebebeb;
-}
-/*.menu-shrink .navbar-nav .nav-link {
- color: #fff !important; 
-}*/
-.menu-shrink .navbar-brand.logo-2 {
-  display: block;
-  top: 0px;
-}
-.navbar-brand.logo-2,
-.menu-shrink .navbar-brand.logo {
-  display: none;
 }
 .img-logo-2 {
   background: #eeeeee;
   border-radius: 10px;
+}
+.cta-link {
+  background-color: var(--primary);
+  color: white !important;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+.nav-link-active::after {
+  content: "";
+  border-bottom: 3px solid var(--primary);
+  width: 100%;
+  display: block;
 }
 /* End Navbar Style */
 
