@@ -69,6 +69,12 @@ body {
 .navbar {
   padding: 0.75rem 0;
 }
+.ReactModal__Overlay--after-open {
+  background-color: rgba(38, 38, 38, 0.8) !important;
+}
+.popup-title {
+  font-size: 1.75rem !important;
+}
 
 nav#navbar {
   z-index: 99999 !important;
