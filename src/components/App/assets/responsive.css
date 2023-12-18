@@ -1,5 +1,6 @@
 @media only screen and (max-width: 767px) {
-  .our-news > .container > .row:nth-child(2) > .col-12 {
+  .our-news > .container > .row:nth-child(2) > .col-12,
+  .services > .container > .row:nth-child(2) > .col-12 {
     margin-top: 2rem;
   }
   .cta-link {
@@ -475,7 +476,8 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .our-news > .container > .row:nth-child(2) > .col-12 {
+  .our-news > .container > .row:nth-child(2) > .col-12,
+  .services > .container > .row:nth-child(2) > .col-12 {
     margin-top: 2rem;
   }
   .modal-dialog {
