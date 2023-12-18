@@ -87,7 +87,9 @@ const News = () => {
                     <Link to={`/news/${newsItem.slug}`}>
                       <h1 className="news-title">{newsItem.title}</h1>
                     </Link>
-                    <p>{trimString(render(newsItem.richText))}</p>
+                    <Link to={`/news/${newsItem.slug}`}>
+                      <p>{trimString(render(newsItem.richText))}</p>
+                    </Link>
                   </div>
                 </div>
               </div>

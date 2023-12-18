@@ -2932,6 +2932,10 @@ h2 {
   overflow: hidden;
   height: 100%;
   border: 2px solid var(--primary);
+  transition: transform 0.3s cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+.news-card:hover {
+  transform: scale(1.025);
 }
 .news-card .news-caption {
   display: flex;
