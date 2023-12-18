@@ -43,19 +43,20 @@ const AboutUs = () => {
             src={post.image.url}
             alt={post.image.title}
             className="about-desc-image"
+            title={post.image.title}
+            loading="lazy"
           />
-          <div className="img-caption">{post.image.title}</div>
         </div>
       </div>
     )
   })
 
   return (
-    <div id="about-us" className="about-us">
+    <div id="about-us" className="about-us ptb-100">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 offset-lg-2 text-center">
-            <div className="section-title text-center">
+          <div className="col-12">
+            <div className="section-title">
               <h2>{aboutUsTitle}</h2>
               <p dangerouslySetInnerHTML={{ __html: aboutUsDescription }}></p>
             </div>

@@ -126,7 +126,7 @@ p:last-child {
   margin-bottom: 0;
 }
 .ptb-100 {
-  padding: 8rem 0;
+  padding: 6rem 0 8rem;
 }
 
 section#contact-us {
@@ -1031,8 +1031,7 @@ End Our Works Area CSS
 About Us Area CSS
 ========================= */
 .about-us {
-  background-color: #fff;
-  padding: 190px 0;
+  background-color: var(--black);
 }
 .about-us .section-title {
   margin-bottom: 60px;
@@ -2912,13 +2911,20 @@ h2 {
   background-color: #fe5619;
   color: #fff;
 }
+.about-text {
+  border-left: 3px solid var(--primary);
+  padding: 1rem;
+}
 .about-text h3 {
-  font-size: 27px;
-  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
   margin-top: 0;
 }
 .about-text p {
+  color: var(--secondary);
   white-space: pre-line;
+  line-height: 1.4;
 }
 /* News card */
 .news-card {
