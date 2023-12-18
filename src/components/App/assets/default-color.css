@@ -7,8 +7,8 @@
 
 .button,
 .center-wrap button button {
-  border: 1px solid #fe5619;
-  background-color: #fe5619;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
 }
 .plan .button:hover {
   border-color: #fe5619;
