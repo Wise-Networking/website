@@ -1,4 +1,7 @@
 @media only screen and (max-width: 767px) {
+  .our-news > .container > .row:nth-child(2) > .col-12 {
+    margin-top: 2rem;
+  }
   .cta-link {
     margin-left: 0;
     padding: 0.75rem 1rem !important;
@@ -472,6 +475,9 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .our-news > .container > .row:nth-child(2) > .col-12 {
+    margin-top: 2rem;
+  }
   .modal-dialog {
     width: 90%;
     margin-top: -60px;

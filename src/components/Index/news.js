@@ -63,7 +63,7 @@ const News = () => {
         <div className="row">
           {newsItems.map((newsItem, key) => {
             return (
-              <div key={key} className="col-md-6 col-lg-4">
+              <div key={key} className="col-12 col-md-6 col-lg-4">
                 <div className="news-card">
                   <Link to={`/news/${newsItem.slug}`}>
                     <Image
