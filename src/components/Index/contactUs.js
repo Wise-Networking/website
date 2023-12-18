@@ -1,31 +1,31 @@
-import React from "react";
+import React from "react"
 export default class ContactUs extends React.Component {
   constructor(props) {
-    super(props);
-    this.submitForm = this.submitForm.bind(this);
+    super(props)
+    this.submitForm = this.submitForm.bind(this)
     this.state = {
-      status: ""
-    };
+      status: "",
+    }
   }
 
   render() {
-    const { status } = this.state;
+    const { status } = this.state
     return (
-      <section id="contact-us" className="contact-area">
+      <section id="contact-us" className="contact-area ptb-100">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 offset-lg-2 text-center">
+            <div className="col-12 text-center">
               <div className="section-title">
                 <h2>Contact Us</h2>
                 <p>
                   Learn more about how your enterprise can build its own IOT
-                  network. Reach out today!
+                  network. <span className="text-brand">Reach out today!</span>
                 </p>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+            <div className="col-md-6 offset-md-3">
               <div className="contact-form">
                 <form
                   onSubmit={this.submitForm}
@@ -33,7 +33,7 @@ export default class ContactUs extends React.Component {
                   method="POST"
                 >
                   <div className="row">
-                    <div className="col-lg-6 col-md-12">
+                    <div className="col-12">
                       <div className="form-group">
                         <label htmlFor="name">Name:</label>
                         <input
@@ -47,7 +47,7 @@ export default class ContactUs extends React.Component {
                         <div className="help-block with-errors" />
                       </div>
                     </div>
-                    <div className="col-lg-6 col-md-12">
+                    <div className="col-12">
                       <div className="form-group">
                         <label htmlFor="email">Email:</label>
                         <input
@@ -61,7 +61,7 @@ export default class ContactUs extends React.Component {
                         <div className="help-block with-errors" />
                       </div>
                     </div>
-                    <div className="col-lg-12 col-md-12">
+                    <div className="col-12">
                       <div className="form-group">
                         <label htmlFor="message">Message:</label>
                         <input
@@ -76,18 +76,16 @@ export default class ContactUs extends React.Component {
                     </div>
                   </div>
 
-                  <div className="center-wrap text-center">
+                  <div className="center-wrap text-center pt-2">
                     <div className="button">
                       {status === "SUCCESS" ? (
                         <span className="txt-thanks">Thanks!</span>
                       ) : (
                         <button type="submit">
-                          Submit <i className="fa fa-long-arrow-right"></i>{" "}
+                          Submit <i className="fa fa-chevron-right"></i>{" "}
                         </button>
                       )}
                       {status === "ERROR" && <p>Ooops! There was an error.</p>}
-
-                      <div className="mask"></div>
                     </div>
                   </div>
                   <div className="clearfix" />
@@ -101,21 +99,21 @@ export default class ContactUs extends React.Component {
   }
 
   submitForm(ev) {
-    ev.preventDefault();
-    const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
+    ev.preventDefault()
+    const form = ev.target
+    const data = new FormData(form)
+    const xhr = new XMLHttpRequest()
+    xhr.open(form.method, form.action)
+    xhr.setRequestHeader("Accept", "application/json")
     xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.readyState !== XMLHttpRequest.DONE) return
       if (xhr.status === 200) {
-        form.reset();
-        this.setState({ status: "SUCCESS" });
+        form.reset()
+        this.setState({ status: "SUCCESS" })
       } else {
-        this.setState({ status: "ERROR" });
+        this.setState({ status: "ERROR" })
       }
-    };
-    xhr.send(data);
+    }
+    xhr.send(data)
   }
 }

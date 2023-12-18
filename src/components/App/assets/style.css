@@ -129,11 +129,6 @@ p:last-child {
   padding: 6rem 0 8rem;
 }
 
-section#contact-us {
-  /* padding: 240px 0; */
-  padding: 300px 0px;
-}
-
 .mrl-50 {
   margin-left: 50px;
 }
@@ -213,10 +208,11 @@ section#contact-us {
 .center-wrap button {
   color: #fff;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   background: transparent;
   border: transparent;
+  text-transform: uppercase;
 }
 button {
   padding: 0;
@@ -2219,20 +2215,25 @@ End Partners Area CSS
 Contact Area CSS
 ========================= */
 .contact-area {
-  background-color: #f5f8f9;
+  background-image: url("/wavy-curved-line.svg");
+  background-size: cover;
 }
-.contact-form {
-  margin-top: 30px;
+.contact-form > form {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: rgba(38, 38, 38, 0.5);
+  border: 2px solid var(--primary);
+  color: var(--secondary);
 }
 .contact-form .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 .contact-form .form-control {
-  height: 50px;
+  height: 3rem;
   border: 1px solid #ddd;
   background-color: #f1f1f1;
   border: none;
-  padding: 10px 15px;
+  padding: 0.5rem 1rem;
 }
 .contact-form .form-control:focus {
   box-shadow: none;
@@ -2240,8 +2241,14 @@ Contact Area CSS
 .contact-form textarea.form-control {
   height: auto;
 }
-.contact-form .button {
-  margin: auto;
+.contact-form .button,
+.contact-form .button > button {
+  max-width: 100% !important;
+  width: 100% !important;
+  border-radius: 0.5rem;
+}
+.form-control {
+  border-radius: 0.5rem;
 }
 .address-area {
   margin-top: 30px;
