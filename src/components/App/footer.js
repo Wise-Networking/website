@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-md-4">
             <ul className="list-inline footer-privacy">
               <li>

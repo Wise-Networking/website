@@ -136,7 +136,7 @@
   border: 1px solid #fe5619;
 }
 .social-icons.bottom ul li a {
-  background-color: #9e3610;
+  background-color: var(--grey);
 }
 .social-icons.bottom ul li a:hover {
   color: #9e3610;
