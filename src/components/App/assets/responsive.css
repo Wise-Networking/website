@@ -1,4 +1,7 @@
 @media only screen and (max-width: 767px) {
+  .social-icons-footer {
+    padding: 1rem 0;
+  }
   .splide__pagination {
     bottom: 0 !important;
   }
@@ -246,7 +249,6 @@
   }
   .footer {
     padding: 25px 0;
-    text-align: center;
   }
   .email {
     margin: 30px 0;
@@ -255,8 +257,8 @@
     text-align: center;
   }
   .footer .copyright {
-    margin: 0 0 15px;
-    text-align: center !important;
+    margin: 0;
+    text-align: left !important;
   }
   .scrolltop {
     bottom: 100px;
@@ -476,6 +478,13 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer .copyright {
+    margin: 0;
+    text-align: left !important;
+  }
+  .social-icons-footer {
+    padding: 1rem 0;
+  }
   .our-news > .container > .row:nth-child(2) > .col-12,
   .services > .container > .row:nth-child(2) > .col-12 {
     margin-top: 2rem;

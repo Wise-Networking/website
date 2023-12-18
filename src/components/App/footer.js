@@ -18,8 +18,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-4">
+        <div className="row align-items-lg-center">
+          <div className="col-12 col-lg-4">
             <ul className="list-inline footer-privacy">
               <li>
                 <Link to="/terms-of-use/">Terms Of Use</Link>
@@ -29,7 +29,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-12 col-lg-4">
             <div className="social-icons-footer social-icons  bottom">
               <ul className="list-inline">
                 <li>
@@ -55,7 +55,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-12 col-lg-4">
             <p className="copyright">
               © {new Date().getFullYear()} All Rights Reserved.
             </p>

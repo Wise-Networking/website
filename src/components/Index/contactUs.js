@@ -25,7 +25,7 @@ export default class ContactUs extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6 offset-md-3">
+            <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12 offset-sm-0">
               <div className="contact-form">
                 <form
                   onSubmit={this.submitForm}
