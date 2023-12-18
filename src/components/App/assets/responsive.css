@@ -427,9 +427,6 @@
   .our-news .section-title p {
     margin: 0;
   }
-  .contact-area .section-title p {
-    margin: 0;
-  }
   .pagination-area .pagination {
     margin: 30px 0 0;
   }
@@ -656,9 +653,6 @@
   }
   .news-details .news-info {
     padding-left: 30px;
-  }
-  .section-title p {
-    margin: 0;
   }
   .about-text {
     margin-bottom: 30px;
