@@ -164,6 +164,13 @@ section#contact-us {
   color: var(--primary);
   border-top: 3px solid var(--primary);
 }
+.our-works .section-title h2 {
+  margin-top: 0;
+  padding: 0 0 0.5rem;
+}
+.our-works .section-title h2 {
+  border-top: none;
+}
 .section-title {
   position: relative;
   z-index: 1;
@@ -883,7 +890,7 @@ End CTA Area CSS
 Our Works Area CSS
 ========================= */
 .our-works {
-  background-color: #f5f8f9;
+  background-color: var(--black);
 }
 .filtr-item {
   padding-top: 30px;
@@ -910,10 +917,12 @@ Our Works Area CSS
   color: #fff;
 }
 .work-details {
-  background: #fff;
   text-align: center;
   position: relative;
   margin-top: 30px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid var(--primary);
 }
 .work-details img {
   width: 100%;
@@ -934,6 +943,7 @@ Our Works Area CSS
   opacity: 0;
   transition: all 0.35s ease 0s;
   -webkit-transition: all 0.35s ease 0s;
+  border-radius: 0.5rem;
 }
 .work-details:hover .box-content {
   top: 10px;
@@ -3070,4 +3080,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.splide__pagination {
+  bottom: -2rem !important;
 }

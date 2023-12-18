@@ -93,7 +93,7 @@
   color: #fe5619;
 }
 .work-details .box-content {
-  background: #fe5619;
+  background: var(--primary);
 }
 .comments-title::before {
   background: #fe5619;

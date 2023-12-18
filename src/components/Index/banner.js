@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 
 const Banner = props => {
   const data = useStaticQuery(graphql`
@@ -10,11 +9,6 @@ const Banner = props => {
         heroTitle
         heroDescription
         heroButtonTitle
-        heroImage {
-          fluid(maxWidth: 600) {
-            ...GatsbyDatoCmsFluid
-          }
-        }
       }
     }
   `)
@@ -23,7 +17,6 @@ const Banner = props => {
     heroTopTitle,
     heroDescription,
     heroButtonTitle,
-    heroImage,
   } = data.datoCmsHomePage
 
   console.log("banner => ", data.datoCmsHomePage)

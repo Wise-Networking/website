@@ -1,4 +1,7 @@
 @media only screen and (max-width: 767px) {
+  .splide__pagination {
+    bottom: 0 !important;
+  }
   .our-news > .container > .row:nth-child(2) > .col-12,
   .services > .container > .row:nth-child(2) > .col-12 {
     margin-top: 2rem;
@@ -516,7 +519,6 @@
   .single-slider-item {
     height: 100%;
     padding: 110px 0;
-    margin-bottom: 40px;
   }
   .slide-service-item h3 {
     font-size: 20px;
