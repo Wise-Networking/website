@@ -54,15 +54,13 @@ const Products = props => {
                 {productItems.map((productItem, key) => {
                   return (
                     <div key={key} className="col-12 col-md-6 pb-4">
-                      <Link
-                        key={key}
-                        className="read-more"
-                        to={`/products/${productItem.link}`}
-                      >
+                      <Link key={key} to={`/products/${productItem.link}`}>
                         <div className="product-card">
                           <div className="product-caption">
                             <div className="text-center">
-                              <i className={productItem.icon}></i>
+                              <span className="icon-wrapper">
+                                <i className={productItem.icon}></i>
+                              </span>
                             </div>
                             <h3>{productItem.title}</h3>
                             <p>{productItem.description}</p>

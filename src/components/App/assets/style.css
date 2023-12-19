@@ -1493,6 +1493,21 @@ End Our Team Area CSS
   line-height: 1.7;
   margin: 0 0 2rem;
 }
+.news-details .post-content p img {
+  border: 1px solid var(--grey) !important;
+  border-radius: 0.5rem;
+}
+.news-details .post-content ol,
+.news-details .post-content ul {
+  color: var(--black);
+  margin-bottom: 2rem;
+  padding-left: 1.25rem;
+}
+.news-details .post-content ol li,
+.news-details .post-content ul li {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
 .news-details .post-content {
   padding: 0;
   margin-top: -20px;
@@ -2953,6 +2968,7 @@ h2 {
   overflow: hidden;
   height: 100%;
   border: 2px solid var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: transform 0.3s cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 .news-card:hover,
@@ -2976,12 +2992,24 @@ h2 {
   border-top: 0;
   height: 100%;
 }
+.product-card .product-caption span.icon-wrapper {
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  width: 5rem;
+  height: 5rem;
+}
 .product-card .product-caption i {
-  color: var(--primary);
+  color: white;
   font-size: 3rem;
 }
 .product-card .product-caption i:before {
   font-size: inherit;
+  margin-left: 0 !important;
 }
 .news-card .news-caption .meta-tag {
   color: var(--secondary);
