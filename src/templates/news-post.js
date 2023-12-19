@@ -27,45 +27,40 @@ const NewsItem = props => {
       title={`News | ${post.title}`}
       description={post.description}
     >
-      <div className="bread-cumbs-area" style={bannerStyle} />
-      <section id="news" className="our-news main-news bg-none">
+      <section
+        id="news"
+        className="article our-news main-news bg-none ptb-100 pb-0"
+      >
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
-              <div className="news-details">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 banner-txt article-header">
+              <h1>{post.title}</h1>
+              <div className="my-4 text-dark">
+                Posted on{" "}
+                <span style={{ textTransform: "capitalize" }}>
+                  {post.publishedDate}
+                </span>
+                {" by "}
+                <strong>
+                  <Link to="/our-people" className="text-dark">
+                    {post.author}
+                  </Link>
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container article-img">
+          <div className="bread-cumbs-area" style={bannerStyle} />
+        </div>
+
+        <div className="container pb-5">
+          <div className="row">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <div className="news-details img-details">
                 <div className="news-info">
-                  <div className="date-box">
-                    {post.publishDay}
-                    <span className="month">{post.publishMonth}</span>
-                  </div>
-                  <div className="title-meta">
-                    <h1>{post.title}</h1>
-                    <div className="post-meta">
-                      <ul>
-                        <li>
-                          <i className="fa fa-user"></i>
-                          <a href="/our-people">{post.author}</a>
-                        </li>
-                        <li>
-                          <i className="fa fa-tags"></i>
-                          {post.tags.map((tag, i) => (
-                            <Link key={i} to={`/tags/${slugify(tag.link)}`}>
-                              {
-                                (tag.title =
-                                  i !== post.tags.length - 1
-                                    ? tag.title + ","
-                                    : tag.title)
-                              }
-                            </Link>
-                          ))}
-                        </li>
-                        <li>
-                          <i className="fa fa-bars"></i>
-                          <a href="/categories/">{post.category.title}</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <div className="title-meta"></div>
                 </div>
                 <br />
                 <div className="post-content">
@@ -138,9 +133,22 @@ const NewsItem = props => {
                     }}
                   />
                 </div>
+                <div className="pt-5 text-center">
+                  <div className="tag-container">
+                    {post.tags.map(tag => (
+                      <Link to={`/tags/${slugify(tag.title.toLowerCase())}`}>
+                        <span className="tag">{tag.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
+        <div className="sidebar-container">
+          <div className="container">
             <Sidebar />
           </div>
         </div>
@@ -158,8 +166,7 @@ export const query = graphql`
       slug
       author
       keywords
-      publishDay: publishedDate(formatString: "DD")
-      publishMonth: publishedDate(formatString: "MMM")
+      publishedDate(formatString: "MMM DD, YYYY")
       richText {
         value
         blocks {

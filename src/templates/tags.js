@@ -33,7 +33,7 @@ const news = props => {
             </Link>
           </div>
           <Link to={`/news/${post.slug}`}>
-            <h1 className="news-title">{post.title}</h1>
+            <h1 className="news-title text-black">{post.title}</h1>
           </Link>
           <Link to={`/news/${post.slug}`}>
             <p className="text-dark">{trimString(render(post.richText))}</p>

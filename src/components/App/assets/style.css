@@ -590,6 +590,9 @@ Slider Area CSS
 .text-dark {
   color: var(--dark-grey) !important;
 }
+.text-black {
+  color: var(--black) !important;
+}
 .hompage-slides-wrapper {
   position: relative;
   background: linear-gradient(
@@ -1228,6 +1231,20 @@ End Our Team Area CSS
 /* =========================
  News Area CSS
 ========================= */
+.tag-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.tag {
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
 .our-news {
   background-color: var(--black);
   color: var(--grey);
@@ -1363,16 +1380,12 @@ End Our Team Area CSS
   background-color: #eee;
   border-color: #ddd;
 }
-.side-widget {
-  margin-top: 30px;
-}
 .side-widget h3 {
   margin: 0 0 20px;
   position: relative;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
-  padding-bottom: 15px;
-  font-size: 20px;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .side-widget h3::before {
   content: "";
@@ -1380,7 +1393,7 @@ End Our Team Area CSS
   left: 0;
   bottom: -2px;
   height: 3px;
-  width: 40px;
+  width: 60px;
 }
 .search-form {
   position: relative;
@@ -1402,6 +1415,9 @@ End Our Team Area CSS
   padding: 5px 15px;
   font-size: 16px;
 }
+.sidebar-container {
+  background: rgba(38, 38, 38, 0.1);
+}
 .side-widget .list-group li {
   border-radius: 0;
   padding: 0;
@@ -1412,30 +1428,38 @@ End Our Team Area CSS
   padding: 8px 15px;
   display: block;
 }
+.single-post-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+.single-post-caption .meta-tag {
+  font-size: 0.875rem;
+}
+.single-post-caption h2 {
+  color: var(--black);
+}
 .single-post {
-  position: relative;
-  padding: 0 0 0 90px;
-  margin-top: 15px;
-  min-height: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  height: 100%;
 }
 .single-post img {
-  position: absolute;
-  left: 0px;
-  top: 12px;
-  width: 90px;
-  border-radius: 3px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  width: 100%;
 }
 .single-post h4 {
-  margin: 0 0 5px 30px;
+  margin: 1.25rem 2rem 0;
   font-size: 16px;
 }
 .single-post h4 a {
   color: #333;
-}
-
-.side-widget .single-post {
-  background-color: #fff;
-  padding-top: 10px;
 }
 .side-widget .single-post .post-meta {
   margin-bottom: 5px;
@@ -1496,9 +1520,17 @@ End Our Team Area CSS
   line-height: 1.7;
   margin: 0 0 2rem;
 }
-.news-details .post-content p img {
+.news-details .post-content p img,
+.news-details .post-content figure img {
   border: 1px solid var(--grey) !important;
   border-radius: 0.5rem;
+  width: 100%;
+}
+.news-details .post-content figure {
+  margin: 0 0 3rem;
+}
+.news-details .post-content figure > figcaption {
+  margin: 0.5rem 0 0;
 }
 .news-details .post-content ol,
 .news-details .post-content ul {
@@ -3181,9 +3213,10 @@ Custom Page CSS
   margin-bottom: 0 !important;
 }
 .article-header > h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   text-shadow: none !important;
+  line-height: 1.2;
 }
 .article-header > p {
   border-left: 6px solid var(--primary);

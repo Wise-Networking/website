@@ -1,37 +1,30 @@
 import React from "react"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
+import { render } from "datocms-structured-text-to-plain-text"
 import slugify from "slugify"
+
+import trimString from "../../utils/trim-string"
 
 const Sidebar = props => {
   const data = useStaticQuery(
     graphql`
       {
-        posts: allDatoCmsBlogPost(sort: {fields: publishedDate,order:DESC}){
-          edges{
-            node{
+        posts: allDatoCmsBlogPost(sort: { fields: id, order: DESC }, limit: 3) {
+          edges {
+            node {
               title
               slug
-              publishedDate(formatString:"MMMM DD, YYYY")
-              featuredImage{
+              publishedDate(fromNow: true)
+              featuredImage {
                 url
               }
-            }
-          }
-        }
-        tags: allDatoCmsTag {
-          edges {
-            node {
-              title
-              description
-            }
-          }
-        }
-        categories: allDatoCmsCategory {
-          edges {
-            node {
-              title
-              description
+              richText {
+                value
+              }
+              category {
+                title
+              }
             }
           }
         }
@@ -39,62 +32,38 @@ const Sidebar = props => {
     `
   )
 
-  const tags = data.tags.edges.map(node => node.node)
-  const categories = data.categories.edges.map(node => node.node)
   const posts = data.posts.edges.map(node => node.node)
 
   const sidebardata = posts.map((post, index) => (
-    <div className="single-post" key={index}>
-      <Link to={`/news/${post.slug}`}>
-        <img src={post.featuredImage.url} alt="post" />
-      </Link>
-      <h4>
-        <Link to={`/news/${post.slug}`}>{post.title}</Link>
-      </h4>
-      <div className="post-meta">
-        <ul>
-          <li>
-            <i className="fa fa-calendar"></i> Date: {post.publishedDate}
-          </li>
-        </ul>
+    <div className="col-12 col-lg-4 mb-4" key={`sidebar-${index}`}>
+      <div className="single-post">
+        <Link to={`/news/${post.slug}`}>
+          <img src={post.featuredImage.url} alt="post" />
+        </Link>
+        <div className="single-post-caption">
+          <div className="meta-tag">
+            {post.publishedDate} /{" "}
+            <Link
+              to={`/categories/${slugify(post.category.title.toLowerCase())}`}
+              className="text-brand"
+            >
+              {post.category.title}
+            </Link>
+          </div>
+          <Link to={`/news/${post.slug}`}>
+            <h2 className="news-title mt-0">{post.title}</h2>
+          </Link>
+          <Link to={`/news/${post.slug}`}>
+            <p>{trimString(render(post.richText))}</p>
+          </Link>
+        </div>
       </div>
-
     </div>
   ))
-
-  const categoryData = categories.map((category, index) => {
-    const slug = slugify(category.title.toLowerCase())
-    return (
-      <li className="list-group-item" key={index}>
-        <Link to={`/categories/${slug}`}>{category.title}</Link>
-      </li>
-    )
-  })
-
-  const tagdata = tags.map((tag, index) => {
-    const slug = slugify(tag.title.toLowerCase())
-    return (
-      <li key={index}>
-        <Link to={`/tags/${slug}`}>{tag.title}</Link>
-      </li>
-    )
-  })
   return (
-    <div className="col-lg-4">
-      <div className="side-widget">
-        <h3>Recent posts</h3>
-        {sidebardata}
-      </div>
-
-      <div className="side-widget">
-        <h3>Categories</h3>
-        <ul className="list-group">{categoryData}</ul>
-      </div>
-
-      <div className="side-widget">
-        <h3>Tags</h3>
-        <ul className="list-tags">{tagdata}</ul>
-      </div>
+    <div className="side-widget mt-5 py-5">
+      <h3>Recent posts</h3>
+      <div className="row">{sidebardata}</div>
     </div>
   )
 }
