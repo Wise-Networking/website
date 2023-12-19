@@ -38,40 +38,41 @@ const Product = props => {
   } = product
 
   return (
-    <Layout location="products" keywords={product.keywords} title={ `Product | ${title}`} description={description}>
-      <BackgroundImage
-        Tag="div"
-        className="bread-cumbs-area"
-        fluid={featuredImage.fluid}
-        backgroundColor={`#B68D40`}
+    <Layout
+      location="products"
+      keywords={product.keywords}
+      title={`Product | ${title}`}
+      description={description}
+    >
+      <section
+        id="products"
+        className="article our-news main-news bg-none ptb-100"
       >
-        <div className="diplay-table">
-          <div className="display-table-cell">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-7 banner-txt">
-                  <h1>{title}</h1>
-                  <p>{description}</p>
-                </div>
-              </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 banner-txt article-header">
+              <h1>{title}</h1>
+              <p>{description}</p>
             </div>
           </div>
         </div>
-      </BackgroundImage>
-
-      <section id="products" className="our-news main-news bg-none">
+        <div className="container article-img">
+          <BackgroundImage
+            Tag="div"
+            className="bread-cumbs-area"
+            fluid={featuredImage.fluid}
+          />
+        </div>
         <div className="container">
           <div className="row">
-            <div className="col-lg-12">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="news-details img-details">
-                    <div
-                      className="post-content"
-                      dangerouslySetInnerHTML={{ __html: html.replace('sizes="',"") }}
-                    />
-                  </div>
-                </div>
+            <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <div className="news-details img-details">
+                <div
+                  className="post-content"
+                  dangerouslySetInnerHTML={{
+                    __html: html.replace('sizes="', ""),
+                  }}
+                />
               </div>
             </div>
           </div>

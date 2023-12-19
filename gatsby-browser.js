@@ -6,3 +6,4 @@
 
 // You can delete this file if you're not using it
 // include css or scss here
+import "@splidejs/react-splide/dist/css/splide.min.css"

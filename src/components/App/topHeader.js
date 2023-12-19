@@ -14,25 +14,27 @@ const TopHeader = () => {
     }
   `)
   // console.log("datoCmsSiteConfig DATA => ", data);
-  const { email, facebook, twitter, linkedin, instagram } = data.datoCmsSiteConfig
+  const {
+    email,
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
+  } = data.datoCmsSiteConfig
 
   return (
     <div id="home" className="top-header">
       <div className="container">
         <div className="row">
-          <div className="col-lg-7 col-md-8">
+          <div className="col-7">
             <div className="address-bar">
-              <ul className="list-inline">
-                <li>
-                  <a href={`mailto:${email}`}>
-                    <i className="fa fa-envelope"></i> {email}
-                  </a>
-                </li>
-              </ul>
+              <a href={`mailto:${email}`}>
+                <i className="fa fa-envelope"></i> {email}
+              </a>
             </div>
           </div>
 
-          <div className="col-lg-5 col-md-4">
+          <div className="col-5">
             <div className="social-icons">
               <ul className="list-inline">
                 <li>

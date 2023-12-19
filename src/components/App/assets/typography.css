@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Roboto-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Roboto-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Roboto-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}

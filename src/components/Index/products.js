@@ -24,15 +24,12 @@ const getData = graphql`
 const Products = () => {
   const data = useStaticQuery(getData)
 
-  const {
-    productsTitle,
-    productDescription,
-  } = data.titles
+  const { productsTitle, productDescription } = data.titles
 
   const products = data.products.edges.map(node => node.node)
   // console.log("PRODUCTS ==> ", products);
   const productsData = products.map((product, index) => (
-    <div key={index} className="col-md-6 col-lg-6 text-center">
+    <div key={index} className="col-12 col-md-6 col-lg-3">
       <Link
         className="read-more"
         to={`products/${product.link}`}
@@ -41,10 +38,10 @@ const Products = () => {
         }}
       >
         <div className="service-item">
-          <div className="glyph">
+          <div className="text-center">
             <i className={product.icon}></i>
           </div>
-          <h3>{product.title}</h3>
+          <h3 className="text-brand">{product.title}</h3>
           <p>{product.description}</p>
         </div>
       </Link>
@@ -55,7 +52,7 @@ const Products = () => {
     <section id="products" className="services ptb-100">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 offset-lg-2 text-center">
+          <div className="col-12">
             <div className="section-title">
               <h2>{productsTitle}</h2>
               <p dangerouslySetInnerHTML={{ __html: productDescription }}></p>
