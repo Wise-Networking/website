@@ -37,6 +37,7 @@ This files contents are outlined below>>>>>
 ** - Footer Area CSS
 ** - Scroll Top link CSS
 ** - Breadcumbs CSS
+** - Custom Page CSS
 
 */
 
@@ -1308,15 +1309,9 @@ End Our Team Area CSS
   position: relative;
   background: white;
 }
-.post-content {
-  padding: 20px;
-}
 .post-content h2 {
   font-weight: 400;
   font-size: 28px;
-}
-.main-news {
-  padding: 70px 0 90px;
 }
 .pagination-area .pagination {
   margin: 50px 0 0;
@@ -1463,11 +1458,6 @@ End Our Team Area CSS
 .post-img img {
   width: 100%;
 }
-.news-details {
-  margin-top: 30px;
-  background-color: #fff;
-  border: 1px solid #eee;
-}
 .news-details .date-box {
   top: -50px;
 }
@@ -1483,11 +1473,28 @@ End Our Team Area CSS
 .news-details .news-info {
   padding-left: 140px;
 }
+.news-details .post-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 2rem !important;
+}
+.news-details .post-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1rem !important;
+}
+.news-details .post-content h3,
+.news-details .post-content h4,
+.news-details .post-content h5,
+.news-details .post-content h6 {
+  margin-bottom: 1rem;
+}
 .news-details .post-content p {
-  margin-bottom: 15px;
+  line-height: 1.7;
+  margin: 0 0 2rem;
 }
 .news-details .post-content {
-  padding: 0 30px 30px;
+  padding: 0;
   margin-top: -20px;
   z-index: 9999;
   position: relative;
@@ -2381,7 +2388,7 @@ End Scroll Top link CSS
 Breadcumbs CSS
 ========================= */
 .bread-cumbs-area {
-  height: 400px;
+  height: 20rem;
   width: 100%;
   background-color: #ddd;
   /* color: #fff; */
@@ -3103,4 +3110,27 @@ p {
 
 .splide__pagination {
   bottom: -2rem !important;
+}
+
+/* =========================
+Custom Page CSS
+========================= */
+.article-header {
+  margin-bottom: 0 !important;
+}
+.article-header > h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: none;
+}
+.article-header > p {
+  border-left: 6px solid var(--primary);
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+.article-img > div {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 4rem !important;
+  margin-bottom: 5rem !important;
 }
