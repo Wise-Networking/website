@@ -118,7 +118,7 @@ export const query = graphql`
           category {
             title
           }
-          publishedDate(formatString: "MMMM DD, YYYY")
+          publishedDate(fromNow: true)
           richText {
             value
           }

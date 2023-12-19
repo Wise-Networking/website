@@ -3183,7 +3183,7 @@ Custom Page CSS
 .article-header > h1 {
   font-size: 4rem;
   font-weight: 700;
-  text-shadow: none;
+  text-shadow: none !important;
 }
 .article-header > p {
   border-left: 6px solid var(--primary);
