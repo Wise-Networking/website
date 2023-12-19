@@ -587,6 +587,9 @@ Slider Area CSS
 .text-brand {
   color: var(--primary) !important;
 }
+.text-dark {
+  color: var(--dark-grey) !important;
+}
 .hompage-slides-wrapper {
   position: relative;
   background: linear-gradient(
@@ -1319,15 +1322,14 @@ End Our Team Area CSS
 }
 .pagination-area .pagination > li {
   display: inline;
+  cursor: pointer;
 }
 .pagination li a,
 .pagination li span {
-  font-family: "Poppins";
-  font-size: 15px;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: #666;
+  color: var(--dark-grey);
   text-align: center;
-  background: #eaeaea;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1340,7 +1342,7 @@ End Our Team Area CSS
   position: relative;
   float: left;
   text-decoration: none;
-  border: 1px solid #ddd;
+  border: 1px solid var(--grey);
 }
 .pagination > .active > a,
 .pagination > .active > a:focus,
@@ -3019,6 +3021,9 @@ h2 {
 }
 .news-card p {
   color: var(--secondary) !important;
+}
+.news-card p.text-dark {
+  color: var(--dark-grey) !important;
 }
 .product-card p {
   color: var(--dark-grey) !important;

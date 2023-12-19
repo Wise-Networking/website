@@ -30,7 +30,7 @@ const Products = props => {
       title="Products | Dandelions offers a number of different solutions for your IOT project. How can we help?"
       description="Dandelions offers a number of different solutions for your IOT project. How can we help?"
     >
-      <section id="news" className="our-news main-news bg-none ptb-100">
+      <section id="news" className="article our-news main-news bg-none ptb-100">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 banner-txt article-header">
