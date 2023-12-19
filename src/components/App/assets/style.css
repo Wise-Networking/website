@@ -1490,6 +1490,7 @@ End Our Team Area CSS
   margin-bottom: 1rem;
 }
 .news-details .post-content p {
+  font-size: 1rem !important;
   line-height: 1.7;
   margin: 0 0 2rem;
 }
@@ -3181,7 +3182,8 @@ Custom Page CSS
 }
 .article-header > p {
   border-left: 6px solid var(--primary);
-  padding-left: 1.5rem;
+  padding: 0 1.5rem;
+  font-size: 1rem !important;
   font-style: italic;
 }
 .article-img > div {
