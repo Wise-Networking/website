@@ -2947,17 +2947,20 @@ h2 {
   line-height: 1.4;
 }
 /* News card */
-.news-card {
+.news-card,
+.product-card {
   border-radius: 0.5rem;
   overflow: hidden;
   height: 100%;
   border: 2px solid var(--primary);
   transition: transform 0.3s cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
-.news-card:hover {
+.news-card:hover,
+.product-card:hover {
   transform: scale(1.025);
 }
-.news-card .news-caption {
+.news-card .news-caption,
+.product-card .product-caption {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -2969,6 +2972,17 @@ h2 {
   overflow: hidden;
   position: relative;
 }
+.product-card .product-caption {
+  border-top: 0;
+  height: 100%;
+}
+.product-card .product-caption i {
+  color: var(--primary);
+  font-size: 3rem;
+}
+.product-card .product-caption i:before {
+  font-size: inherit;
+}
 .news-card .news-caption .meta-tag {
   color: var(--secondary);
   font-size: 0.875rem;
@@ -2977,17 +2991,31 @@ h2 {
 .news-card p {
   color: var(--secondary) !important;
 }
-.news-card .news-caption h3 {
+.product-card p {
+  color: var(--dark-grey) !important;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.news-card .news-caption h3,
+.product-card .product-caption h3 {
   line-height: 1.4;
   margin: 10px 0 10px;
 }
-.news-card .news-caption h3 a {
+.product-card .product-caption h3 {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.news-card .news-caption h3 a,
+.product-card .product-caption h3 a {
   color: #333;
 }
-.news-card .news-caption h3 a:hover {
+.news-card .news-caption h3 a:hover,
+.product-card .product-caption h3 a:hover {
   color: #fe5619;
 }
-.news-card .news-caption .read-more {
+.news-card .news-caption .read-more,
+.product-card .product-caption .read-more {
   background-color: #fe5619;
   color: #fff;
   display: inline-block;
