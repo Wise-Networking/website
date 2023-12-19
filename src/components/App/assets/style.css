@@ -409,9 +409,9 @@ Top Header CSS
   text-align: right;
 }
 .social-icons-footer {
-  /* text-align: center !important; */
+  text-align: center;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .footer .copyright {
   color: var(--grey);

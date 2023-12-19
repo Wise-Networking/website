@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 col-lg-4">
-            <div className="social-icons-footer social-icons  bottom">
+            <div className="social-icons-footer social-icons bottom">
               <ul className="list-inline">
                 <li>
                   <a href={facebook}>

@@ -13,6 +13,7 @@
     margin-bottom: 4rem !important;
   }
   .social-icons-footer {
+    justify-content: flex-start;
     padding: 1rem 0;
   }
   .splide__pagination {
@@ -483,6 +484,7 @@
     text-align: left !important;
   }
   .social-icons-footer {
+    justify-content: flex-start;
     padding: 1rem 0;
   }
   .our-news > .container > .row:nth-child(2) > .col-12,
