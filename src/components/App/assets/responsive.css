@@ -29,9 +29,6 @@
   .team-box {
     width: 100% !important;
   }
-  .top-header {
-    text-align: center;
-  }
   .modal-dialog {
     width: 95%;
     margin-top: -65px;
@@ -93,10 +90,6 @@
   }
   .logo img {
     width: 10rem;
-  }
-
-  .address-bar {
-    margin-left: auto;
   }
   .navbar-nav.ml-auto {
     float: none !important;

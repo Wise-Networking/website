@@ -3129,7 +3129,7 @@ Custom Page CSS
   font-style: italic;
 }
 .article-img > div {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   overflow: hidden;
   margin-top: 4rem !important;
   margin-bottom: 5rem !important;
