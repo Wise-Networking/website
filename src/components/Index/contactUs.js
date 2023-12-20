@@ -28,6 +28,7 @@ export default class ContactUs extends React.Component {
             <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12 offset-sm-0">
               <div className="contact-form">
                 <form
+                  id="contact-us"
                   onSubmit={this.submitForm}
                   action="https://formspree.io/f/xknpezrb"
                   method="POST"
@@ -106,18 +107,19 @@ export default class ContactUs extends React.Component {
     ev.preventDefault()
     const form = ev.target
     const data = new FormData(form)
-    const xhr = new XMLHttpRequest()
-    xhr.open(form.method, form.action)
-    xhr.setRequestHeader("Accept", "application/json")
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return
-      if (xhr.status === 200) {
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    }).then(response => {
+      if (response.status === 200) {
         form.reset()
         this.setState({ status: "SUCCESS" })
       } else {
         this.setState({ status: "ERROR" })
       }
-    }
-    xhr.send(data)
+    })
   }
 }
