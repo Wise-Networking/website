@@ -3,7 +3,7 @@ module.exports = {
     title: `Dandelions: Your Partner In Custom Smart Grids`,
     description: `Dandelions provides standardized IT, power and communications enabling customers to build custom IOT grids.`,
     author: `https://www.linkedin.com/company/wise-networking/`,
-    siteUrl: `https://www.dandelions.cloud`
+    siteUrl: `https://www.dandelions.cloud`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,8 +43,8 @@ module.exports = {
         name: `dandelions.cloud`,
         short_name: `dandelions.cloud`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#262626`,
+        theme_color: `#262626`,
         display: `minimal-ui`,
         icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
         // icons: [
@@ -99,7 +99,7 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-        "https://work.us4.list-manage.com/subscribe/post?u=12f5efa71026881a906be432f&amp;id=1568b98859",
+          "https://work.us4.list-manage.com/subscribe/post?u=12f5efa71026881a906be432f&amp;id=1568b98859",
         timeout: 3500,
       },
     },
@@ -114,17 +114,16 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.dandelions.cloud',
-        sitemap: 'https://www.dandelions.cloud/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        host: "https://www.dandelions.cloud",
+        sitemap: "https://www.dandelions.cloud/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-
   ],
 }
