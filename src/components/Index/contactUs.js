@@ -85,8 +85,12 @@ export default class ContactUs extends React.Component {
                           Submit <i className="fa fa-chevron-right"></i>{" "}
                         </button>
                       )}
-                      {status === "ERROR" && <p>Ooops! There was an error.</p>}
                     </div>
+                    {status === "ERROR" && (
+                      <p className="text-white mt-2">
+                        Ooops! There was an error.
+                      </p>
+                    )}
                   </div>
                   <div className="clearfix" />
                 </form>

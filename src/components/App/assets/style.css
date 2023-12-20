@@ -593,6 +593,9 @@ Slider Area CSS
 .text-black {
   color: var(--black) !important;
 }
+.text-white {
+  color: white;
+}
 .hompage-slides-wrapper {
   position: relative;
   background: linear-gradient(
